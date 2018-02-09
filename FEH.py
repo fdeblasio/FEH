@@ -1,3 +1,4 @@
+#coding: utf-8
 from random import randint
 
 def randList(list):
@@ -37,34 +38,34 @@ def randHero():
 
     swords = [("Armorsmasher", 14), ("Brave Sword", 8), ("Firesweep Sword", 15), ("Kadomatsu", 14), ("Ruby Sword", 12), ("Silver Sword", 15), ("Slaying Edge", 14), ("Wo Dao", 13), ("Zanbato", 14)]
     axes = [("Brave Axe", 8), ("Carrot Axe", 13), ("Emerald Axe", 12), ("Hagoita", 14), ("Handbell", 14), ("Legion's Axe", 14), ("Lilith Floatie", 14), ("Melon Crusher", 14), ("Sack o' Gifts", 14), ("Silver Axe", 15), ("Slaying Axe", 14), ("Slaying Hammer", 14)]
-    lances = [("Berkut's Lance", 14), ("Brave Lance", 8), ("Carrot Lance", 13), ("Deft Harpoon", 14), ("Firesweep Lance", 15), ("First Bite", 14), ("Ridersbane", 14), ("Sapphire Lance", 12), ("Silver Lance", 15), ("Slaying Lance", 14), ("Slaying Spear", 14), ("Tannenboom!", 14)]
-    bows = [("Assassin's Bow", 11), ("Brave Bow", 7), ("Clarisse's Bow", 11), ("Cupid Arrow", 11), ("Firesweep Bow", 11), ("Guard Bow", 12), ("Hama Ya", 12), ("Monstrous Bow", 12), ("Refreshing Bolt", 12), ("Silver Bow", 13), ("Slaying Bow", 12)]
+    lances = [("Berkut's Lance", 14), ("Brave Lance", 8), ("Carrot Lance", 13), ("Deft Harpoon", 14), ("Firesweep Lance", 15), ("First Bite", 14), ("Ridersbane", 14), ("Sapphire Lance", 12), ("Silver Lance", 15), ("Slaying Lance", 14), ("Slaying Spear", 14), ("Tannenboom!", 14), ("Casa Blanca", 12)]
+    bows = [("Assassin's Bow", 11), ("Brave Bow", 7), ("Clarisse's Bow", 11), ("Cupid Arrow", 11), ("Firesweep Bow", 11), ("Guard Bow", 12), ("Hama Ya", 12), ("Monstrous Bow", 12), ("Refreshing Bolt", 12), ("Silver Bow", 13), ("Slaying Bow", 12), ("Gratia", 12)]
     daggers = [("Dancer's Fan", 10), ("Kagami Mochi", 12), ("Kitty Paddle", 8), ("Poison Dagger", 5), ("Rogue Dagger", 7), ("Seashell", 10), ("Silver Dagger", 10), ("Smoke Dagger", 9)]
-    fires = [("Bolganone", 13)]
-    winds = [("Dancer's Ring", 12), ("Green Egg", 11), ("Gronnblade", 13), ("Gronnowl", 10), ("Gronnraven", 11), ("Keen Gronnwolf", 12), ("Rexcalibur", 13), ("Spectral Tome", 12)]
+    fires = [("Bolganone", 13), ("Candelabra", 12)]
+    winds = [("Dancer's Ring", 12), ("Green Egg", 11), ("Gronnblade", 13), ("Gronnowl", 10), ("Gronnraven", 11), ("Keen Gronnwolf", 12), ("Rexcalibur", 13), ("Spectral Tome", 12), ("Green Gift", 12)]
     thunders = [("Thoron", 13)]
     staffs = [("Absorb", 7), ("Candlelight", 11), ("Fear", 12), ("Gravity", 10), ("Pain", 10), ("Panic", 11), ("Slow", 12)]
     darks = [("Fenrir", 13)]
-    lights = [("Shine", 13)]
+    lights = [("Shine", 13), ("Blue Egg", 11), ("Blessed Bouqet", 12), ("Blue Gift", 12)]
     breaths = [("Dark Breath", 13), ("Flametongue", 15), ("Light Breath", 13), ("Lightning Breath", 11)]
 
-    reds = [("Candelabra", 12), ("Keen RauO~rwolf", 12), ("RauO~rblade", 13), ("RauO~rowl", 10), ("RauO~rraven", 11), ("Tomato Tome", 12)]
-    blues = [("BlA'rblade", 13), ("BlA'rowl", 10), ("BlA'rraven", 11), ("Keen BlA'rwolf", 12), ("Blessed Bouqet", 12), ("Blue Egg", 11), ("Dancer's Score", 12), ("Sealife Tome", 12)]
+    reds = [("Keen Rauðrwolf", 12), ("Rauðrblade", 13), ("Rauðrowl", 10), ("Rauðrraven", 11), ("Tomato Tome", 12)]
+    blues = [("Blárblade", 13), ("Blárowl", 10), ("Blárraven", 11), ("Keen Blárwolf", 12), ("Dancer's Score", 12), ("Sealife Tome", 12)]
 
     fires.extend(reds)
     darks.extend(reds)
     thunders.extend(blues)
     lights.extend(blues)
 
-    exclusiveSwords = [("FO'lkvangr", 16), ("Falchion", 16), ("Ragnell", 16), ("Raijinto", 16), ("Alondite", 16), ("Amiti", 11), ("Durandal", 16), ("Blazing Durandal", 16), ("Audhulma", 16), ("Arya's Blade", 16), ("Binding Blade", 16), ("Tyrfing", 16), ("Divine Tyrfing", 16), ("Dark Greatsword", 16), ("Eckesachs", 16), ("Laevatein", 16), ("Mystletainn", 16), ("Regal Blade", 16), ("Resolute Blade", 16), ("Siegfried", 16), ("Sieglinde", 16), ("Sol Katti", 16), ("Yato", 16), ("Wing Sword", 16)]
-    exclusiveAxes = [("Armads", 16), ("Basilikos", 16), ("Hauteclere", 16), ("NO'atU'n", 16), ("Sinmara", 16), ("Stout Tomahawk", 16), ("Urvan", 16), ("UrO~r", 16), ("Berserk Armads", 16)]
-    exclusiveLances = [("Fensalir", 16), ("Leiptr", 16), ("Siegmund", 16), ("Gradivus", 16), ("Cursed Lance", 16), ("GeirskO:gul", 16), ("Vidofnir", 16), ("Bright Naginata", 16), ("Hinoka's Spear", 16)]
+    exclusiveSwords = [("Fólkvangr", 16), ("Falchion", 16), ("Ragnell", 16), ("Raijinto", 16), ("Alondite", 16), ("Amiti", 11), ("Durandal", 16), ("Blazing Durandal", 16), ("Audhulma", 16), ("Arya's Blade", 16), ("Binding Blade", 16), ("Tyrfing", 16), ("Divine Tyrfing", 16), ("Dark Greatsword", 16), ("Eckesachs", 16), ("Laevatein", 16), ("Mystletainn", 16), ("Regal Blade", 16), ("Resolute Blade", 16), ("Siegfried", 16), ("Sieglinde", 16), ("Sol Katti", 16), ("Yato", 16), ("Wing Sword", 16)]
+    exclusiveAxes = [("Armads", 16), ("Basilikos", 16), ("Hauteclere", 16), ("Nóatún", 16), ("Sinmara", 16), ("Stout Tomahawk", 16), ("Urvan", 16), ("Urðr", 16), ("Berserk Armads", 16)]
+    exclusiveLances = [("Fensalir", 16), ("Leiptr", 16), ("Siegmund", 16), ("Gradivus", 16), ("Cursed Lance", 16), ("Geirskögul", 16), ("Vidofnir", 16), ("Bright Naginata", 16), ("Hinoka's Spear", 16)]
     exclusiveBows = [("Fujin Yumi", 14), ("Mulagir", 14), ("Nidhogg", 14), ("Parthia", 14)]
     exclusiveDaggers = [("Deathly Dagger", 11), ("Peshkatz", 14), ("Felicia's Plate", 14)]
     exclusiveFires = [("Cymbeline", 14), ("Valflame", 14), ("Ragnarok", 14)]
-    exclusiveWinds = [("E'livA'gar", 14), ("Excalibur", 14), ("Naga", 14), ("Divine Naga", 14), ("Dark Excalibur", 14), ("Blizzard", 14)]
-    exclusiveThunders = [("ValaskjA'lf", 14), ("Dire Thunder", 9), ("Dark Aura", 14), ("Weirding Tome", 14)]
-    exclusiveStaffs = [("ThO:kk", 14)]
+    exclusiveWinds = [("Élivágar", 14), ("Excalibur", 14), ("Naga", 14), ("Divine Naga", 14), ("Dark Excalibur", 14), ("Blizzard", 14)]
+    exclusiveThunders = [("Valaskjálf", 14), ("Dire Thunder", 9), ("Dark Aura", 14), ("Weirding Tome", 14)]
+    exclusiveStaffs = [("Thökk", 14)]
     exclusiveDarks = [("Brynhildr", 14), ("Gleipnir", 14), ("Naglfar", 14), ("Grimoire", 0)]
     exclusiveLights = [("Aura", 14), ("Thani", 14), ("Ivaldi", 14)]
     exclusiveBreaths = [("Great Flame", 16)]
@@ -102,8 +103,8 @@ def randHero():
                 specials.extend(physicalMeleeSpecials)
         special = randList(specials)
 
-    normalAs = ["HP +5", "Attack +3", "Speed +3", "Defense +3", "Resistance +3", "HP/Speed", "HP/Defense", "HP/Resistance", "Attack/Speed +2", "Attack/Defense +2", "Attack/Resistance +2", "Speed/Defense +2", "Speed/Resistance +2", "Defiant Attack", "Defiant Speed", "Defiant Defense", "Defiant Resistance", "Fortress Defense", "Fortress Resistance", "Steady Stance", "Warding Stance", "Fire Boost", "Wind Boost", "Earth Boost", "Water Boost", "Attack/Defense Bond", "Attack/Resistance Bond", "Speed/Defense Bond", "Brazen Attack/Speed", "Brazen Attack/Def", "Close Defense", "Distant Defense"]
-    #HP/Atk, Def/Res, Atk/Spd Bond, Spd/Res Bond, Def/Res Bond, #Brazen Atk/Res, Brazen Spd/Def, Brazen Spd/Res, Brazen Def/Res
+    normalAs = ["HP +5", "Attack +3", "Speed +3", "Defense +3", "Resistance +3", "HP/Attack", "HP/Speed", "HP/Defense", "HP/Resistance", "Attack/Speed +2", "Attack/Defense +2", "Attack/Resistance +2", "Speed/Defense +2", "Speed/Resistance +2", "Defiant Attack", "Defiant Speed", "Defiant Defense", "Defiant Resistance", "Fortress Defense", "Fortress Resistance", "Steady Stance", "Warding Stance", "Fire Boost", "Wind Boost", "Earth Boost", "Water Boost", "Attack/Speed Bond", "Attack/Defense Bond", "Attack/Resistance Bond", "Speed/Defense Bond", "Brazen Attack/Speed", "Brazen Attack/Def", "Close Defense", "Distant Defense"]
+    #Def/Res, Spd/Res Bond, Def/Res Bond, #Brazen Atk/Res, Brazen Spd/Def, Brazen Spd/Res, Brazen Def/Res
     meleeAs = ["Distant Counter"]
     rangedAs = ["Close Counter"]
     noStaffAs = ["Death Blow", "Darting Blow", "Armored Blow", "Warding Blow", "Swift Sparrow", "Sturdy Blow", "Mirror Strike", "Steady Blow", "Swift Strike", "Bracing Blow", "Fierce Stance", "Fury", "Life and Death", "Flashing Blaze"]
@@ -144,8 +145,7 @@ def randHero():
     #Goad Dragons, Ward Dragons
     axeCs = ["Axe Experience", "Axe Valor"]
     blueTomeCs = ["Blue Tome Experience", "Blue Tome Valor"]
-    bowCs = ["Bow Experience"]
-    #Bow Valor
+    bowCs = ["Bow Experience", "Bow Valor"]
     daggerCs = ["Dagger Valor"]
     #Dagger Experience
     greenTomeCs = ["Green Tome Valor"]
@@ -159,7 +159,7 @@ def randHero():
     noStaffSeals = ["Attack Smoke", "Heavy Blade", "Poison Strike"]
     meleeSeals = ["Deflect Melee"]
     flierSeals = ["Guidance", "Iote's Shield"]
-    exclusiveSeals = ["Embla's Ward", "MU'spellflame"]
+    exclusiveSeals = ["Embla's Ward", "Múspellflame"]
 
     #A Skill
     As = normalAs[:]
@@ -328,7 +328,7 @@ def randHero():
         cooldown = 4
     elif special in ["Aether", "Galeforce", "Miracle"]:
         cooldown = 5
-    if weapon in ["RauO~rblade", "Gronnblade", "BlA'rblade", "Lightning Breath"]:
+    if weapon in ["Rauðrblade", "Gronnblade", "Blárblade", "Lightning Breath"]:
         cooldown += 1
     elif weapon in ["Slaying Edge", "Slaying Axe", "Slaying Lance", "Slaying Bow", "Hauteclere", "Mystletainn", "Cursed Lance", "Urvan", "Audhulma", "Kagami Mochi", "Berserk Armads"]:
         cooldown -= 1
