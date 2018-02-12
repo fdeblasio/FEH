@@ -107,7 +107,7 @@ def randHero():
     #Def/Res, Spd/Res Bond, Def/Res Bond, #Brazen Atk/Res, Brazen Spd/Def, Brazen Spd/Res, Brazen Def/Res
     meleeAs = ["Distant Counter"]
     rangedAs = ["Close Counter"]
-    noStaffAs = ["Death Blow", "Darting Blow", "Armored Blow", "Warding Blow", "Swift Sparrow", "Sturdy Blow", "Mirror Strike", "Steady Blow", "Swift Strike", "Bracing Blow", "Fierce Stance", "Fury", "Life and Death", "Flashing Blaze"]
+    noStaffAs = ["Death Blow", "Darting Blow", "Armored Blow", "Warding Blow", "Swift Sparrow", "Sturdy Blow", "Mirror Strike", "Steady Blow", "Swift Strike", "Bracing Blow", "Fierce Stance", "Fury", "Life and Death", "Flashing Blade"]
     #Speed Stance
     cavalryAs = ["Grani's Shield"]
     flierAs = ["Iote's Shield"]
@@ -155,10 +155,11 @@ def randHero():
     redTomeCs = ["Red Tome Experience", "Red Tome Valor"]
     swordCs = ["Sword Experience", "Sword Valor"]
 
-    normalSeals = ["Attack Ploy", "Attack +3", "Brash Assault", "Breath of Life", "Close Defense", "Defense Ploy", "Defense +3", "Deflect Magic", "Deflect Missile", "Distant Defense", "Drive Defense", "Fortify Defense", "Fortify Res", "Hardy Bearing", "Hone Attack", "Hone Speed", "HP +5", "Initiate Seal Attack", "Initiate Seal Defense", "Initiate Seal HP", "Initiate Seal Res", "Initiate Seal Speed", "Panic Ploy", "Phantom Speed", "Quick Riposte", "Quickened Pulse", "Resistance +3", "Savage Blow", "Seal Attack", "Speed +3", "Spur Attack", "Spur Defense", "Spur Resistance", "Spur Speed", "Squad Ace A", "Squad Ace B", "Squad Ace C", "Squad Ace D", "Squad Ace E", "Squad Ace F", "Threaten Speed"]
+    normalSeals = ["Attack Ploy", "Attack +3", "Brash Assault", "Breath of Life", "Close Defense", "Defense Ploy", "Defense +3", "Deflect Magic", "Deflect Missile", "Distant Defense", "Drive Defense", "Fortify Defense", "Fortify Res", "Hardy Bearing", "Hone Attack", "Hone Speed", "HP +5", "Initiate Seal Attack", "Initiate Seal Defense", "Initiate Seal HP", "Initiate Seal Resistance", "Initiate Seal Speed", "Panic Ploy", "Phantom Speed", "Quick Riposte", "Quickened Pulse", "Resistance +3", "Savage Blow", "Seal Attack", "Speed +3", "Spur Attack", "Spur Defense", "Spur Resistance", "Spur Speed", "Squad Ace A", "Squad Ace B", "Squad Ace C", "Squad Ace D", "Squad Ace E", "Squad Ace F", "Squad Ace G", "Threaten Speed"]
     noStaffSeals = ["Attack Smoke", "Heavy Blade", "Poison Strike"]
     meleeSeals = ["Deflect Melee"]
     flierSeals = ["Guidance", "Iote's Shield"]
+    armoredSeals = ["Armored Boots"]
     exclusiveSeals = ["Embla's Ward", "Múspellflame"]
 
     #A Skill
@@ -232,14 +233,27 @@ def randHero():
             seals.extend(meleeSeals)
     if movementType == "Flier":
         seals.extend(flierSeals)
+    elif movementType == "Armored":
+        seals.extend(armoredSeals)
     S = randList(seals)
 
     if (weaponType == "Bow" and weapon != "-") or weapon == "Excalibur":
-        effective.append("Fliers")
+        effective.append("Flier")
+    elif (weapon.startswith("Keen") and weapon.endswith("wolf")) or weapon in ["Zanbato", "Ridersbane"]:
+        effective.append("Calvary")
+    elif weapon in ["Armorsmasher", "Slaying Hammer", "Slaying Spear"]:
+        effective.append("Armored")
+    elif weapon in ["Falchion", "Naga", "Divine Naga"]:
+        effective.append("Dragon")
+    elif weapon == "Poison Dagger":
+        effective.append("Infantry")
+    elif weapon == "Kitty Paddle":
+        effective.append("Mage")
+    elif weapon in ["Thani", "Wing Sword"]:
+        effective.append("Calvary")
+        effective.append("Armored")
 
-    #not implemeneted from skills yet besides weapon MT
     #neutral IVs for now
-
     #47 - 1 for each stat
     BST = 42
     #31 - 1 for each stat
@@ -289,6 +303,89 @@ def randHero():
 
     #Adds weapon MT
     stats[Atk] += MT
+
+    if weapon in ["Brave Sword", "Brave Axe", "Brave Lance", "Brave Bow", "Dire Thunder"]:
+        stats[Spd] -= 5
+    elif weapon == "Amiti":
+        stats[Spd] -= 2
+    elif weapon in ["Blazing Durandal", "Great Flame", "Laevatein", "Resolute Blade"]:
+        stats[Atk] += 3
+    elif weapon in ["Arya's Blade", "Mulagir", "Weirding Tome"]:
+        stats[Spd] += 3
+    elif weapon in ["Geirskögul", "Ivaldi", "Sinmara"]:
+        stats[Def] += 3
+    elif weapon in ["Blizzard", "Divine Tyrfing", "Gleipnir", "Thani"]:
+        stats[Res] += 3
+    elif weapon == "Audhulma":
+        stats[Res] += 5
+    elif weapon == "Cursed Lance":
+        stats[Atk] += 2
+        stats[Spd] += 2
+
+    if A == "HP +5":
+        stats[HP] += 5
+    elif A == "Attack +3":
+        stats[Atk] += 3
+    elif A == "Speed +3":
+        stats[Spd] += 3
+    elif A == "Defense +3":
+        stats[Def] += 3
+    elif A == "Resistance +3":
+        stats[Res] += 3
+    elif A == "HP/Attack":
+        stats[HP] += 4
+        stats[Atk] += 2
+    elif A == "HP/Speed":
+        stats[HP] += 4
+        stats[Spd] += 2
+    elif A == "HP/Defense":
+        stats[HP] += 4
+        stats[Def] += 2
+    elif A == "HP/Resistance":
+        stats[HP] += 4
+        stats[Res] += 2
+    elif A == "Attack/Speed +2":
+        stats[Atk] += 2
+        stats[Spd] += 2
+    elif A == "Attack/Defense +2":
+        stats[Atk] += 2
+        stats[Def] += 2
+    elif A == "Attack/Resistance +2":
+        stats[Atk] += 2
+        stats[Res] += 2
+    elif A == "Speed/Defense +2":
+        stats[Spd] += 2
+        stats[Def] += 2
+    elif A == "Speed/Resistance +2":
+        stats[Spd] += 2
+        stats[Res] += 2
+    elif A == "Fortress Defense":
+        stats[Def] += 5
+        stats[Atk] -= 3
+    elif A == "Fortress Resistance":
+        stats[Res] += 5
+        stats[Atk] -= 3
+    elif A == "Fury":
+        stats[Atk] += 3
+        stats[Spd] += 3
+        stats[Def] += 3
+        stats[Res] += 3
+    elif A == "Life and Death":
+        stats[Atk] += 5
+        stats[Spd] += 5
+        stats[Def] -= 5
+        stats[Res] -= 5
+
+    if S in ["HP +5", "Initiate Seal HP", "Squad Ace A", "Squad Ace F"]:
+        stats[HP] += 5
+    elif S in ["Attack +3", "Initiate Seal Attack", "Squad Ace E"]:
+        stats[Atk] += 3
+    elif S in ["Speed +3", "Initiate Seal Speed", "Squad Ace D"]:
+        stats[Spd] += 3
+    elif S in ["Defense +3", "Initiate Seal Defense", "Squad Ace B", "Squad Ace G"]:
+        stats[Def] += 3
+    elif S in ["Resistance +3", "Initiate Seal Resistance", "Squad Ace C"]:
+        stats[Res] += 3
 
     name = ""
     if weaponType in ["Sword", "Axe", "Lance"]:
@@ -353,6 +450,7 @@ def randHero():
     print
     print baseStats
     print statGrowths
+    print effective
 
 if __name__== "__main__":
     randHero()
