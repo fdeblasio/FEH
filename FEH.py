@@ -57,10 +57,10 @@ def randHero():
     thunders.extend(blues)
     lights.extend(blues)
 
-    exclusiveSwords = [("Fólkvangr", 16), ("Falchion", 16), ("Ragnell", 16), ("Raijinto", 16), ("Alondite", 16), ("Amiti", 11), ("Durandal", 16), ("Blazing Durandal", 16), ("Audhulma", 16), ("Arya's Blade", 16), ("Binding Blade", 16), ("Tyrfing", 16), ("Divine Tyrfing", 16), ("Dark Greatsword", 16), ("Eckesachs", 16), ("Laevatein", 16), ("Mystletainn", 16), ("Regal Blade", 16), ("Resolute Blade", 16), ("Siegfried", 16), ("Sieglinde", 16), ("Sol Katti", 16), ("Yato", 16), ("Wing Sword", 16)]
+    exclusiveSwords = [("Fólkvangr", 16), ("Falchion", 16), ("Ragnell", 16), ("Raijinto", 16), ("Alondite", 16), ("Amiti", 11), ("Durandal", 16), ("Blazing Durandal", 16), ("Audhulma", 16), ("Arya's Blade", 16), ("Binding Blade", 16), ("Tyrfing", 16), ("Divine Tyrfing", 16), ("Dark Greatsword", 16), ("Eckesachs", 16), ("Laevatein", 16), ("Mystletainn", 16), ("Regal Blade", 16), ("Resolute Blade", 16), ("Siegfried", 16), ("Sieglinde", 16), ("Sol Katti", 16), ("Yato", 16), ("Wing Sword", 16), ("Beloved Zofia", 16), ("Níu", 16)]
     exclusiveAxes = [("Armads", 16), ("Basilikos", 16), ("Hauteclere", 16), ("Nóatún", 16), ("Sinmara", 16), ("Stout Tomahawk", 16), ("Urvan", 16), ("Urðr", 16), ("Berserk Armads", 16)]
     exclusiveLances = [("Fensalir", 16), ("Leiptr", 16), ("Siegmund", 16), ("Gradivus", 16), ("Cursed Lance", 16), ("Geirskögul", 16), ("Vidofnir", 16), ("Bright Naginata", 16), ("Hinoka's Spear", 16)]
-    exclusiveBows = [("Fujin Yumi", 14), ("Mulagir", 14), ("Nidhogg", 14), ("Parthia", 14)]
+    exclusiveBows = [("Fujin Yumi", 14), ("Mulagir", 14), ("Nidhogg", 14), ("Parthia", 14), ("Skadi", 14)]
     exclusiveDaggers = [("Deathly Dagger", 11), ("Peshkatz", 14), ("Felicia's Plate", 14)]
     exclusiveFires = [("Cymbeline", 14), ("Valflame", 14), ("Ragnarok", 14)]
     exclusiveWinds = [("Élivágar", 14), ("Excalibur", 14), ("Naga", 14), ("Divine Naga", 14), ("Dark Excalibur", 14), ("Blizzard", 14)]
@@ -68,7 +68,7 @@ def randHero():
     exclusiveStaffs = [("Thökk", 14)]
     exclusiveDarks = [("Brynhildr", 14), ("Gleipnir", 14), ("Naglfar", 14), ("Grimoire", 0)]
     exclusiveLights = [("Aura", 14), ("Thani", 14), ("Ivaldi", 14)]
-    exclusiveBreaths = [("Great Flame", 16)]
+    exclusiveBreaths = [("Great Flame", 16), ("Expiration", 16)]
 
     weapons = {"Sword": swords, "Axe": axes, "Lance": lances, "Bow": bows, "Dagger": daggers, "Fire": fires, "Wind": winds, "Thunder": thunders, "Dark": darks, "Light": lights, "Staff": staffs, "Red Breath": breaths, "Green Breath": breaths, "Blue Breath": breaths}
     effective = []
@@ -103,8 +103,8 @@ def randHero():
                 specials.extend(physicalMeleeSpecials)
         special = randList(specials)
 
-    normalAs = ["HP +5", "Attack +3", "Speed +3", "Defense +3", "Resistance +3", "HP/Attack", "HP/Speed", "HP/Defense", "HP/Resistance", "Attack/Speed +2", "Attack/Defense +2", "Attack/Resistance +2", "Speed/Defense +2", "Speed/Resistance +2", "Defiant Attack", "Defiant Speed", "Defiant Defense", "Defiant Resistance", "Fortress Defense", "Fortress Resistance", "Steady Stance", "Warding Stance", "Fire Boost", "Wind Boost", "Earth Boost", "Water Boost", "Attack/Speed Bond", "Attack/Defense Bond", "Attack/Resistance Bond", "Speed/Defense Bond", "Brazen Attack/Speed", "Brazen Attack/Def", "Close Defense", "Distant Defense"]
-    #Def/Res, Spd/Res Bond, Def/Res Bond, #Brazen Atk/Res, Brazen Spd/Def, Brazen Spd/Res, Brazen Def/Res
+    normalAs = ["HP +5", "Attack +3", "Speed +3", "Defense +3", "Resistance +3", "HP/Attack", "HP/Speed", "HP/Defense", "HP/Resistance", "Attack/Speed +2", "Attack/Defense +2", "Attack/Resistance +2", "Speed/Defense +2", "Speed/Resistance +2", "Defiant Attack", "Defiant Speed", "Defiant Defense", "Defiant Resistance", "Fortress Defense", "Fortress Resistance", "Steady Stance", "Warding Stance", "Fire Boost", "Wind Boost", "Earth Boost", "Water Boost", "Attack/Speed Bond", "Attack/Defense Bond", "Attack/Resistance Bond", "Speed/Defense Bond", "Brazen Attack/Speed", "Brazen Attack/Defense", "Brazen Defense/Resistance", "Close Defense", "Distant Defense"]
+    #Def/Res, Spd/Res Bond, Def/Res Bond, #Brazen Atk/Res, Brazen Spd/Def, Brazen Spd/Res
     meleeAs = ["Distant Counter"]
     rangedAs = ["Close Counter"]
     noStaffAs = ["Death Blow", "Darting Blow", "Armored Blow", "Warding Blow", "Swift Sparrow", "Sturdy Blow", "Mirror Strike", "Steady Blow", "Swift Strike", "Bracing Blow", "Fierce Stance", "Fury", "Life and Death", "Flashing Blade"]
@@ -116,7 +116,8 @@ def randHero():
     infantryArmoredNoStaffAs = ["Flashing Blaze"]
     meleeInfantryArmoredAs = ["Steady Breath", "Warding Breath"]
 
-    normalBs = ["Brash Assault", "Daggerbreaker", "Desperation", "Guard", "Obstruct", "Pass", "Vantage", "Escape Route", "Quick Riposte", "Renewal"]
+    normalBs = ["Brash Assault", "Daggerbreaker", "Desperation", "Guard", "Obstruct", "Pass", "Vantage", "Escape Route", "Quick Riposte", "Renewal", "Chill Speed"]
+    #Chill Attack, Chill Defense, Chill Resistance
     meleeBs = ["Drag Back", "Hit and Run", "Knock Back", "Lunge", "Wings of Mercy"]
     staffBs = ["Live to Serve", "Dazzling Staff", "Wrathful Staff"]
     noStaffBs = ["Seal Attack", "Seal Speed", "Seal Defense", "Seal Resistance", "Seal Attack/Speed", "Seal Attack/Defense", "Poison Strike", "Watersweep", "Windsweep"]
@@ -128,10 +129,9 @@ def randHero():
     flierBs = ["Flier Formation"]
     armoredBs = ["Bold Fighter", "Vengeful Fighter", "Wary Fighter"]
     noTomeNoStaffBs = ["Cancel Affinity"]
-    #no (magic AND ranged)
     meleeInfantryArmoredBs = ["Shield Pulse", "Wrath"]
     singDanceBs = ["Blaze Dance", "Earth Dance", "Gale Dance", "Geyser Dance"]
-    exclusiveBs = ["Follow-Up Ring", "Recover Ring", "Beorc's Blessing", "Crusader's Ward", "Sacae's Blessing", "Warp Powder"]
+    exclusiveBs = ["Follow-Up Ring", "Recover Ring", "Beorc's Blessing", "Crusader's Ward", "Sacae's Blessing", "Warp Powder", "Chilling Seal"]
 
     normalCs = ["Breath of Life", "Hone Attack", "Hone Speed", "Fortify Defense", "Fortify Resistance", "Savage Blow", "Spur Attack", "Spur Speed", "Spur Defense", "Spur Resistance", "Drive Attack", "Spur Attack/Speed", "Spur Speed/Defense", "Spur Defense/Resistance", "Drive Speed", "Drive Defense", "Drive Resistance", "Threaten Attack", "Threaten Speed", "Threaten Defense", "Threaten Resistance", "Attack Ploy", "Speed Ploy", "Defense Ploy", "Resistance Ploy", "Panic Ploy", "Attack Tactic", "Defense Tactic", "Resistance Tactic"]
     #Speed Tactic, Spur Attack/Defense, Spur Attack/Resistance, Spur Speed/Resistance
@@ -141,8 +141,8 @@ def randHero():
     armoredCs = ["Hone Armor", "Fortify Armor", "Goad Armor", "Ward Armor", "Armor March"]
     cavalryCs = ["Hone Cavalry", "Fortify Cavalry", "Goad Cavalry", "Ward Cavalry"]
     flierCs = ["Hone Fliers", "Fortify Fliers", "Goad Fliers", "Ward Fliers", "Guidance"]
-    dragonCs = ["Hone Dragons", "Fortify Dragons"]
-    #Goad Dragons, Ward Dragons
+    dragonCs = ["Hone Dragons", "Fortify Dragons", "Ward Dragons"]
+    #Goad Dragons
     axeCs = ["Axe Experience", "Axe Valor"]
     blueTomeCs = ["Blue Tome Experience", "Blue Tome Valor"]
     bowCs = ["Bow Experience", "Bow Valor"]
@@ -310,9 +310,9 @@ def randHero():
         stats[Spd] -= 2
     elif weapon in ["Blazing Durandal", "Great Flame", "Laevatein", "Resolute Blade"]:
         stats[Atk] += 3
-    elif weapon in ["Arya's Blade", "Mulagir", "Weirding Tome"]:
+    elif weapon in ["Arya's Blade", "Mulagir", "Weirding Tome", "Skadi", "Níu"]:
         stats[Spd] += 3
-    elif weapon in ["Geirskögul", "Ivaldi", "Sinmara"]:
+    elif weapon in ["Geirskögul", "Ivaldi", "Sinmara", "Beloved Zofia"]:
         stats[Def] += 3
     elif weapon in ["Blizzard", "Divine Tyrfing", "Gleipnir", "Thani"]:
         stats[Res] += 3
