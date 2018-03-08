@@ -38,12 +38,14 @@ def randHero():
     distance = {True: "Melee", False: "Ranged"}[melee]
 
     swords = [("Armorsmasher", 14), ("Brave Sword", 8), ("Firesweep Sword", 15), ("Kadomatsu", 14), ("Ruby Sword", 12), ("Silver Sword", 15), ("Slaying Edge", 14), ("Wo Dao", 13), ("Zanbato", 14)]
-    axes = [("Brave Axe", 8), ("Carrot Axe", 13), ("Emerald Axe", 12), ("Hagoita", 14), ("Handbell", 14), ("Legion's Axe", 14), ("Lilith Floatie", 14), ("Melon Crusher", 14), ("Sack o' Gifts", 14), ("Silver Axe", 15), ("Slaying Axe", 14), ("Slaying Hammer", 14)]
+    axes = [("Brave Axe", 8), ("Carrot Axe", 13), ("Emerald Axe", 12), ("Hagoita", 14), ("Handbell", 14), ("Legion's Axe", 14), ("Lilith Floatie", 14), ("Melon Crusher", 14), ("Sack o' Gifts", 14), ("Silver Axe", 15), ("Slaying Axe", 14), ("Slaying Hammer", 14), ("Poleaxe", 14)]
+    #Firesweep Axe
     lances = [("Berkut's Lance", 14), ("Brave Lance", 8), ("Carrot Lance", 13), ("Deft Harpoon", 14), ("Firesweep Lance", 15), ("First Bite", 14), ("Ridersbane", 14), ("Sapphire Lance", 12), ("Silver Lance", 15), ("Slaying Lance", 14), ("Slaying Spear", 14), ("Tannenboom!", 14), ("Casa Blanca", 12)]
     bows = [("Assassin's Bow", 11), ("Brave Bow", 7), ("Clarisse's Bow", 11), ("Cupid Arrow", 11), ("Firesweep Bow", 11), ("Guard Bow", 12), ("Hama Ya", 12), ("Monstrous Bow", 12), ("Refreshing Bolt", 12), ("Silver Bow", 13), ("Slaying Bow", 12), ("Gratia", 12)]
     daggers = [("Dancer's Fan", 10), ("Kagami Mochi", 12), ("Kitty Paddle", 8), ("Poison Dagger", 5), ("Rogue Dagger", 7), ("Seashell", 10), ("Silver Dagger", 10), ("Smoke Dagger", 9)]
     fires = [("Bolganone", 13), ("Candelabra", 12)]
     winds = [("Dancer's Ring", 12), ("Green Egg", 11), ("Gronnblade", 13), ("Gronnowl", 10), ("Gronnraven", 11), ("Keen Gronnwolf", 12), ("Rexcalibur", 13), ("Spectral Tome", 12), ("Green Gift", 12)]
+    #Gronnserpent
     thunders = [("Thoron", 13)]
     staffs = [("Absorb", 7), ("Candlelight", 11), ("Fear", 12), ("Gravity", 10), ("Pain", 10), ("Panic", 11), ("Slow", 12)]
     darks = [("Fenrir", 13)]
@@ -51,7 +53,8 @@ def randHero():
     breaths = [("Dark Breath", 13), ("Flametongue", 15), ("Light Breath", 13), ("Lightning Breath", 11)]
 
     reds = [("Keen Rauðrwolf", 12), ("Rauðrblade", 13), ("Rauðrowl", 10), ("Rauðrraven", 11), ("Tomato Tome", 12)]
-    blues = [("Blárblade", 13), ("Blárowl", 10), ("Blárraven", 11), ("Keen Blárwolf", 12), ("Dancer's Score", 12), ("Sealife Tome", 12)]
+    #Rauðrserpent
+    blues = [("Blárblade", 13), ("Blárowl", 10), ("Blárraven", 11), ("Keen Blárwolf", 12), ("Dancer's Score", 12), ("Sealife Tome", 12), ("Blárserpent", 12)]
 
     fires.extend(reds)
     darks.extend(reds)
@@ -64,10 +67,10 @@ def randHero():
     exclusiveBows = [("Fujin Yumi", 14), ("Mulagir", 14), ("Nidhogg", 14), ("Parthia", 14), ("Skadi", 14)]
     exclusiveDaggers = [("Deathly Dagger", 11), ("Peshkatz", 14), ("Felicia's Plate", 14)]
     exclusiveFires = [("Cymbeline", 14), ("Valflame", 14), ("Ragnarok", 14)]
-    exclusiveWinds = [("Élivágar", 14), ("Excalibur", 14), ("Naga", 14), ("Divine Naga", 14), ("Dark Excalibur", 14), ("Blizzard", 14)]
+    exclusiveWinds = [("Élivágar", 14), ("Excalibur", 14), ("Naga", 14), ("Divine Naga", 14), ("Dark Excalibur", 14), ("Blizzard", 14), ("Wind's Brand", 14)]
     exclusiveThunders = [("Valaskjálf", 14), ("Dire Thunder", 9), ("Dark Aura", 14), ("Weirding Tome", 14)]
     exclusiveStaffs = [("Thökk", 14)]
-    exclusiveDarks = [("Brynhildr", 14), ("Gleipnir", 14), ("Naglfar", 14), ("Grimoire", 0)]
+    exclusiveDarks = [("Brynhildr", 14), ("Gleipnir", 14), ("Naglfar", 14), ("Grimoire", 14), ("Grima's Truth", 14)]
     exclusiveLights = [("Aura", 14), ("Thani", 14), ("Ivaldi", 14)]
     exclusiveBreaths = [("Great Flame", 16), ("Expiration", 16)]
 
@@ -108,8 +111,8 @@ def randHero():
     #Def/Res, Spd/Res Bond, Def/Res Bond, #Brazen Atk/Res, Brazen Spd/Def, Brazen Spd/Res
     meleeAs = ["Distant Counter"]
     rangedAs = ["Close Counter"]
-    noStaffAs = ["Death Blow", "Darting Blow", "Armored Blow", "Warding Blow", "Swift Sparrow", "Sturdy Blow", "Mirror Strike", "Steady Blow", "Swift Strike", "Bracing Blow", "Fierce Stance", "Sturdy Stance", "Fury", "Life and Death", "Flashing Blade"]
-    #Speed Stance
+    noStaffAs = ["Death Blow", "Darting Blow", "Armored Blow", "Warding Blow", "Swift Sparrow", "Sturdy Blow", "Mirror Strike", "Steady Blow", "Swift Strike", "Bracing Blow", "Fierce Stance", "Sturdy Stance", "Mirror Stance", "Fury", "Life and Death", "Flashing Blade"]
+    #Speed Stance, Atk/Spd Stance, Spd/Def Stance, Spd/Res Stance, Def/Res Stance
     cavalryAs = ["Grani's Shield"]
     flierAs = ["Iote's Shield"]
     armoredAs = ["Svalinn Shield"]
@@ -117,8 +120,8 @@ def randHero():
     infantryArmoredNoStaffAs = ["Flashing Blaze"]
     meleeInfantryArmoredAs = ["Steady Breath", "Warding Breath"]
 
-    normalBs = ["Brash Assault", "Daggerbreaker", "Desperation", "Guard", "Obstruct", "Pass", "Vantage", "Escape Route", "Quick Riposte", "Renewal", "Chill Speed"]
-    #Chill Attack, Chill Defense, Chill Resistance
+    normalBs = ["Brash Assault", "Daggerbreaker", "Desperation", "Guard", "Obstruct", "Pass", "Vantage", "Escape Route", "Quick Riposte", "Renewal", "Chill Speed", "Chill Defense", "Dull Ranged"]
+    #Chill Attack, Chill Resistance, #Dull Close
     meleeBs = ["Drag Back", "Hit and Run", "Knock Back", "Lunge", "Wings of Mercy"]
     staffBs = ["Live to Serve", "Dazzling Staff", "Wrathful Staff"]
     noStaffBs = ["Seal Attack", "Seal Speed", "Seal Defense", "Seal Resistance", "Seal Attack/Speed", "Seal Attack/Defense", "Poison Strike", "Watersweep", "Windsweep"]
@@ -321,7 +324,7 @@ def randHero():
         stats[Spd] += 3
     elif weapon in ["Geirskögul", "Ivaldi", "Sinmara", "Beloved Zofia"]:
         stats[Def] += 3
-    elif weapon in ["Blizzard", "Divine Tyrfing", "Gleipnir", "Thani"]:
+    elif weapon in ["Blizzard", "Divine Tyrfing", "Gleipnir", "Thani", "Grima's Truth"]:
         stats[Res] += 3
     elif weapon == "Audhulma":
         stats[Res] += 5
@@ -442,7 +445,6 @@ def randHero():
     skillString = ["Weapon", "Assist", "Special", "A", "B", "C", "S"]
     statString = ["HP: ", "Atk:", "Spd:", "Def:", "Res:"]
 
-    print
     print name
     print
     print "Color:", color
@@ -453,11 +455,14 @@ def randHero():
         print skillString[i] + ":", skills[i]
     print
     for i in range(len(stats)):
-        print statString[i], stats[i]
+        print statString[i], stats[i], "\tBase:", baseStats[i], "\tGrowth:", statGrowths[i]
     print
-    print baseStats
-    print statGrowths
-    print effective
+    if len(effective) > 0:
+      eff = ""
+      for effect in effective:
+        eff += effect + ", "
+      eff = eff[:-2]
+      print "Effective Against:", eff
 
 if __name__== "__main__":
     randHero()
