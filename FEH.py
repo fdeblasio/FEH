@@ -108,26 +108,26 @@ def randHero():
         special = randList(specials)
 
     normalAs = ["HP +5", "Attack +3", "Speed +3", "Defense +3", "Resistance +3", "HP/Attack", "HP/Speed", "HP/Defense", "HP/Resistance", "Attack/Speed +2", "Attack/Defense +2", "Attack/Resistance +2", "Speed/Defense +2", "Speed/Resistance +2", "Defiant Attack", "Defiant Speed", "Defiant Defense", "Defiant Resistance", "Fortress Defense", "Fortress Resistance", "Steady Stance", "Warding Stance", "Fire Boost", "Wind Boost", "Earth Boost", "Water Boost", "Attack/Speed Bond", "Attack/Defense Bond", "Attack/Resistance Bond", "Speed/Defense Bond", "Brazen Attack/Speed", "Brazen Attack/Defense", "Brazen Defense/Resistance", "Close Defense", "Distant Defense"]
-    #Def/Res, Spd/Res Bond, Def/Res Bond, #Brazen Atk/Res, Brazen Spd/Def, Brazen Spd/Res
+    #Def/Res, Spd/Res Bond, Def/Res Bond, Brazen Atk/Res, Brazen Spd/Def, Brazen Spd/Res
     meleeAs = ["Distant Counter"]
     rangedAs = ["Close Counter"]
-    noStaffAs = ["Death Blow", "Darting Blow", "Armored Blow", "Warding Blow", "Swift Sparrow", "Sturdy Blow", "Mirror Strike", "Steady Blow", "Swift Strike", "Bracing Blow", "Fierce Stance", "Sturdy Stance", "Mirror Stance", "Fury", "Life and Death", "Flashing Blade"]
-    #Speed Stance, Atk/Spd Stance, Spd/Def Stance, Spd/Res Stance, Def/Res Stance
+    noStaffAs = ["Fury", "Life and Death", "Heavy Blade", "Death Blow", "Darting Blow", "Armored Blow", "Warding Blow", "Swift Sparrow", "Sturdy Blow", "Mirror Strike", "Steady Blow", "Swift Strike", "Bracing Blow", "Fierce Stance", "Sturdy Stance", "Mirror Stance"]
+    #Speed Stance?, Atk/Spd Stance, Spd/Def Stance, Spd/Res Stance, Def/Res Stance
     cavalryAs = ["Grani's Shield"]
     flierAs = ["Iote's Shield"]
     armoredAs = ["Svalinn Shield"]
     noColorlessAs = ["Triangle Adept"]
-    infantryArmoredNoStaffAs = ["Flashing Blaze"]
+    infantryArmoredNoStaffAs = ["Flashing Blade"]
     meleeInfantryArmoredAs = ["Steady Breath", "Warding Breath"]
 
-    normalBs = ["Brash Assault", "Daggerbreaker", "Desperation", "Guard", "Obstruct", "Pass", "Vantage", "Escape Route", "Quick Riposte", "Renewal", "Chill Speed", "Chill Defense", "Dull Ranged"]
+    normalBs = ["Brash Assault", "Daggerbreaker", "Desperation", "Guard", "Obstruct", "Pass", "Vantage", "Escape Route", "Quick Riposte", "Renewal", "Wings of Mercy", "Chill Speed", "Chill Defense", "Dull Ranged"]
     #Chill Attack, Chill Resistance, #Dull Close
-    meleeBs = ["Drag Back", "Hit and Run", "Knock Back", "Lunge", "Wings of Mercy"]
+    meleeBs = ["Drag Back", "Hit and Run", "Knock Back", "Lunge"]
     staffBs = ["Live to Serve", "Dazzling Staff", "Wrathful Staff"]
     noStaffBs = ["Seal Attack", "Seal Speed", "Seal Defense", "Seal Resistance", "Seal Attack/Speed", "Seal Attack/Defense", "Poison Strike", "Watersweep", "Windsweep"]
     #Seal Atk/Res, Seal Spd/Def, Seal Spd/Res, Seal Def/Res
-    noRedBs = ["Blue Tomebreaker", "Lancebreaker"]
-    noGreenBs = ["Red Tomebreaker", "Swordbreaker"]
+    noRedBs = ["Lancebreaker", "Blue Tomebreaker"]
+    noGreenBs = ["Swordbreaker", "Red Tomebreaker"]
     noBlueBs = ["Axebreaker", "Green Tomebreaker"]
     noFlierBs = ["Bowbreaker"]
     flierBs = ["Flier Formation"]
@@ -137,7 +137,7 @@ def randHero():
     singDanceBs = ["Blaze Dance", "Earth Dance", "Gale Dance", "Geyser Dance"]
     exclusiveBs = ["Follow-Up Ring", "Recover Ring", "Beorc's Blessing", "Crusader's Ward", "Sacae's Blessing", "Warp Powder", "Chilling Seal", "Solar Brace"]
 
-    normalCs = ["Breath of Life", "Hone Attack", "Hone Speed", "Fortify Defense", "Fortify Resistance", "Savage Blow", "Spur Attack", "Spur Speed", "Spur Defense", "Spur Resistance", "Drive Attack", "Spur Attack/Speed", "Spur Speed/Defense", "Spur Defense/Resistance", "Drive Speed", "Drive Defense", "Drive Resistance", "Threaten Attack", "Threaten Speed", "Threaten Defense", "Threaten Resistance", "Attack Ploy", "Speed Ploy", "Defense Ploy", "Resistance Ploy", "Panic Ploy", "Attack Tactic", "Defense Tactic", "Resistance Tactic"]
+    normalCs = ["Breath of Life", "Hone Attack", "Hone Speed", "Fortify Defense", "Fortify Resistance", "Savage Blow", "Spur Attack", "Spur Speed", "Spur Defense", "Spur Resistance", "Spur Attack/Speed", "Spur Speed/Defense", "Spur Defense/Resistance", "Drive Attack", "Drive Speed", "Drive Defense", "Drive Resistance", "Threaten Attack", "Threaten Speed", "Threaten Defense", "Threaten Resistance", "Attack Ploy", "Speed Ploy", "Defense Ploy", "Resistance Ploy", "Panic Ploy", "Attack Tactic", "Defense Tactic", "Resistance Tactic"]
     #Speed Tactic, Spur Attack/Defense, Spur Attack/Resistance, Spur Speed/Resistance
     noStaffCs = ["Attack Smoke", "Speed Smoke"]
     #Defense Smoke, Resistance Smoke
@@ -159,8 +159,8 @@ def randHero():
     redTomeCs = ["Red Tome Experience", "Red Tome Valor"]
     swordCs = ["Sword Experience", "Sword Valor"]
 
-    normalSeals = ["Attack Ploy", "Attack +3", "Brash Assault", "Breath of Life", "Close Defense", "Defense Ploy", "Defense +3", "Deflect Magic", "Deflect Missile", "Distant Defense", "Drive Defense", "Fortify Defense", "Fortify Res", "Hardy Bearing", "Hone Attack", "Hone Speed", "HP +5", "Initiate Seal Attack", "Initiate Seal Defense", "Initiate Seal HP", "Initiate Seal Resistance", "Initiate Seal Speed", "Panic Ploy", "Phantom Speed", "Quick Riposte", "Quickened Pulse", "Resistance +3", "Savage Blow", "Seal Attack", "Speed +3", "Spur Attack", "Spur Defense", "Spur Resistance", "Spur Speed", "Squad Ace A", "Squad Ace B", "Squad Ace C", "Squad Ace D", "Squad Ace E", "Squad Ace F", "Squad Ace G", "Threaten Speed"]
-    noStaffSeals = ["Attack Smoke", "Heavy Blade", "Poison Strike"]
+    normalSeals = ["Attack Ploy", "Attack +3", "Brash Assault", "Breath of Life", "Close Defense", "Defense Ploy", "Defense +3", "Deflect Magic", "Deflect Missile", "Distant Defense", "Drive Defense", "Fortify Defense", "Fortify Resistance", "Fortress Resistance", "Hardy Bearing", "Hone Attack", "Hone Speed", "HP +5", "Initiate Seal Attack", "Initiate Seal Defense", "Initiate Seal HP", "Initiate Seal Resistance", "Initiate Seal Speed", "Panic Ploy", "Phantom Speed", "Quick Riposte", "Quickened Pulse", "Resistance +3", "Savage Blow", "Speed +3", "Spur Attack", "Spur Defense", "Threaten Attack", "Threaten Speed", "Spur Resistance", "Spur Speed", "Squad Ace A", "Squad Ace B", "Squad Ace C", "Squad Ace D", "Squad Ace E", "Squad Ace F", "Squad Ace G", "Squad Ace H"]
+    noStaffSeals = ["Attack Smoke", "Heavy Blade", "Poison Strike", "Seal Attack"]
     meleeSeals = ["Deflect Melee"]
     flierSeals = ["Guidance", "Iote's Shield"]
     armoredSeals = ["Armored Boots"]
@@ -243,7 +243,7 @@ def randHero():
 
     if (weaponType == "Bow" and weapon != "-") or weapon == "Excalibur":
         effective.append("Flier")
-    elif (weapon.startswith("Keen") and weapon.endswith("wolf")) or weapon in ["Zanbato", "Ridersbane"]:
+    elif (weapon.startswith("Keen") and weapon.endswith("wolf")) or weapon in ["Zanbato", "Poleaxe", "Ridersbane"]:
         effective.append("Calvary")
     elif weapon in ["Armorsmasher", "Slaying Hammer", "Slaying Spear"]:
         effective.append("Armored")
@@ -394,8 +394,11 @@ def randHero():
         stats[Spd] += 3
     elif S in ["Defense +3", "Initiate Seal Defense", "Squad Ace B", "Squad Ace G"]:
         stats[Def] += 3
-    elif S in ["Resistance +3", "Initiate Seal Resistance", "Squad Ace C"]:
+    elif S in ["Resistance +3", "Initiate Seal Resistance", "Squad Ace C", "Squad Ace H"]:
         stats[Res] += 3
+    elif S == "Fortress Resistance":
+        stats[Res] += 5
+        stats[Atk] -= 3
 
     name = ""
     if weaponType in ["Sword", "Axe", "Lance"]:
