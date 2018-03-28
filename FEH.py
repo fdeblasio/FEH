@@ -8,7 +8,7 @@ Spd = 2
 Def = 3
 Res = 4
 
-weaponTypes = ["Sword", "Axe", "Lance", "Bow", "Fire", "Wind", "Thunder", "Staff", "Dagger", "Dark", "Light", "Red Breath", "Green Breath", "Blue Breath"]
+weaponTypes = ["Sword", "Axe", "Lance", "Bow", "Fire", "Wind", "Thunder", "Staff", "Dagger", "Dark", "Light", "Red Breath", "Green Breath", "Blue Breath", "Colorless Breath"]
 movementTypes = ["Infantry", "Cavalry", "Flier", "Armored"]
 
 swords = [("Armorsmasher", 14), ("Brave Sword", 8), ("Firesweep Sword", 15), ("Kadomatsu", 14), ("Ruby Sword", 12), ("Silver Sword", 15), ("Slaying Edge", 14), ("Wo Dao", 13), ("Zanbato", 14)]
@@ -64,7 +64,7 @@ normalAs = ["HP +5", "Attack +3", "Speed +3", "Defense +3", "Resistance +3", "HP
 #Def/Res, Def/Res Bond, Brazen Atk/Res, Brazen Spd/Def, Brazen Spd/Res
 meleeAs = ["Distant Counter"]
 rangedAs = ["Close Counter"]
-noStaffAs = ["Fury", "Life and Death", "Heavy Blade", "Death Blow", "Darting Blow", "Armored Blow", "Warding Blow", "Swift Sparrow", "Sturdy Blow", "Mirror Strike", "Steady Blow", "Swift Strike", "Bracing Blow", "Fierce Stance", "Sturdy Stance", "Mirror Stance", "Swift Stance"]
+noStaffAs = ["Fury", "Life and Death", "Heavy Blade", "Death Blow", "Darting Blow", "Armored Blow", "Warding Blow", "Swift Sparrow", "Sturdy Blow", "Mirror Strike", "Steady Blow", "Swift Strike", "Bracing Blow", "Fierce Stance", "Darting Stance", "Sturdy Stance", "Mirror Stance", "Swift Stance"]
 #Speed Stance, Atk/Spd Stance, Spd/Def Stance, Spd/Res Stance, Def/Res Stance
 cavalryAs = ["Grani's Shield"]
 flierAs = ["Iote's Shield"]
@@ -72,9 +72,10 @@ armoredAs = ["Svalinn Shield"]
 noColorlessAs = ["Triangle Adept"]
 infantryArmoredNoStaffAs = ["Flashing Blade"]
 meleeInfantryArmoredAs = ["Steady Breath", "Warding Breath"]
+exclusiveAs = ["Dragonskin"]
 
 normalBs = ["Brash Assault", "Daggerbreaker", "Desperation", "Guard", "Obstruct", "Pass", "Vantage", "Escape Route", "Quick Riposte", "Renewal", "Wings of Mercy", "Chill Speed", "Chill Defense", "Chill Resistance", "Dull Ranged"]
-#Chill Attack, Chill Resistance, #Dull Close
+#Chill Attack, #Dull Close
 meleeBs = ["Drag Back", "Hit and Run", "Knock Back", "Lunge"]
 staffBs = ["Live to Serve", "Dazzling Staff", "Wrathful Staff"]
 noStaffBs = ["Seal Attack", "Seal Speed", "Seal Defense", "Seal Resistance", "Seal Attack/Speed", "Seal Attack/Defense", "Poison Strike", "Watersweep", "Windsweep"]
@@ -92,8 +93,7 @@ exclusiveBs = ["Follow-Up Ring", "Recover Ring", "Beorc's Blessing", "Crusader's
 
 normalCs = ["Breath of Life", "Hone Attack", "Hone Speed", "Fortify Defense", "Fortify Resistance", "Savage Blow", "Spur Attack", "Spur Speed", "Spur Defense", "Spur Resistance", "Spur Attack/Speed", "Spur Speed/Defense", "Spur Defense/Resistance", "Drive Attack", "Drive Speed", "Drive Defense", "Drive Resistance", "Threaten Attack", "Threaten Speed", "Threaten Defense", "Threaten Resistance", "Attack Ploy", "Speed Ploy", "Defense Ploy", "Resistance Ploy", "Panic Ploy", "Attack Tactic", "Defense Tactic", "Resistance Tactic"]
 #Speed Tactic, Spur Attack/Defense, Spur Attack/Resistance, Spur Speed/Resistance
-noStaffCs = ["Attack Smoke", "Speed Smoke", "Defense Smoke"]
-#Defense Smoke, Resistance Smoke
+noStaffCs = ["Attack Smoke", "Speed Smoke", "Defense Smoke", "Resistance Smoke"]
 infantryCs = ["Infantry Pulse"]
 armoredCs = ["Hone Armor", "Fortify Armor", "Goad Armor", "Ward Armor", "Armor March"]
 cavalryCs = ["Hone Cavalry", "Fortify Cavalry", "Goad Cavalry", "Ward Cavalry"]
