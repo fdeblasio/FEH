@@ -8,7 +8,7 @@ Spd = 2
 Def = 3
 Res = 4
 
-weaponTypes = ["Sword", "Axe", "Lance", "Bow", "Fire", "Wind", "Thunder", "Staff", "Dagger", "Dark", "Light", "Red Breath", "Green Breath", "Blue Breath", "Colorless Breath"]
+weaponTypes = ["Sword", "Axe", "Lance", " Colorless Bow", "Fire", "Wind", "Thunder", "Staff", "Dagger", "Dark", "Light", "Red Breath", "Green Breath", "Blue Breath", "Colorless Breath", "Red Bow", "Green Bow", "Blue Bow"]
 movementTypes = ["Infantry", "Cavalry", "Flier", "Armored"]
 
 swords = [("Armorsmasher", 14), ("Brave Sword", 8), ("Firesweep Sword", 15), ("Kadomatsu", 14), ("Ruby Sword", 12), ("Silver Sword", 15), ("Slaying Edge", 14), ("Wo Dao", 13), ("Zanbato", 14)]
@@ -35,23 +35,23 @@ darks.extend(reds)
 thunders.extend(blues)
 lights.extend(blues)
 
-exclusiveSwords = [("Fólkvangr", 16), ("Falchion", 16), ("Ragnell", 16), ("Raijinto", 16), ("Alondite", 16), ("Amiti", 11), ("Durandal", 16), ("Blazing Durandal", 16), ("Audhulma", 16), ("Arya's Blade", 16), ("Binding Blade", 16), ("Tyrfing", 16), ("Divine Tyrfing", 16), ("Dark Greatsword", 16), ("Eckesachs", 16), ("Laevatein", 16), ("Mystletainn", 16), ("Regal Blade", 16), ("Resolute Blade", 16), ("Siegfried", 16), ("Sieglinde", 16), ("Sol Katti", 16), ("Yato", 16), ("Wing Sword", 16), ("Beloved Zofia", 16), ("Níu", 16)]
+exclusiveSwords = [("Fólkvangr", 16), ("Falchion", 16), ("Ragnell", 16), ("Raijinto", 16), ("Alondite", 16), ("Amiti", 11), ("Durandal", 16), ("Blazing Durandal", 16), ("Audhulma", 16), ("Arya's Blade", 16), ("Binding Blade", 16), ("Tyrfing", 16), ("Divine Tyrfing", 16), ("Dark Greatsword", 16), ("Eckesachs", 16), ("Laevatein", 16), ("Mystletainn", 16), ("Regal Blade", 16), ("Resolute Blade", 16), ("Siegfried", 16), ("Sieglinde", 16), ("Sol Katti", 16), ("Yato", 16), ("Wing Sword", 16), ("Beloved Zofia", 16), ("Níu", 16), ("Nameless Blade", 16), ("Light Brand", 16), ("Meisterschwert", 11)]
 exclusiveAxes = [("Armads", 16), ("Basilikos", 16), ("Hauteclere", 16), ("Nóatún", 16), ("Sinmara", 16), ("Stout Tomahawk", 16), ("Urvan", 16), ("Urðr", 16), ("Berserk Armads", 16)]
 exclusiveLances = [("Fensalir", 16), ("Leiptr", 16), ("Siegmund", 16), ("Gradivus", 16), ("Cursed Lance", 16), ("Geirskögul", 16), ("Vidofnir", 16), ("Bright Naginata", 16), ("Hinoka's Spear", 16), ("Flame Siegmund", 16)]
 exclusiveBows = [("Fujin Yumi", 14), ("Mulagir", 14), ("Nidhogg", 14), ("Parthia", 14), ("Skadi", 14)]
 exclusiveDaggers = [("Deathly Dagger", 11), ("Peshkatz", 14), ("Felicia's Plate", 14)]
-exclusiveFires = [("Cymbeline", 14), ("Valflame", 14), ("Ragnarok", 14)]
-exclusiveWinds = [("Élivágar", 14), ("Excalibur", 14), ("Naga", 14), ("Divine Naga", 14), ("Dark Excalibur", 14), ("Blizzard", 14), ("Wind's Brand", 14), ("Munnin's Egg", 14)]
+exclusiveFires = [("Cymbeline", 14), ("Valflame", 14), ("Ragnarok", 14), ("Forblaze", 14)]
+exclusiveWinds = [("Élivágar", 14), ("Excalibur", 14), ("Naga", 14), ("Divine Naga", 14), ("Dark Excalibur", 14), ("Blizzard", 14), ("Wind's Brand", 14), ("Munnin's Egg", 14), ("Thunderhead", 14)]
 exclusiveThunders = [("Valaskjálf", 14), ("Dire Thunder", 9), ("Dark Aura", 14), ("Weirding Tome", 14), ("Huggin's Egg", 14)]
 exclusiveStaffs = [("Thökk", 14)]
 exclusiveDarks = [("Brynhildr", 14), ("Gleipnir", 14), ("Naglfar", 14), ("Grimoire", 14), ("Grima's Truth", 14)]
-exclusiveLights = [("Aura", 14), ("Thani", 14), ("Ivaldi", 14)]
+exclusiveLights = [("Aura", 14), ("Thani", 14), ("Ivaldi", 14), ("Wargod's Tome", 14)]
 exclusiveBreaths = [("Great Flame", 16), ("Expiration", 16)]
 
-weapons = {"Sword": swords, "Axe": axes, "Lance": lances, "Bow": bows, "Dagger": daggers, "Fire": fires, "Wind": winds, "Thunder": thunders, "Dark": darks, "Light": lights, "Staff": staffs, "Red Breath": breaths, "Green Breath": breaths, "Blue Breath": breaths}
+weapons = {"Sword": swords, "Axe": axes, "Lance": lances, "Colorless Bow": bows, "Dagger": daggers, "Fire": fires, "Wind": winds, "Thunder": thunders, "Dark": darks, "Light": lights, "Staff": staffs, "Red Breath": breaths, "Green Breath": breaths, "Blue Breath": breaths, "Red Bow": bows, "Green Bow": bows, "Blue Bows": bows}
 
 assists = ["Ardent Sacrifice", "Draw Back", "Harsh Command", "Pivot", "Reciprocal Aid", "Reposition", "Shove", "Smite", "Swap", "Rally Attack", "Rally Speed", "Rally Defense", "Rally Resistance", "Rally Attack/Speed", "Rally Attack/Defense", "Rally Attack/Resistance", "Rally Speed/Defense", "Rally Speed/Resistance", "Rally Defense/Resistance"]
-heals = ["Martyr", "Physic", "Recover", "Rehabilitate"]
+heals = ["Martyr", "Physic", "Recover", "Rehabilitate", "Restore"]
 exclusiveAssists = ["Dance", "Sing", "Sacrifice"]
 
 normalSpecials = ["Sol", "Luna", "Astra", "Noontime", "Moonbow", "Glimmer", "Aether", "Dragon Fang", "Ignis", "Glacies", "Draconic Aura", "Bonfire", "Iceberg", "Vengeance", "Reprisal", "Blazing Flame", "Growing Flame", "Blazing Thunder", "Growing Thunder", "Blazing Wind", "Growing Wind", "Blazing Light", "Growing Light", "Miracle"]
@@ -89,10 +89,10 @@ armoredBs = ["Bold Fighter", "Vengeful Fighter", "Wary Fighter"]
 noTomeNoStaffBs = ["Cancel Affinity"]
 meleeInfantryArmoredBs = ["Shield Pulse", "Wrath"]
 singDanceBs = ["Blaze Dance", "Earth Dance", "Gale Dance", "Geyser Dance"]
-exclusiveBs = ["Follow-Up Ring", "Recover Ring", "Beorc's Blessing", "Crusader's Ward", "Sacae's Blessing", "Warp Powder", "Chilling Seal", "Solar Brace"]
+exclusiveBs = ["Follow-Up Ring", "Recover Ring", "Beorc's Blessing", "Crusader's Ward", "Sacae's Blessing", "Warp Powder", "Chilling Seal", "Solar Brace", "S Drink"]
 
-normalCs = ["Breath of Life", "Hone Attack", "Hone Speed", "Fortify Defense", "Fortify Resistance", "Savage Blow", "Spur Attack", "Spur Speed", "Spur Defense", "Spur Resistance", "Spur Attack/Speed", "Spur Speed/Defense", "Spur Defense/Resistance", "Drive Attack", "Drive Speed", "Drive Defense", "Drive Resistance", "Threaten Attack", "Threaten Speed", "Threaten Defense", "Threaten Resistance", "Attack Ploy", "Speed Ploy", "Defense Ploy", "Resistance Ploy", "Panic Ploy", "Attack Tactic", "Defense Tactic", "Resistance Tactic"]
-#Speed Tactic, Spur Attack/Defense, Spur Attack/Resistance, Spur Speed/Resistance
+normalCs = ["Breath of Life", "Hone Attack", "Hone Speed", "Fortify Defense", "Fortify Resistance", "Savage Blow", "Spur Attack", "Spur Speed", "Spur Defense", "Spur Resistance", "Spur Attack/Speed", "Spur Attack/Defense", "Spur Speed/Defense", "Spur Defense/Resistance", "Drive Attack", "Drive Speed", "Drive Defense", "Drive Resistance", "Threaten Attack", "Threaten Speed", "Threaten Defense", "Threaten Resistance", "Attack Ploy", "Speed Ploy", "Defense Ploy", "Resistance Ploy", "Panic Ploy", "Attack Tactic", "Defense Tactic", "Resistance Tactic"]
+#Speed Tactic, Spur Attack/Resistance, Spur Speed/Resistance
 noStaffCs = ["Attack Smoke", "Speed Smoke", "Defense Smoke", "Resistance Smoke"]
 infantryCs = ["Infantry Pulse"]
 armoredCs = ["Hone Armor", "Fortify Armor", "Goad Armor", "Ward Armor", "Armor March"]
@@ -105,14 +105,13 @@ blueTomeCs = ["Blue Tome Experience", "Blue Tome Valor"]
 bowCs = ["Bow Experience", "Bow Valor"]
 daggerCs = ["Dagger Valor"]
 #Dagger Experience
-greenTomeCs = ["Green Tome Valor"]
-#Green Tome Experience
+greenTomeCs = ["Green Tome Valor", "Green Tome Experience"]
 lanceCs = ["Lance Valor"]
 #Lance Experience
 redTomeCs = ["Red Tome Experience", "Red Tome Valor"]
 swordCs = ["Sword Experience", "Sword Valor"]
 
-normalSeals = ["Attack Ploy", "Defense Ploy", "Resistance Ploy", "HP +5", "Attack +3", "Speed +3", "Defense +3", "Resistance +3", "Brash Assault", "Breath of Life", "Close Defense", "Deflect Magic", "Deflect Missile", "Distant Defense", "Drive Defense", "Hone Attack", "Hone Speed", "Fortify Defense", "Fortify Resistance", "Fortress Resistance", "Hardy Bearing", "Initiate Seal Attack", "Initiate Seal Defense", "Initiate Seal HP", "Initiate Seal Resistance", "Initiate Seal Speed", "Panic Ploy", "Phantom Speed", "Quick Riposte", "Quickened Pulse", "Savage Blow", "Spur Attack", "Spur Speed", "Spur Defense", "Spur Resistance", "Threaten Attack", "Threaten Speed", "Obstruct", "Defense Tactic", "Squad Ace A", "Squad Ace B", "Squad Ace C", "Squad Ace D", "Squad Ace E", "Squad Ace F", "Squad Ace G", "Squad Ace H"]
+normalSeals = ["Attack Ploy", "Defense Ploy", "Resistance Ploy", "HP +5", "Attack +3", "Speed +3", "Defense +3", "Resistance +3", "Brash Assault", "Breath of Life", "Close Defense", "Deflect Magic", "Deflect Missile", "Distant Defense", "Drive Defense", "Hone Attack", "Hone Speed", "Fortify Defense", "Fortify Resistance", "Fortress Resistance", "Hardy Bearing", "Initiate Seal Attack", "Initiate Seal Defense", "Initiate Seal HP", "Initiate Seal Resistance", "Initiate Seal Speed", "Panic Ploy", "Phantom Speed", "Quick Riposte", "Quickened Pulse", "Savage Blow", "Spur Attack", "Spur Speed", "Spur Defense", "Spur Resistance", "Threaten Attack", "Threaten Speed", "Obstruct", "Defense Tactic", "Squad Ace A", "Squad Ace B", "Squad Ace C", "Squad Ace D", "Squad Ace E", "Squad Ace F", "Squad Ace G", "Squad Ace H", "Squad Ace I"]
 noStaffSeals = ["Attack Smoke", "Heavy Blade", "Poison Strike", "Seal Attack"]
 meleeSeals = ["Deflect Melee"]
 flierSeals = ["Guidance", "Iote's Shield"]
@@ -128,26 +127,31 @@ class Hero():
         self.movementType = movementType
         self.movement = {"Infantry" : 2, "Cavalry": 3, "Flier": 2, "Armored": 1}[self.movementType]
         self.experience = "Normal"
-        if self.weaponType in {"Sword", "Fire", "Dark", "Red Breath"}:
+        if self.weaponType in {"Sword", "Fire", "Dark", "Red Breath", "Red Bow"}:
             self.color = "Red"
-        elif self.weaponType in {"Axe", "Wind", "Green Breath"}:
+        elif self.weaponType in {"Axe", "Wind", "Green Breath", "Green Bow"}:
             self.color = "Green"
-        elif self.weaponType in {"Lance", "Thunder", "Light", "Blue Breath"}:
+        elif self.weaponType in {"Lance", "Thunder", "Light", "Blue Breath", "Blue Bow"}:
             self.color = "Blue"
-        elif self.weaponType in {"Bow", "Dagger", "Staff", "Colorless Breath"}:
+        elif self.weaponType in {"Colorless Bow", "Dagger", "Staff", "Colorless Breath"}:
             self.color = "Colorless"
 
         if self.weaponType in {"Red Breath", "Green Breath", "Blue Breath", "Colorless Breath"}:
             self.dragon = True
+            self.bow = False
+        elif self.weaponType in {"Colorless Bow", "Red Bow", "Green Bow", "Blue Bow"}:
+            self.dragon = False
+            self.bow = True
         else:
             self.dragon = False
-        if self.weaponType in {"Sword", "Axe", "Lance", "Bow", "Dagger"}:
+            self.bow = False
+        if self.weaponType in {"Sword", "Axe", "Lance", "Colorless Bow", "Dagger", "Red Bow", "Green Bow", "Blue Bow"}:
             self.physical = True
-        elif self.weaponType in {"Fire", "Wind", "Thunder", "Dark", "Light", "Staff", "Red Breath", "Green Breath", "Blue Breath"}:
+        elif self.weaponType in {"Fire", "Wind", "Thunder", "Dark", "Light", "Staff", "Red Breath", "Green Breath", "Blue Breath", "Colorless Breath"}:
             self.physical = False
-        if self.weaponType in {"Sword", "Axe", "Lance", "Red Breath", "Green Breath", "Blue Breath"}:
+        if self.weaponType in {"Sword", "Axe", "Lance", "Red Breath", "Green Breath", "Blue Breath", "Colorless Breath"}:
             self.melee = True
-        elif self.weaponType in {"Bow", "Dagger", "Fire", "Wind", "Thunder", "Dark", "Light", "Staff"}:
+        elif self.weaponType in {"Colorless Bow", "Dagger", "Fire", "Wind", "Thunder", "Dark", "Light", "Staff", "Red Bow", "Green Bow", "Blue Bow"}:
             self.melee = False
 
         self.damage = {True: "Physical", False: "Magical"}[self.physical]
@@ -228,12 +232,14 @@ class Hero():
 
         #C Skill
         self.Cs = normalCs[:]
-        self.weaponCs = {"Sword": swordCs, "Axe": axeCs, "Lance": lanceCs, "Bow": bowCs, "Dagger": daggerCs, "Fire": redTomeCs, "Wind": greenTomeCs, "Thunder": blueTomeCs, "Dark": redTomeCs, "Light": blueTomeCs}
+        self.weaponCs = {"Sword": swordCs, "Axe": axeCs, "Lance": lanceCs, "Dagger": daggerCs, "Fire": redTomeCs, "Wind": greenTomeCs, "Thunder": blueTomeCs, "Dark": redTomeCs, "Light": blueTomeCs}
         self.movementCs = {"Infantry": infantryCs, "Cavalry": cavalryCs, "Armored": armoredCs, "Flier": flierCs}
         if self.weaponType != "Staff":
             self.Cs.extend(noStaffCs)
             if self.dragon:
                 self.Cs.extend(dragonCs)
+            elif self.bow:
+                self.Cs.extend(bowCs)
             else:
                 self.Cs.extend(self.weaponCs[weaponType])
         self.Cs.extend(self.movementCs[movementType])
@@ -251,7 +257,7 @@ class Hero():
             self.seals.extend(armoredSeals)
         self.S = randList(self.seals)
 
-        if (self.weaponType == "Bow" and self.weapon != "-") or self.weapon == "Excalibur":
+        if (self.bow and self.weapon != "-") or self.weapon == "Excalibur":
             self.effective.append("Flier")
         elif (self.weapon.startswith("Keen") and self.weapon.endswith("wolf")) or self.weapon in {"Zanbato", "Poleaxe", "Ridersbane"}:
             self.effective.append("Calvary")
@@ -317,7 +323,7 @@ class Hero():
         #Adds weapon MT
         self.stats[Atk] += self.MT
 
-        if self.weapon in {"Brave Sword", "Brave Axe", "Brave Lance", "Brave Bow", "Dire Thunder"}:
+        if self.weapon in {"Brave Sword", "Brave Axe", "Brave Lance", "Brave Bow", "Dire Thunder", "Meisterschwert"}:
             self.stats[Spd] -= 5
         elif self.weapon == "Amiti":
             self.stats[Spd] -= 2
@@ -393,7 +399,7 @@ class Hero():
             self.stats[HP] += 5
         elif self.S in {"Attack +3", "Initiate Seal Attack", "Squad Ace E"}:
             self.stats[Atk] += 3
-        elif self.S in {"Speed +3", "Initiate Seal Speed", "Squad Ace D"}:
+        elif self.S in {"Speed +3", "Initiate Seal Speed", "Squad Ace D", "Squad Ace I"}:
             self.stats[Spd] += 3
         elif self.S in {"Defense +3", "Initiate Seal Defense", "Squad Ace B", "Squad Ace G"}:
             self.stats[Def] += 3
@@ -425,10 +431,10 @@ class Hero():
                 self.name += self.weaponType + " Mage"
                 if self.movementType == "Cavalry":
                     self.name = self.name.replace("Horseback ", "") + " Cavalier"
-            elif self.weaponType == "Bow":
-                self.name += "Archer"
+            elif self.bow:
+                self.name += color + "Archer"
                 if self.movementType == "Cavalry":
-                    self.name = "Bow Knight"
+                    self.name = color + "Bow Knight"
 
         if self.special == "Imbue" or self.special.endswith("Balm"):
             self.cooldown = 1
@@ -484,6 +490,6 @@ def randHero(weap = "-", move = "-"):
 
 if __name__== "__main__":
     randHero()
-    '''randHero(weap = "Axe")
+    '''randHero(weap = "Sword")
     randHero(move = "Infantry")
-    randHero(weap = "Axe", move = "Infantry")'''
+    randHero(weap = "Sword", move = "Infantry")'''
