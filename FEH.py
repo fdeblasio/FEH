@@ -8,7 +8,7 @@ Spd = 2
 Def = 3
 Res = 4
 
-weaponTypes = ["Sword", "Axe", "Lance", " Colorless Bow", "Fire", "Wind", "Thunder", "Staff", "Dagger", "Dark", "Light", "Red Breath", "Green Breath", "Blue Breath", "Colorless Breath", "Red Bow", "Green Bow", "Blue Bow"]
+weaponTypes = ["Sword", "Axe", "Lance", "Colorless Bow", "Fire", "Wind", "Thunder", "Staff", "Dagger", "Dark", "Light", "Red Breath", "Green Breath", "Blue Breath", "Colorless Breath", "Red Bow", "Green Bow", "Blue Bow"]
 movementTypes = ["Infantry", "Cavalry", "Flier", "Armored"]
 
 swords = [("Armorsmasher", 14), ("Brave Sword", 8), ("Firesweep Sword", 15), ("Kadomatsu", 14), ("Ruby Sword", 12), ("Silver Sword", 15), ("Slaying Edge", 14), ("Wo Dao", 13), ("Zanbato", 14)]
@@ -48,7 +48,7 @@ exclusiveDarks = [("Brynhildr", 14), ("Gleipnir", 14), ("Naglfar", 14), ("Grimoi
 exclusiveLights = [("Aura", 14), ("Thani", 14), ("Ivaldi", 14), ("Wargod's Tome", 14)]
 exclusiveBreaths = [("Great Flame", 16), ("Expiration", 16)]
 
-weapons = {"Sword": swords, "Axe": axes, "Lance": lances, "Colorless Bow": bows, "Dagger": daggers, "Fire": fires, "Wind": winds, "Thunder": thunders, "Dark": darks, "Light": lights, "Staff": staffs, "Red Breath": breaths, "Green Breath": breaths, "Blue Breath": breaths, "Red Bow": bows, "Green Bow": bows, "Blue Bows": bows}
+weapons = {"Sword": swords, "Axe": axes, "Lance": lances, "Colorless Bow": bows, "Dagger": daggers, "Fire": fires, "Wind": winds, "Thunder": thunders, "Dark": darks, "Light": lights, "Staff": staffs, "Red Breath": breaths, "Green Breath": breaths, "Blue Breath": breaths, "Colorless Breath": breaths, "Red Bow": bows, "Green Bow": bows, "Blue Bow": bows}
 
 assists = ["Ardent Sacrifice", "Draw Back", "Harsh Command", "Pivot", "Reciprocal Aid", "Reposition", "Shove", "Smite", "Swap", "Rally Attack", "Rally Speed", "Rally Defense", "Rally Resistance", "Rally Attack/Speed", "Rally Attack/Defense", "Rally Attack/Resistance", "Rally Speed/Defense", "Rally Speed/Resistance", "Rally Defense/Resistance"]
 heals = ["Martyr", "Physic", "Recover", "Rehabilitate", "Restore"]
@@ -321,93 +321,94 @@ class Hero():
             self.stats.append(self.baseStats[i] + self.growthValues[self.statGrowths[i]])
 
         #Adds weapon MT
-        self.stats[Atk] += self.MT
+        self.statAdd = [0, 0, 0, 0, 0, 0]
+        self.statAdd[Atk] += self.MT
 
         if self.weapon in {"Brave Sword", "Brave Axe", "Brave Lance", "Brave Bow", "Dire Thunder", "Meisterschwert"}:
-            self.stats[Spd] -= 5
+            self.statAdd[Spd] -= 5
         elif self.weapon == "Amiti":
-            self.stats[Spd] -= 2
+            self.statAdd[Spd] -= 2
         elif self.weapon in {"Blazing Durandal", "Great Flame", "Laevatein", "Resolute Blade", "Flame Siegmund"}:
-            self.stats[Atk] += 3
+            self.statAdd[Atk] += 3
         elif self.weapon in {"Arya's Blade", "Mulagir", "Weirding Tome", "Skadi", "Níu"}:
-            self.stats[Spd] += 3
+            self.statAdd[Spd] += 3
         elif self.weapon in {"Geirskögul", "Ivaldi", "Sinmara", "Beloved Zofia"}:
-            self.stats[Def] += 3
+            self.statAdd[Def] += 3
         elif self.weapon in {"Blizzard", "Divine Tyrfing", "Gleipnir", "Thani", "Grima's Truth"}:
-            self.stats[Res] += 3
+            self.statAdd[Res] += 3
         elif self.weapon == "Audhulma":
-            self.stats[Res] += 5
+            self.statAdd[Res] += 5
         elif self.weapon == "Cursed Lance":
-            self.stats[Atk] += 2
-            self.stats[Spd] += 2
+            self.statAdd[Atk] += 2
+            self.statAdd[Spd] += 2
 
         if self.A == "HP +5":
-            self.stats[HP] += 5
+            self.statAdd[HP] += 5
         elif self.A == "Attack +3":
-            self.stats[Atk] += 3
+            self.statAdd[Atk] += 3
         elif self.A == "Speed +3":
-            self.stats[Spd] += 3
+            self.statAdd[Spd] += 3
         elif self.A == "Defense +3":
-            self.stats[Def] += 3
+            self.statAdd[Def] += 3
         elif self.A == "Resistance +3":
-            self.stats[Res] += 3
+            self.statAdd[Res] += 3
         elif self.A == "HP/Attack":
-            self.stats[HP] += 4
-            self.stats[Atk] += 2
+            self.statAdd[HP] += 4
+            self.statAdd[Atk] += 2
         elif self.A == "HP/Speed":
-            self.stats[HP] += 4
-            self.stats[Spd] += 2
+            self.statAdd[HP] += 4
+            self.statAdd[Spd] += 2
         elif self.A == "HP/Defense":
-            self.stats[HP] += 4
-            self.stats[Def] += 2
+            self.statAdd[HP] += 4
+            self.statAdd[Def] += 2
         elif self.A == "HP/Resistance":
-            self.stats[HP] += 4
-            self.stats[Res] += 2
+            self.statAdd[HP] += 4
+            self.statAdd[Res] += 2
         elif self.A == "Attack/Speed +2":
-            self.stats[Atk] += 2
-            self.stats[Spd] += 2
+            self.statAdd[Atk] += 2
+            self.statAdd[Spd] += 2
         elif self.A == "Attack/Defense +2":
-            self.stats[Atk] += 2
-            self.stats[Def] += 2
+            self.statAdd[Atk] += 2
+            self.statAdd[Def] += 2
         elif self.A == "Attack/Resistance +2":
-            self.stats[Atk] += 2
-            self.stats[Res] += 2
+            self.statAdd[Atk] += 2
+            self.statAdd[Res] += 2
         elif self.A == "Speed/Defense +2":
-            self.stats[Spd] += 2
-            self.stats[Def] += 2
+            self.statAdd[Spd] += 2
+            self.statAdd[Def] += 2
         elif self.A == "Speed/Resistance +2":
-            self.stats[Spd] += 2
-            self.stats[Res] += 2
+            self.statAdd[Spd] += 2
+            self.statAdd[Res] += 2
         elif self.A == "Fortress Defense":
-            self.stats[Def] += 5
-            self.stats[Atk] -= 3
+            self.statAdd[Def] += 5
+            self.statAdd[Atk] -= 3
         elif self.A == "Fortress Resistance":
-            self.stats[Res] += 5
-            self.stats[Atk] -= 3
+            self.statAdd[Res] += 5
+            self.statAdd[Atk] -= 3
         elif self.A == "Fury":
-            self.stats[Atk] += 3
-            self.stats[Spd] += 3
-            self.stats[Def] += 3
-            self.stats[Res] += 3
+            self.statAdd[Atk] += 3
+            self.statAdd[Spd] += 3
+            self.statAdd[Def] += 3
+            self.statAdd[Res] += 3
         elif self.A == "Life and Death":
-            self.stats[Atk] += 5
-            self.stats[Spd] += 5
-            self.stats[Def] -= 5
-            self.stats[Res] -= 5
+            self.statAdd[Atk] += 5
+            self.statAdd[Spd] += 5
+            self.statAdd[Def] -= 5
+            self.statAdd[Res] -= 5
 
         if self.S in {"HP +5", "Initiate Seal HP", "Squad Ace A", "Squad Ace F"}:
-            self.stats[HP] += 5
+            self.statAdd[HP] += 5
         elif self.S in {"Attack +3", "Initiate Seal Attack", "Squad Ace E"}:
-            self.stats[Atk] += 3
+            self.statAdd[Atk] += 3
         elif self.S in {"Speed +3", "Initiate Seal Speed", "Squad Ace D", "Squad Ace I"}:
-            self.stats[Spd] += 3
+            self.statAdd[Spd] += 3
         elif self.S in {"Defense +3", "Initiate Seal Defense", "Squad Ace B", "Squad Ace G"}:
-            self.stats[Def] += 3
+            self.statAdd[Def] += 3
         elif self.S in {"Resistance +3", "Initiate Seal Resistance", "Squad Ace C", "Squad Ace H"}:
-            self.stats[Res] += 3
+            self.statAdd[Res] += 3
         elif self.S == "Fortress Resistance":
-            self.stats[Res] += 5
-            self.stats[Atk] -= 3
+            self.statAdd[Res] += 5
+            self.statAdd[Atk] -= 3
 
         self.name = ""
         if self.weaponType in {"Sword", "Axe", "Lance"}:
@@ -432,9 +433,9 @@ class Hero():
                 if self.movementType == "Cavalry":
                     self.name = self.name.replace("Horseback ", "") + " Cavalier"
             elif self.bow:
-                self.name += color + "Archer"
+                self.name += self.color + " Archer"
                 if self.movementType == "Cavalry":
-                    self.name = color + "Bow Knight"
+                    self.name = self.color + " Bow Knight"
 
         if self.special == "Imbue" or self.special.endswith("Balm"):
             self.cooldown = 1
@@ -467,7 +468,7 @@ class Hero():
             print self.skillString[i] + ":", self.skills[i]
         print
         for i in range(len(self.stats)):
-            print self.statString[i], self.stats[i], "\tBase:", self.baseStats[i], "\tGrowth:", self.statGrowths[i]
+            print self.statString[i], self.stats[i], "\tBase:", self.baseStats[i], "\tGrowth:", self.statGrowths[i], "\tTotal:", self.stats[i] + self.statAdd[i], "(" + str(self.statAdd[i]) +  ")"
         if len(self.effective) > 0:
             print
             eff = ""
