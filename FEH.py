@@ -18,7 +18,7 @@ lances = [("Berkut's Lance", 14), ("Brave Lance", 8), ("Carrot Lance", 13), ("De
 bows = [("Assassin's Bow", 11), ("Brave Bow", 7), ("Clarisse's Bow", 11), ("Cupid Arrow", 11), ("Firesweep Bow", 11), ("Guard Bow", 12), ("Hama Ya", 12), ("Monstrous Bow", 12), ("Refreshing Bolt", 12), ("Silver Bow", 13), ("Slaying Bow", 12), ("Gratia", 12)]
 daggers = [("Dancer's Fan", 10), ("Kagami Mochi", 12), ("Kitty Paddle", 8), ("Poison Dagger", 5), ("Rogue Dagger", 7), ("Seashell", 10), ("Silver Dagger", 10), ("Smoke Dagger", 9), ("Lethal Carrot", 12)]
 fires = [("Bolganone", 13), ("Candelabra", 12)]
-winds = [("Dancer's Ring", 12), ("Green Egg", 11), ("Gronnblade", 13), ("Gronnowl", 10), ("Gronnraven", 11), ("Keen Gronnwolf", 12), ("Rexcalibur", 13), ("Spectral Tome", 12), ("Green Gift", 12)]
+winds = [("Dancer's Ring", 12), ("Green Egg", 11), ("Gronnblade", 13), ("Gronnowl", 10), ("Gronnraven", 11), ("Keen Gronnwolf", 12), ("Rexcalibur", 13), ("Hibiscus Tome", 12) ("Spectral Tome", 12), ("Green Gift", 12)]
 #Gronnserpent
 thunders = [("Thoron", 13)]
 staffs = [("Absorb", 7), ("Candlelight", 11), ("Fear", 12), ("Gravity", 10), ("Pain", 10), ("Panic", 11), ("Slow", 12)]
@@ -111,8 +111,8 @@ lanceCs = ["Lance Valor"]
 redTomeCs = ["Red Tome Experience", "Red Tome Valor"]
 swordCs = ["Sword Experience", "Sword Valor"]
 
-normalSeals = ["Attack Ploy", "Defense Ploy", "Resistance Ploy", "HP +5", "Attack +3", "Speed +3", "Defense +3", "Resistance +3", "Brash Assault", "Breath of Life", "Close Defense", "Deflect Magic", "Deflect Missile", "Distant Defense", "Drive Defense", "Hone Attack", "Hone Speed", "Fortify Defense", "Fortify Resistance", "Fortress Resistance", "Hardy Bearing", "Initiate Seal Attack", "Initiate Seal Defense", "Initiate Seal HP", "Initiate Seal Resistance", "Initiate Seal Speed", "Panic Ploy", "Phantom Speed", "Quick Riposte", "Quickened Pulse", "Savage Blow", "Spur Attack", "Spur Speed", "Spur Defense", "Spur Resistance", "Threaten Attack", "Threaten Speed", "Obstruct", "Defense Tactic", "Squad Ace A", "Squad Ace B", "Squad Ace C", "Squad Ace D", "Squad Ace E", "Squad Ace F", "Squad Ace G", "Squad Ace H", "Squad Ace I"]
-noStaffSeals = ["Attack Smoke", "Heavy Blade", "Poison Strike", "Seal Attack"]
+normalSeals = ["Attack Ploy", "Defense Ploy", "Resistance Ploy", "HP +5", "Attack +3", "Speed +3", "Defense +3", "Resistance +3", "Brash Assault", "Breath of Life", "Close Defense", "Deflect Magic", "Deflect Missile", "Distant Defense", "Drive Attack", "Drive Defense", "Hone Attack", "Hone Speed", "Fortify Defense", "Fortify Resistance", "Fortress Defense", "Fortress Resistance", "Hardy Bearing", "Initiate Seal Attack", "Initiate Seal Defense", "Initiate Seal HP", "Initiate Seal Resistance", "Initiate Seal Speed", "Panic Ploy", "Phantom Speed", "Quick Riposte", "Quickened Pulse", "Savage Blow", "Spur Attack", "Spur Speed", "Spur Defense", "Spur Resistance", "Threaten Attack", "Threaten Speed", "Obstruct", "Defense Tactic", "Squad Ace A", "Squad Ace B", "Squad Ace C", "Squad Ace D", "Squad Ace E", "Squad Ace F", "Squad Ace G", "Squad Ace H", "Squad Ace I"]
+noStaffSeals = ["Attack Smoke", "Heavy Blade", "Poison Strike", "Seal Attack", "Seal Speed"]
 meleeSeals = ["Deflect Melee"]
 flierSeals = ["Guidance", "Iote's Shield"]
 armoredSeals = ["Armored Boots"]
@@ -406,6 +406,9 @@ class Hero():
             self.statAdd[Def] += 3
         elif self.S in {"Resistance +3", "Initiate Seal Resistance", "Squad Ace C", "Squad Ace H"}:
             self.statAdd[Res] += 3
+        elif self.S == "Fortress Defense":
+            self.statAdd[Def] += 5
+            self.statAdd[Atk] -= 3
         elif self.S == "Fortress Resistance":
             self.statAdd[Res] += 5
             self.statAdd[Atk] -= 3
