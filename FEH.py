@@ -14,17 +14,17 @@ movementTypes = ["Infantry", "Cavalry", "Flier", "Armored"]
 swords = [("Armorsmasher", 14), ("Brave Sword", 8), ("Firesweep Sword", 15), ("Kadomatsu", 14), ("Ruby Sword", 12), ("Silver Sword", 15), ("Slaying Edge", 14), ("Wo Dao", 13), ("Zanbato", 14)]
 axes = [("Brave Axe", 8), ("Carrot Axe", 13), ("Emerald Axe", 12), ("Hagoita", 14), ("Handbell", 14), ("Legion's Axe", 14), ("Lilith Floatie", 14), ("Melon Crusher", 14), ("Sack o' Gifts", 14), ("Silver Axe", 15), ("Slaying Axe", 14), ("Slaying Hammer", 14), ("Poleaxe", 14), ("Giant Spoon", 13)]
 #Firesweep Axe
-lances = [("Berkut's Lance", 14), ("Brave Lance", 8), ("Carrot Lance", 13), ("Deft Harpoon", 14), ("Firesweep Lance", 15), ("First Bite", 14), ("Ridersbane", 14), ("Sapphire Lance", 12), ("Silver Lance", 15), ("Slaying Lance", 14), ("Slaying Spear", 14), ("Tannenboom!", 14), ("Casa Blanca", 12)]
+lances = [("Berkut's Lance", 14), ("Brave Lance", 8), ("Carrot Lance", 13), ("Deft Harpoon", 14), ("Firesweep Lance", 15), ("First Bite", 14), ("Ridersbane", 14), ("Sapphire Lance", 12), ("Silver Lance", 15), ("Slaying Lance", 14), ("Slaying Spear", 14), ("Tannenboom!", 14), ("Casa Blanca", 14), ("Harmonic Lance", 13)]
 bows = [("Assassin's Bow", 11), ("Brave Bow", 7), ("Clarisse's Bow", 11), ("Cupid Arrow", 11), ("Firesweep Bow", 11), ("Guard Bow", 12), ("Hama Ya", 12), ("Monstrous Bow", 12), ("Refreshing Bolt", 12), ("Silver Bow", 13), ("Slaying Bow", 12), ("Gratia", 12)]
-daggers = [("Dancer's Fan", 10), ("Kagami Mochi", 12), ("Kitty Paddle", 8), ("Poison Dagger", 5), ("Rogue Dagger", 7), ("Seashell", 10), ("Silver Dagger", 10), ("Smoke Dagger", 9), ("Lethal Carrot", 12)]
+daggers = [("Dancer's Fan", 10), ("Kagami Mochi", 12), ("Kitty Paddle", 8), ("Poison Dagger", 5), ("Rogue Dagger", 7), ("Seashell", 10), ("Silver Dagger", 10), ("Smoke Dagger", 9), ("Lethal Carrot", 12), ("Barb Shuriken", 12)]
 fires = [("Bolganone", 13), ("Candelabra", 12)]
-winds = [("Dancer's Ring", 12), ("Green Egg", 11), ("Gronnblade", 13), ("Gronnowl", 10), ("Gronnraven", 11), ("Keen Gronnwolf", 12), ("Rexcalibur", 13), ("Hibiscus Tome", 12) ("Spectral Tome", 12), ("Green Gift", 12)]
+winds = [("Dancer's Ring", 12), ("Green Egg", 11), ("Gronnblade", 13), ("Gronnowl", 10), ("Gronnraven", 11), ("Keen Gronnwolf", 12), ("Rexcalibur", 13), ("Hibiscus Tome", 12), ("Spectral Tome", 12), ("Green Gift", 12)]
 #Gronnserpent
 thunders = [("Thoron", 13)]
 staffs = [("Absorb", 7), ("Candlelight", 11), ("Fear", 12), ("Gravity", 10), ("Pain", 10), ("Panic", 11), ("Slow", 12)]
 darks = [("Fenrir", 13)]
 lights = [("Shine", 13), ("Blessed Bouqet", 12), ("Blue Gift", 12)]
-breaths = [("Dark Breath", 13), ("Flametongue", 15), ("Light Breath", 13), ("Lightning Breath", 11)]
+breaths = [("Dark Breath", 13), ("Flametongue", 15), ("Light Breath", 13), ("Lightning Breath", 11), ("Water Breath", 14)]
 
 reds = [("Keen Rauðrwolf", 12), ("Rauðrblade", 13), ("Rauðrowl", 10), ("Rauðrraven", 11), ("Tomato Tome", 12)]
 #Rauðrserpent
@@ -38,7 +38,7 @@ lights.extend(blues)
 exclusiveSwords = [("Fólkvangr", 16), ("Falchion", 16), ("Ragnell", 16), ("Raijinto", 16), ("Alondite", 16), ("Amiti", 11), ("Durandal", 16), ("Blazing Durandal", 16), ("Audhulma", 16), ("Arya's Blade", 16), ("Binding Blade", 16), ("Tyrfing", 16), ("Divine Tyrfing", 16), ("Dark Greatsword", 16), ("Eckesachs", 16), ("Laevatein", 16), ("Mystletainn", 16), ("Regal Blade", 16), ("Resolute Blade", 16), ("Siegfried", 16), ("Sieglinde", 16), ("Sol Katti", 16), ("Yato", 16), ("Wing Sword", 16), ("Beloved Zofia", 16), ("Níu", 16), ("Nameless Blade", 16), ("Light Brand", 16), ("Meisterschwert", 11)]
 exclusiveAxes = [("Armads", 16), ("Basilikos", 16), ("Hauteclere", 16), ("Nóatún", 16), ("Sinmara", 16), ("Stout Tomahawk", 16), ("Urvan", 16), ("Urðr", 16), ("Berserk Armads", 16)]
 exclusiveLances = [("Fensalir", 16), ("Leiptr", 16), ("Siegmund", 16), ("Gradivus", 16), ("Cursed Lance", 16), ("Geirskögul", 16), ("Vidofnir", 16), ("Bright Naginata", 16), ("Hinoka's Spear", 16), ("Flame Siegmund", 16)]
-exclusiveBows = [("Fujin Yumi", 14), ("Mulagir", 14), ("Nidhogg", 14), ("Parthia", 14), ("Skadi", 14)]
+exclusiveBows = [("Fujin Yumi", 14), ("Mulagir", 14), ("Nidhogg", 14), ("Parthia", 14), ("Skadi", 14), ("Warrior Princess", 14)]
 exclusiveDaggers = [("Deathly Dagger", 11), ("Peshkatz", 14), ("Felicia's Plate", 14)]
 exclusiveFires = [("Cymbeline", 14), ("Valflame", 14), ("Ragnarok", 14), ("Forblaze", 14)]
 exclusiveWinds = [("Élivágar", 14), ("Excalibur", 14), ("Naga", 14), ("Divine Naga", 14), ("Dark Excalibur", 14), ("Blizzard", 14), ("Wind's Brand", 14), ("Munnin's Egg", 14), ("Thunderhead", 14)]
@@ -65,7 +65,7 @@ normalAs = ["HP +5", "Attack +3", "Speed +3", "Defense +3", "Resistance +3", "HP
 meleeAs = ["Distant Counter"]
 rangedAs = ["Close Counter"]
 noStaffAs = ["Fury", "Life and Death", "Heavy Blade", "Death Blow", "Darting Blow", "Armored Blow", "Warding Blow", "Swift Sparrow", "Sturdy Blow", "Mirror Strike", "Steady Blow", "Swift Strike", "Bracing Blow", "Fierce Stance", "Darting Stance", "Sturdy Stance", "Mirror Stance", "Swift Stance"]
-#Speed Stance, Atk/Spd Stance, Spd/Def Stance, Spd/Res Stance, Def/Res Stance
+#Atk/Spd Stance, Spd/Def Stance, Spd/Res Stance, Def/Res Stance
 cavalryAs = ["Grani's Shield"]
 flierAs = ["Iote's Shield"]
 armoredAs = ["Svalinn Shield"]
@@ -97,9 +97,8 @@ noStaffCs = ["Attack Smoke", "Speed Smoke", "Defense Smoke", "Resistance Smoke"]
 infantryCs = ["Infantry Pulse"]
 armoredCs = ["Hone Armor", "Fortify Armor", "Goad Armor", "Ward Armor", "Armor March"]
 cavalryCs = ["Hone Cavalry", "Fortify Cavalry", "Goad Cavalry", "Ward Cavalry"]
-flierCs = ["Hone Fliers", "Fortify Fliers", "Goad Fliers", "Ward Fliers", "Guidance"]
-dragonCs = ["Hone Dragons", "Fortify Dragons", "Ward Dragons"]
-#Goad Dragons
+flierCs = ["Hone Fliers", "Fortify Fliers", "Goad Fliers", "Ward Fliers", "Guidance", "Flier Guidance"]
+dragonCs = ["Hone Dragons", "Fortify Dragons", "Goad Dragons", "Ward Dragons"]
 axeCs = ["Axe Experience", "Axe Valor"]
 blueTomeCs = ["Blue Tome Experience", "Blue Tome Valor"]
 bowCs = ["Bow Experience", "Bow Valor"]
@@ -161,7 +160,7 @@ class Hero():
         self.weaponTuple = randList(weapons[self.weaponType])
         self.weapon = self.weaponTuple[0]
         self.MT = self.weaponTuple[1]
-        self.effective = []
+        self.effective = set()
 
         #Assist
         if self.weaponType == "Staff":
@@ -258,20 +257,23 @@ class Hero():
         self.S = randList(self.seals)
 
         if (self.bow and self.weapon != "-") or self.weapon == "Excalibur":
-            self.effective.append("Flier")
+            self.effective.add("Flier")
         elif (self.weapon.startswith("Keen") and self.weapon.endswith("wolf")) or self.weapon in {"Zanbato", "Poleaxe", "Ridersbane"}:
-            self.effective.append("Calvary")
+            self.effective.add("Calvary")
         elif self.weapon in {"Armorsmasher", "Slaying Hammer", "Slaying Spear"}:
-            self.effective.append("Armored")
+            self.effective.add("Armored")
         elif self.weapon in {"Falchion", "Naga", "Divine Naga"}:
-            self.effective.append("Dragon")
+            self.effective.add("Dragon")
         elif self.weapon == "Poison Dagger":
-            self.effective.append("Infantry")
+            self.effective.add("Infantry")
         elif self.weapon == "Kitty Paddle":
-            self.effective.append("Mage")
+            self.effective.add("Mage")
         elif self.weapon in {"Thani", "Wing Sword"}:
-            self.effective.append("Calvary")
-            self.effective.append("Armored")
+            self.effective.add("Calvary")
+            self.effective.add("Armored")
+        elif self.weapon == "Warrior Princess":
+            self.effective.add("Flier")
+            self.effective.add("Armored")
 
         #neutral IVs for now
         #47 - 1 for each stat
@@ -330,7 +332,7 @@ class Hero():
             self.statAdd[Spd] -= 2
         elif self.weapon in {"Blazing Durandal", "Great Flame", "Laevatein", "Resolute Blade", "Flame Siegmund"}:
             self.statAdd[Atk] += 3
-        elif self.weapon in {"Arya's Blade", "Mulagir", "Weirding Tome", "Skadi", "Níu"}:
+        elif self.weapon in {"Arya's Blade", "Mulagir", "Weirding Tome", "Skadi", "Níu", "Warrior Princess"}:
             self.statAdd[Spd] += 3
         elif self.weapon in {"Geirskögul", "Ivaldi", "Sinmara", "Beloved Zofia"}:
             self.statAdd[Def] += 3
@@ -452,7 +454,7 @@ class Hero():
             self.cooldown = 5
         if self.weapon in {"Rauðrblade", "Gronnblade", "Blárblade", "Lightning Breath"}:
             self.cooldown += 1
-        elif self.weapon in {"Slaying Edge", "Slaying Axe", "Slaying Lance", "Slaying Bow", "Hauteclere", "Mystletainn", "Cursed Lance", "Urvan", "Audhulma", "Basilikos", "Kagami Mochi", "Berserk Armads"}:
+        elif self.weapon in {"Slaying Edge", "Slaying Axe", "Slaying Lance", "Slaying Bow", "Hauteclere", "Mystletainn", "Cursed Lance", "Urvan", "Audhulma", "Basilikos", "Kagami Mochi", "Berserk Armads", "Nameless Blade", "Barb Shuriken"}:
             self.cooldown -= 1
         self.special += " (Cooldown: %d)" % self.cooldown
 
