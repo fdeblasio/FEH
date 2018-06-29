@@ -36,7 +36,7 @@ thunders.extend(blues)
 lights.extend(blues)
 
 exclusiveSwords = [("Fólkvangr", 16), ("Falchion", 16), ("Ragnell", 16), ("Raijinto", 16), ("Alondite", 16), ("Amiti", 11), ("Durandal", 16), ("Blazing Durandal", 16), ("Audhulma", 16), ("Arya's Blade", 16), ("Binding Blade", 16), ("Tyrfing", 16), ("Divine Tyrfing", 16), ("Dark Greatsword", 16), ("Eckesachs", 16), ("Laevatein", 16), ("Mystletainn", 16), ("Regal Blade", 16), ("Resolute Blade", 16), ("Siegfried", 16), ("Sieglinde", 16), ("Sol Katti", 16), ("Yato", 16), ("Wing Sword", 16), ("Beloved Zofia", 16), ("Níu", 16), ("Sealed Falchion", 16), ("Nameless Blade", 16), ("Light Brand", 16), ("Meisterschwert", 11), ("Dark Mystletainn", 16), ("Vassal's Blade", 16)]
-exclusiveAxes = [("Armads", 16), ("Basilikos", 16), ("Hauteclere", 16), ("Nóatún", 16), ("Sinmara", 16), ("Stout Tomahawk", 16), ("Urvan", 16), ("Urðr", 16), ("Berserk Armads", 16), ("Camilla's Axe", 16), ("Býleistr", 16)]
+exclusiveAxes = [("Armads", 16), ("Basilikos", 16), ("Hauteclere", 16), ("Nóatún", 16), ("Sinmara", 16), ("Stout Tomahawk", 16), ("Urvan", 16), ("Urðr", 16), ("Berserk Armads", 16), ("Camilla's Axe", 16), ("Býleistr", 16), ("Thunder Armads", 16)]
 exclusiveLances = [("Fensalir", 16), ("Leiptr", 16), ("Siegmund", 16), ("Gradivus", 16), ("Cursed Lance", 16), ("Geirskögul", 16), ("Vidofnir", 16), ("Bright Naginata", 16), ("Hinoka's Spear", 16), ("Flame Siegmund", 16), ("Rhomphaia", 16)]
 exclusiveBows = [("Fujin Yumi", 14), ("Mulagir", 14), ("Nidhogg", 14), ("Parthia", 14), ("Skadi", 14), ("Warrior Princess", 14), ("Swift Mulagir", 14)]
 exclusiveDaggers = [("Deathly Dagger", 11), ("Peshkatz", 14), ("Felicia's Plate", 14)]
@@ -99,6 +99,7 @@ infantryCs = ["Infantry Pulse", "Infantry Rush"]
 armoredCs = ["Hone Armor", "Fortify Armor", "Goad Armor", "Ward Armor", "Armor March"]
 cavalryCs = ["Hone Cavalry", "Fortify Cavalry", "Goad Cavalry", "Ward Cavalry"]
 flierCs = ["Hone Fliers", "Fortify Fliers", "Goad Fliers", "Ward Fliers", "Guidance", "Flier Guidance"]
+exclusiveCs = ["Ostia's Pulse"]
 dragonCs = ["Hone Dragons", "Fortify Dragons", "Goad Dragons", "Ward Dragons"]
 axeCs = ["Axe Experience", "Axe Valor"]
 blueTomeCs = ["Blue Tome Experience", "Blue Tome Valor"]
@@ -344,9 +345,9 @@ class Hero:
             self.statAdd[Spd] -= 2
         elif self.weapon in {"Blazing Durandal", "Great Flame", "Laevatein", "Resolute Blade", "Flame Siegmund", "Nifl Frostflowers"}:
             self.statAdd[Atk] += 3
-        elif self.weapon in {"Arya's Blade", "Mulagir", "Weirding Tome", "Skadi", "Níu", "Warrior Princess", "Múspell Fireposy", "Giga Excalibur"}:
+        elif self.weapon in {"Arya's Blade", "Mulagir", "Weirding Tome", "Skadi", "Níu", "Warrior Princess", "Múspell Fireposy", "Giga Excalibur", "Fruit of Iðunn"}:
             self.statAdd[Spd] += 3
-        elif self.weapon in {"Geirskögul", "Ivaldi", "Sinmara", "Beloved Zofia"}:
+        elif self.weapon in {"Geirskögul", "Ivaldi", "Sinmara", "Beloved Zofia", "Thunder Armads"}:
             self.statAdd[Def] += 3
         elif self.weapon in {"Blizzard", "Divine Tyrfing", "Gleipnir", "Thani", "Grima's Truth", "Swift Mulagir", "Loptous"}:
             self.statAdd[Res] += 3
