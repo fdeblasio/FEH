@@ -8,7 +8,7 @@ Spd = 2
 Def = 3
 Res = 4
 
-weaponTypes = ["Sword", "Axe", "Lance", "Colorless Bow", "Fire", "Wind", "Thunder", "Staff", "Dagger", "Dark", "Light", "Red Breath", "Green Breath", "Blue Breath", "Colorless Breath", "Red Bow", "Green Bow", "Blue Bow"]
+weaponTypes = ["Sword", "Axe", "Lance", "Colorless Bow", "Fire", "Wind", "Thunder", "Staff", "Colorless Dagger", "Dark", "Light", "Red Breath", "Green Breath", "Blue Breath", "Colorless Breath", "Red Bow", "Green Bow", "Blue Bow", "Red Dagger", "Green Dagger", "Blue Dagger"]
 movementTypes = ["Infantry", "Cavalry", "Flier", "Armored"]
 
 swords = {"Silver Sword": 15, "Slaying Edge": 14, "Brave Sword": 8, "Ruby Sword": 12, "Armorsmasher": 14, "Zanbato": 14, "Wo Dao": 13, "Firesweep Sword": 15, "Safeguard": 14, "Kadomatsu": 14}
@@ -16,7 +16,7 @@ axes = {"Silver Axe": 15, "Slaying Axe": 14, "Brave Axe": 8, "Emerald Axe": 12, 
 #Firesweep Axe
 lances = {"Silver Lance": 15, "Slaying Lance": 14, "Brave Lance": 8, "Sapphire Lance": 12, "Slaying Spear": 14, "Ridersbane": 14, "Firesweep Lance": 15, "Harmonic Lance": 13, "Reprisal Lance": 14, "Berkut's Lance": 14, "Carrot Lance": 13, "First Bite": 14, "Deft Harpoon": 14, "Tannenboom!": 14, "Casa Blanca": 14, "Shell Lance": 14}
 bows = {"Silver Bow": 13, "Slaying Bow": 12, "Brave Bow": 7, "Firesweep Bow": 11, "Assassin's Bow": 11, "Guard Bow": 12, "Clarisse's Bow": 11, "Cupid Arrow": 11, "Refreshing Bolt": 12, "Monstrous Bow": 12, "Hama Ya": 12, "Gratia": 12, "Cocobow": 12, "Fishie Bow": 12}
-daggers = {"Silver Dagger": 10, "Rogue Dagger": 7, "Smoke Dagger": 9, "Poison Dagger": 5, "Barb Shuriken": 12, "The Cleaner": 12, "Seashell": 10, "Dancer's Fan": 10, "Kitty Paddle": 8, "Kagami Mochi": 12, "Lethal Carrot": 12, "Starfish": 12}
+daggers = {"Silver Dagger": 10, "Rogue Dagger": 7, "Smoke Dagger": 9, "Poison Dagger": 5, "Barb Shuriken": 12, "The Cleaner": 12, "Seashell": 10, "Dancer's Fan": 10, "Kitty Paddle": 8, "Kagami Mochi": 12, "Lethal Carrot": 12, "Starfish": 12, "Dusk Uchiwa": 12, "Cloud Maiougi": 12, "Dawn Maiougi": 12}
 fires = {"Bolganone": 13}
 winds = {"Rexcalibur": 13, "Gronnblade": 13, "Gronnraven": 11, "Keen Gronnwolf": 12, "Gronnowl": 10, "Green Egg": 11, "Hibiscus Tome": 12, "Dancer's Ring": 12, "Spectral Tome": 12, "Green Gift": 12}
 #Gronnserpent
@@ -40,7 +40,7 @@ exclusiveAxes = {"Armads": 16, "Basilikos": 16, "Hauteclere": 16, "Nóatún": 16
 exclusiveLances = {"Fensalir": 16, "Leiptr": 16, "Siegmund": 16, "Gradivus": 16, "Cursed Lance": 16, "Geirskögul": 16, "Vidofnir": 16, "Bright Naginata": 16, "Hinoka's Spear": 16, "Flame Siegmund": 16, "Rhomphaia": 16, "Dauntless Lance": 16}
 exclusiveBows = {"Fujin Yumi": 14, "Mulagir": 14, "Nidhogg": 14, "Parthia": 14, "Skadi": 14, "Warrior Princess": 14, "Swift Mulagir": 14, "Thögn": 14}
 exclusiveDaggers = {"Deathly Dagger": 11, "Peshkatz": 14, "Felicia's Plate": 14}
-exclusiveFires = {"Cymbeline": 14, "Valflame": 14, "Ragnarok": 14, "Forblaze": 14, "Múspell Fireposy": 14, "Fruit of Iðunn": 14, "Reese's Tome": 14}
+exclusiveFires = {"Cymbeline": 14, "Valflame": 14, "Ragnarok": 14, "Forblaze": 14, "Múspell Fireposy": 14, "Fruit of Iðunn": 14, "Reese's Tome": 14, "Dawn Suzu": 14}
 exclusiveWinds = {"Élivágar": 14, "Excalibur": 14, "Naga": 14, "Divine Naga": 14, "Dark Excalibur": 14, "Blizzard": 14, "Wind's Brand": 14, "Munnin's Egg": 14, "Thunderhead": 14, "Nifl Frostflowers": 14, "Giga Excalibur": 14}
 exclusiveThunders = {"Valaskjálf": 14, "Dire Thunder": 9, "Dark Aura": 14, "Weirding Tome": 14, "Huggin's Egg": 14, "Mjölnir": 14}
 exclusiveStaffs = {"Thökk": 14}
@@ -48,7 +48,7 @@ exclusiveDarks = {"Brynhildr": 14, "Gleipnir": 14, "Naglfar": 14, "Grimoire": 14
 exclusiveLights = {"Aura": 14, "Thani": 14, "Ivaldi": 14, "Wargod's Tome": 14}
 exclusiveBreaths = {"Great Flame": 16, "Expiration": 16, "Breath of Fog": 16, "Summer Breath": 16}
 
-weapons = {"Sword": swords, "Axe": axes, "Lance": lances, "Colorless Bow": bows, "Dagger": daggers, "Fire": fires, "Wind": winds, "Thunder": thunders, "Dark": darks, "Light": lights, "Staff": staffs, "Red Breath": breaths, "Green Breath": breaths, "Blue Breath": breaths, "Colorless Breath": breaths, "Red Bow": bows, "Green Bow": bows, "Blue Bow": bows}
+weapons = {"Sword": swords, "Axe": axes, "Lance": lances, "Colorless Bow": bows, "Colorless Dagger": daggers, "Fire": fires, "Wind": winds, "Thunder": thunders, "Dark": darks, "Light": lights, "Staff": staffs, "Red Breath": breaths, "Green Breath": breaths, "Blue Breath": breaths, "Colorless Breath": breaths, "Red Bow": bows, "Green Bow": bows, "Blue Bow": bows, "Red Dagger": daggers, "Green Dagger": daggers, "Blue Dagger": daggers}
 
 assists = ["Draw Back", "Pivot", "Reposition", "Swap", "Ardent Sacrifice", "Reciprocal Aid", "Shove", "Smite", "Harsh Command", "Rally Attack", "Rally Speed", "Rally Defense", "Rally Resistance", "Rally Attack/Speed", "Rally Attack/Defense", "Rally Attack/Resistance", "Rally Speed/Defense", "Rally Speed/Resistance", "Rally Defense/Resistance"]
 heals = ["Martyr", "Physic", "Recover", "Rehabilitate", "Restore"]
@@ -88,12 +88,12 @@ armoredBs = ["Bold Fighter", "Vengeful Fighter", "Wary Fighter"]
 noArmoredBs = ["Pass"]
 noTomeNoStaffBs = ["Cancel Affinity"]
 meleeInfantryArmoredBs = ["Shield Pulse", "Wrath"]
-singDanceBs = ["Blaze Dance", "Gale Dance", "Earth Dance", "Torrent Dance", "Firestorm Dance", "Geyser Dance"]
-#Atk/Def Dance, Atk/Res Dance, Spd/Def Dance, Spd/Res Dance
+singDanceBs = ["Blaze Dance", "Gale Dance", "Earth Dance", "Torrent Dance", "Firestorm Dance", "Fireflood Dance", "Rockslide Dance", "Geyser Dance"]
+#Atk/Def Dance, Spd/Res Dance
 exclusiveBs = ["Follow-Up Ring", "Recover Ring", "Beorc's Blessing", "Crusader's Ward", "Sacae's Blessing", "Warp Powder", "Chilling Seal", "Solar Brace", "S Drink", "Bushido"]
 
-normalCs = ["Breath of Life", "Savage Blow", "Hone Attack", "Hone Speed", "Fortify Defense", "Fortify Resistance", "Spur Attack", "Spur Speed", "Spur Defense", "Spur Resistance", "Spur Attack/Speed", "Spur Attack/Defense", "Spur Attack/Resistance", "Spur Speed/Defense", "Spur Defense/Resistance", "Drive Attack", "Drive Speed", "Drive Defense", "Drive Resistance", "Threaten Attack", "Threaten Speed", "Threaten Defense", "Threaten Resistance", "Attack Ploy", "Speed Ploy", "Defense Ploy", "Resistance Ploy", "Panic Ploy", "Attack Tactic", "Speed Tactic", "Defense Tactic", "Resistance Tactic", "Odd Attack Wave", "Even Speed Wave", "Odd Resistance Wave", "Distant Guard"]
-#Spur Speed/Resistance, Even Attack Wave, Odd Speed Wave, Odd/Even Defense Wave, Even Resistance Wave, #Close Guard
+normalCs = ["Breath of Life", "Savage Blow", "Hone Attack", "Hone Speed", "Fortify Defense", "Fortify Resistance", "Spur Attack", "Spur Speed", "Spur Defense", "Spur Resistance", "Spur Attack/Speed", "Spur Attack/Defense", "Spur Attack/Resistance", "Spur Speed/Defense", "Spur Speed/Resistance", "Spur Defense/Resistance", "Drive Attack", "Drive Speed", "Drive Defense", "Drive Resistance", "Threaten Attack", "Threaten Speed", "Threaten Defense", "Threaten Resistance", "Attack Ploy", "Speed Ploy", "Defense Ploy", "Resistance Ploy", "Panic Ploy", "Attack Tactic", "Speed Tactic", "Defense Tactic", "Resistance Tactic", "Odd Attack Wave", "Even Speed Wave", "Odd Defense Wave", "Odd Resistance Wave", "Distant Guard"]
+#Even Attack Wave, Odd Speed Wave, Even Defense Wave, Even Resistance Wave, #Close Guard
 noStaffCs = ["Attack Smoke", "Speed Smoke", "Defense Smoke", "Resistance Smoke"]
 infantryCs = ["Infantry Pulse", "Infantry Rush"]
 armoredCs = ["Hone Armor", "Fortify Armor", "Goad Armor", "Ward Armor", "Armor March"]
@@ -114,7 +114,7 @@ swordCs = ["Sword Experience", "Sword Valor"]
 staffCs = ["Staff Valor"]
 #Staff Experience
 
-normalSeals = ["HP +5", "Attack +3", "Speed +3", "Defense +3", "Resistance +3", "Attack/Defense +2", "HP/Resistance", "Attack Ploy", "Speed Ploy", "Defense Ploy", "Resistance Ploy", "Panic Ploy",  "Brash Assault", "Breath of Life", "Close Defense", "Distant Defense", "Deflect Magic", "Deflect Missile", "Drive Attack", "Drive Defense", "Hone Attack", "Hone Speed", "Fortify Defense", "Fortify Resistance", "Fortress Defense", "Fortress Resistance", "Hardy Bearing", "Phantom Speed", "Quick Riposte", "Quickened Pulse", "Savage Blow", "Spur Attack", "Spur Speed", "Spur Defense", "Spur Resistance", "Threaten Attack", "Threaten Speed", "Obstruct", "Defense Tactic", "Resistance Tactic", "Initiate Seal Attack", "Initiate Seal Defense", "Initiate Seal HP", "Initiate Seal Resistance", "Initiate Seal Speed", "Squad Ace A", "Squad Ace B", "Squad Ace C", "Squad Ace D", "Squad Ace E", "Squad Ace F", "Squad Ace G", "Squad Ace H", "Squad Ace I", "Squad Ace J", "Squad Ace K", "Squad Ace L"]
+normalSeals = ["HP +5", "Attack +3", "Speed +3", "Defense +3", "Resistance +3", "Attack/Defense +2", "HP/Resistance", "Attack Ploy", "Speed Ploy", "Defense Ploy", "Resistance Ploy", "Panic Ploy",  "Brash Assault", "Breath of Life", "Close Defense", "Distant Defense", "Deflect Magic", "Deflect Missile", "Drive Attack", "Drive Defense", "Hone Attack", "Hone Speed", "Fortify Defense", "Fortify Resistance", "Fortress Defense", "Fortress Resistance", "Hardy Bearing", "Phantom Speed", "Quick Riposte", "Quickened Pulse", "Savage Blow", "Spur Attack", "Spur Speed", "Spur Defense", "Spur Resistance", "Threaten Attack", "Threaten Speed", "Obstruct", "Defense Tactic", "Resistance Tactic", "Initiate Seal Attack", "Initiate Seal Defense", "Initiate Seal HP", "Initiate Seal Resistance", "Initiate Seal Speed", "Squad Ace A", "Squad Ace B", "Squad Ace C", "Squad Ace D", "Squad Ace E", "Squad Ace F", "Squad Ace G", "Squad Ace H", "Squad Ace I", "Squad Ace J", "Squad Ace K", "Squad Ace L", "Squad Ace M"]
 noStaffSeals = ["Attack Smoke", "Speed Smoke", "Heavy Blade", "Poison Strike", "Seal Attack", "Seal Speed"]
 staffSeals = ["Live to Serve"]
 singDanceSeals = ["Earth Dance"]
@@ -140,31 +140,38 @@ class Hero:
         else:
             self.customName = True
         self.experience = ""
-        if self.weaponType in {"Sword", "Fire", "Dark", "Red Breath", "Red Bow"}:
+        if self.weaponType in {"Sword", "Fire", "Dark", "Red Breath", "Red Bow", "Red Dagger"}:
             self.color = "Red"
-        elif self.weaponType in {"Axe", "Wind", "Green Breath", "Green Bow"}:
+        elif self.weaponType in {"Axe", "Wind", "Green Breath", "Green Bow", "Green Dagger"}:
             self.color = "Green"
-        elif self.weaponType in {"Lance", "Thunder", "Light", "Blue Breath", "Blue Bow"}:
+        elif self.weaponType in {"Lance", "Thunder", "Light", "Blue Breath", "Blue Bow", "Blue Dagger"}:
             self.color = "Blue"
-        elif self.weaponType in {"Colorless Bow", "Dagger", "Staff", "Colorless Breath"}:
+        elif self.weaponType in {"Colorless Bow", "Colorless Dagger", "Staff", "Colorless Breath"}:
             self.color = "Colorless"
 
         if self.weaponType in {"Red Breath", "Green Breath", "Blue Breath", "Colorless Breath"}:
             self.dragon = True
             self.bow = False
+            self.dagger = False
         elif self.weaponType in {"Colorless Bow", "Red Bow", "Green Bow", "Blue Bow"}:
             self.dragon = False
             self.bow = True
+            self.dagger = False
+        elif self.weaponType in {"Colorless Dagger", "Red Dagger", "Green Dagger", "Blue Dagger"}:
+            self.dragon = False
+            self.bow = False
+            self.dagger = True
         else:
             self.dragon = False
             self.bow = False
-        if self.weaponType in {"Sword", "Axe", "Lance", "Colorless Bow", "Dagger", "Red Bow", "Green Bow", "Blue Bow"}:
+            self.dagger = False
+        if self.weaponType in {"Sword", "Axe", "Lance", "Colorless Bow", "Colorless Dagger", "Red Bow", "Green Bow", "Blue Bow", "Red Dagger", "Green Dagger", "Blue Dagger"}:
             self.physical = True
         elif self.weaponType in {"Fire", "Wind", "Thunder", "Dark", "Light", "Staff", "Red Breath", "Green Breath", "Blue Breath", "Colorless Breath"}:
             self.physical = False
         if self.weaponType in {"Sword", "Axe", "Lance", "Red Breath", "Green Breath", "Blue Breath", "Colorless Breath"}:
             self.melee = True
-        elif self.weaponType in {"Colorless Bow", "Dagger", "Fire", "Wind", "Thunder", "Dark", "Light", "Staff", "Red Bow", "Green Bow", "Blue Bow"}:
+        elif self.weaponType in {"Colorless Bow", "Colorless Dagger", "Fire", "Wind", "Thunder", "Dark", "Light", "Staff", "Red Bow", "Green Bow", "Blue Bow", "Red Dagger", "Green Dagger", "Blue Dagger"}:
             self.melee = False
 
         #Weapon
@@ -245,7 +252,7 @@ class Hero:
 
         #C Skill
         self.Cs = normalCs[:]
-        self.weaponCs = {"Sword": swordCs, "Axe": axeCs, "Lance": lanceCs, "Dagger": daggerCs, "Fire": redTomeCs, "Wind": greenTomeCs, "Thunder": blueTomeCs, "Dark": redTomeCs, "Light": blueTomeCs, "Staff": staffCs}
+        self.weaponCs = {"Sword": swordCs, "Axe": axeCs, "Lance": lanceCs, "Fire": redTomeCs, "Wind": greenTomeCs, "Thunder": blueTomeCs, "Dark": redTomeCs, "Light": blueTomeCs, "Staff": staffCs}
         self.movementCs = {"Infantry": infantryCs, "Cavalry": cavalryCs, "Armored": armoredCs, "Flier": flierCs}
         if self.weaponType != "Staff":
             self.Cs.extend(noStaffCs)
@@ -253,6 +260,8 @@ class Hero:
             self.Cs.extend(dragonCs)
         elif self.bow:
             self.Cs.extend(bowCs)
+        elif self.dagger:
+            self.Cs.extend(daggerCs)
         else:
             self.Cs.extend(self.weaponCs[weaponType])
         self.Cs.extend(self.movementCs[movementType])
@@ -320,17 +329,17 @@ class Hero:
         self.effective = set()
         if self.weapon in bows or self.weapon in exclusiveBows or self.weapon == "Excalibur":
             self.effective.add("Flier")
-        elif (self.weapon.startswith("Keen") and self.weapon.endswith("wolf")) or self.weapon in {"Zanbato", "Poleaxe", "Ridersbane"}:
+        elif (self.weapon.startswith("Keen") and self.weapon.endswith("wolf")) or self.weapon in {"Zanbato", "Poleaxe", "Ridersbane", "Dusk Uchiwa"}:
             self.effective.add("Calvary")
-        elif self.weapon in {"Armorsmasher", "Slaying Hammer", "Slaying Spear", "Dauntless Lance"}:
+        elif self.weapon in {"Armorsmasher", "Slaying Hammer", "Slaying Spear", "Dauntless Lance", "Sky Maiougi"}:
             self.effective.add("Armored")
-        elif self.weapon in {"Falchion", "Naga", "Divine Naga", "Sealed Falchion", "Breath of Fog", "Summer Breath"}:
+        elif self.weapon in {"Falchion", "Naga", "Divine Naga", "Sealed Falchion", "Breath of Fog", "Summer Breath", "Cloud Maiougi"}:
             self.effective.add("Dragon")
         elif self.weapon == "Poison Dagger":
             self.effective.add("Infantry")
         elif self.weapon == "Kitty Paddle":
             self.effective.add("Mage")
-        elif self.weapon in {"Thani", "Wing Sword", "Rhomphaia"}:
+        elif self.weapon in {"Thani", "Wing Sword", "Rhomphaia", "Dawn Suzu"}:
             self.effective.add("Calvary")
             self.effective.add("Armored")
         elif self.weapon == "Warrior Princess":
@@ -352,7 +361,7 @@ class Hero:
             self.statAdd[Spd] -= 5
         elif self.weapon == "Amiti":
             self.statAdd[Spd] -= 2
-        elif self.weapon in {"Blazing Durandal", "Great Flame", "Laevatein", "Resolute Blade", "Flame Siegmund", "Nifl Frostflowers"}:
+        elif self.weapon in {"Blazing Durandal", "Great Flame", "Laevatein", "Resolute Blade", "Flame Siegmund", "Nifl Frostflowers", "Dawn Suzu"}:
             self.statAdd[Atk] += 3
         elif self.weapon in {"Arya's Blade", "Mulagir", "Weirding Tome", "Skadi", "Níu", "Warrior Princess", "Múspell Fireposy", "Giga Excalibur", "Fruit of Iðunn", "Thögn"}:
             self.statAdd[Spd] += 3
@@ -428,7 +437,7 @@ class Hero:
             self.statAdd[Spd] += 3
         elif self.S in {"Defense +3", "Initiate Seal Defense", "Squad Ace B", "Squad Ace G", "Squad Ace L"}:
             self.statAdd[Def] += 3
-        elif self.S in {"Resistance +3", "Initiate Seal Resistance", "Squad Ace C", "Squad Ace H"}:
+        elif self.S in {"Resistance +3", "Initiate Seal Resistance", "Squad Ace C", "Squad Ace H", "Squad Ace M"}:
             self.statAdd[Res] += 3
         elif self.S == "Fortress Defense":
             self.statAdd[Def] += 5
@@ -461,8 +470,8 @@ class Hero:
                     self.name += "Cleric"
                     if self.movementType == "Cavalry":
                         self.name = "Troubadour"
-                elif self.weaponType == "Dagger":
-                    self.name += "Thief"
+                elif self.dagger:
+                    self.name += self.color + " Thief"
                 elif not self.physical:
                     self.name += self.weaponType + " Mage"
                     if self.movementType == "Cavalry":
