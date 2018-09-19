@@ -15,7 +15,7 @@ swords = {"Silver Sword": 15, "Slaying Edge": 14, "Brave Sword": 8, "Ruby Sword"
 axes = {"Silver Axe": 15, "Slaying Axe": 14, "Brave Axe": 8, "Emerald Axe": 12, "Slaying Hammer": 14, "Poleaxe": 14, "Wo Gùn": 14, "Legion's Axe": 14, "Carrot Axe": 13, "Melon Crusher": 14, "Lilith Floatie": 14, "Sack o' Gifts": 14, "Handbell": 14, "Hagoita": 14, "Giant Spoon": 13, "Ardent Service": 14, "Beach Banner": 14}
 #Firesweep Axe
 lances = {"Silver Lance": 15, "Slaying Lance": 14, "Brave Lance": 8, "Sapphire Lance": 12, "Slaying Spear": 14, "Ridersbane": 14, "Firesweep Lance": 15, "Harmonic Lance": 13, "Reprisal Lance": 14, "Berkut's Lance": 14, "Carrot Lance": 13, "First Bite": 14, "Deft Harpoon": 14, "Tannenboom!": 14, "Casa Blanca": 14, "Shell Lance": 14}
-bows = {"Silver Bow": 13, "Slaying Bow": 12, "Brave Bow": 7, "Firesweep Bow": 11, "Assassin's Bow": 11, "Guard Bow": 12, "Clarisse's Bow": 11, "Cupid Arrow": 11, "Refreshing Bolt": 12, "Monstrous Bow": 12, "Hama Ya": 12, "Gratia": 12, "Cocobow": 12, "Fishie Bow": 12}
+bows = {"Silver Bow": 13, "Slaying Bow": 12, "Brave Bow": 7, "Firesweep Bow": 11, "Assassin's Bow": 11, "Guard Bow": 12, "Clarisse's Bow": 11, "Shining Bow": 12, "Cupid Arrow": 11, "Refreshing Bolt": 12, "Monstrous Bow": 12, "Hama Ya": 12, "Gratia": 12, "Cocobow": 12, "Fishie Bow": 12}
 daggers = {"Silver Dagger": 10, "Rogue Dagger": 7, "Smoke Dagger": 9, "Poison Dagger": 5, "Barb Shuriken": 12, "The Cleaner": 12, "Seashell": 10, "Dancer's Fan": 10, "Kitty Paddle": 8, "Kagami Mochi": 12, "Lethal Carrot": 12, "Starfish": 12, "Dusk Uchiwa": 12, "Cloud Maiougi": 12, "Dawn Maiougi": 12}
 fires = {"Bolganone": 13}
 winds = {"Rexcalibur": 13, "Gronnblade": 13, "Gronnraven": 11, "Keen Gronnwolf": 12, "Gronnowl": 10, "Green Egg": 11, "Hibiscus Tome": 12, "Dancer's Ring": 12, "Spectral Tome": 12, "Green Gift": 12}
@@ -39,29 +39,29 @@ exclusiveSwords = {"Fólkvangr": 16, "Falchion": 16, "Ragnell": 16, "Raijinto": 
 exclusiveAxes = {"Armads": 16, "Basilikos": 16, "Hauteclere": 16, "Nóatún": 16, "Sinmara": 16, "Stout Tomahawk": 16, "Urvan": 16, "Urðr": 16, "Berserk Armads": 16, "Camilla's Axe": 16, "Býleistr": 16, "Thunder Armads": 16, "Draconic Poleax": 16, "Wolf Berg": 16, "Garm": 16, "Cherche's Axe": 11}
 exclusiveLances = {"Fensalir": 16, "Leiptr": 16, "Siegmund": 16, "Gradivus": 16, "Cursed Lance": 16, "Geirskögul": 16, "Vidofnir": 16, "Bright Naginata": 16, "Hinoka's Spear": 16, "Flame Siegmund": 16, "Rhomphaia": 16, "Dauntless Lance": 16, "Maltet": 16, "Gáe Bolg": 16}
 exclusiveBows = {"Fujin Yumi": 14, "Mulagir": 14, "Nidhogg": 14, "Parthia": 14, "Skadi": 14, "Warrior Princess": 14, "Swift Mulagir": 14, "Thögn": 14}
-exclusiveDaggers = {"Deathly Dagger": 11, "Peshkatz": 14, "Felicia's Plate": 14}
+exclusiveDaggers = {"Deathly Dagger": 11, "Peshkatz": 14, "Felicia's Plate": 14, "Hoarfrost Knife": 14}
 exclusiveFires = {"Cymbeline": 14, "Valflame": 14, "Ragnarok": 14, "Forblaze": 14, "Múspell Fireposy": 14, "Fruit of Iðunn": 14, "Reese's Tome": 14, "Dawn Suzu": 14}
 exclusiveWinds = {"Élivágar": 14, "Excalibur": 14, "Naga": 14, "Divine Naga": 14, "Dark Excalibur": 14, "Blizzard": 14, "Wind's Brand": 14, "Munnin's Egg": 14, "Thunderhead": 14, "Nifl Frostflowers": 14, "Giga Excalibur": 14, "Forseti": 14}
-exclusiveThunders = {"Valaskjálf": 14, "Dire Thunder": 9, "Dark Aura": 14, "Weirding Tome": 14, "Huggin's Egg": 14, "Mjölnir": 14, "Odin's Grimoire": 14}
+exclusiveThunders = {"Valaskjálf": 14, "Dire Thunder": 9, "Dark Aura": 14, "Weirding Tome": 14, "Huggin's Egg": 14, "Mjölnir": 14, "Odin's Grimoire": 14, "Missiletain": 14}
 exclusiveStaffs = {"Thökk": 14, "Hliðskjálf": 14}
 exclusiveDarks = {"Brynhildr": 14, "Gleipnir": 14, "Naglfar": 14, "Grimoire": 14, "Grima's Truth": 14, "Loptous": 14}
 exclusiveLights = {"Aura": 14, "Thani": 14, "Ivaldi": 14, "Wargod's Tome": 14}
-exclusiveBreaths = {"Great Flame": 16, "Expiration": 16, "Breath of Fog": 16, "Summer Breath": 16}
+exclusiveBreaths = {"Great Flame": 16, "Expiration": 16, "Breath of Fog": 16, "Summer Breath": 16, "Breath of Blight": 16}
 
 weapons = {"Sword": swords, "Axe": axes, "Lance": lances, "Colorless Bow": bows, "Colorless Dagger": daggers, "Fire": fires, "Wind": winds, "Thunder": thunders, "Dark": darks, "Light": lights, "Staff": staffs, "Red Breath": breaths, "Green Breath": breaths, "Blue Breath": breaths, "Colorless Breath": breaths, "Red Bow": bows, "Green Bow": bows, "Blue Bow": bows, "Red Dagger": daggers, "Green Dagger": daggers, "Blue Dagger": daggers}
 
-assists = ["Draw Back", "Pivot", "Reposition", "Swap", "Ardent Sacrifice", "Reciprocal Aid", "Shove", "Smite", "Harsh Command", "Rally Attack", "Rally Speed", "Rally Defense", "Rally Resistance", "Rally Attack/Speed", "Rally Attack/Defense", "Rally Attack/Resistance", "Rally Speed/Defense", "Rally Speed/Resistance", "Rally Defense/Resistance"]
+assists = ["Draw Back", "Pivot", "Reposition", "Swap", "Ardent Sacrifice", "Reciprocal Aid", "Shove", "Smite", "Harsh Command", "Rally Up Attack", "Rally Resistance", "Rally Attack/Speed", "Rally Attack/Defense", "Rally Attack/Resistance", "Rally Speed/Defense", "Rally Speed/Resistance", "Rally Defense/Resistance"]
 heals = ["Martyr", "Physic", "Recover", "Rehabilitate", "Restore"]
 exclusiveAssists = ["Dance", "Sing", "Sacrifice", "Future Vision"]
 
 normalSpecials = ["Sol", "Luna", "Astra", "Noontime", "Moonbow", "Glimmer", "Aether", "Dragon Fang", "Ignis", "Glacies", "Draconic Aura", "Bonfire", "Iceberg", "Vengeance", "Reprisal", "Blazing Flame", "Growing Flame", "Blazing Thunder", "Growing Thunder", "Blazing Wind", "Growing Wind", "Blazing Light", "Growing Light", "Miracle"]
 meleeSpecials = ["Aegis", "Pavise", "Sacred Cowl", "Escutcheon"]
 physicalMeleeSpecials = ["Galeforce"]
-healSpecials = ["Imbue", "Kindled-Fire Balm", "Swift-Winds Balm", "Solid-Earth Balm", "Still-Water Balm", "Heavenly Light", "Miracle", "Windfire Balm"]
+healSpecials = ["Imbue", "Solid-Earth Balm", "Still-Water Balm", "Heavenly Light", "Miracle", "Windfire Balm"]
 exclusiveSpecials = ["Black Luna", "Ice Mirror", "Radiant Aether", "Regnal Astra", "Fire Emblem"]
 
-normalAs = ["HP +5", "Attack +3", "Speed +3", "Defense +3", "Resistance +3", "HP/Attack", "HP/Speed", "HP/Defense", "HP/Resistance", "Attack/Speed +2", "Attack/Defense +2", "Attack/Resistance +2", "Speed/Defense +2", "Speed/Resistance +2", "Defiant Attack", "Defiant Speed", "Defiant Defense", "Defiant Resistance", "Fortress Defense", "Fortress Resistance", "Steady Stance", "Warding Stance", "Fire Boost", "Wind Boost", "Earth Boost", "Water Boost", "Attack/Speed Bond", "Attack/Defense Bond", "Attack/Resistance Bond", "Speed/Defense Bond", "Speed/Resistance Bond", "Brazen Attack/Speed", "Brazen Attack/Defense", "Brazen Attack/Resistance", "Brazen Defense/Resistance", "Close Defense", "Distant Defense", "Attack/Speed Push"]
-#Def/Res Bond, Brazen Atk/Res, Brazen Spd/Def, Brazen Spd/Res, Pushes
+normalAs = ["HP +5", "Attack +3", "Speed +3", "Defense +3", "Resistance +3", "HP/Attack", "HP/Speed", "HP/Defense", "HP/Resistance", "Attack/Speed +2", "Attack/Defense +2", "Attack/Resistance +2", "Speed/Defense +2", "Speed/Resistance +2", "Defiant Attack", "Defiant Speed", "Defiant Defense", "Defiant Resistance", "Fortress Defense", "Fortress Resistance", "Steady Stance", "Warding Stance", "Fire Boost", "Wind Boost", "Earth Boost", "Water Boost", "Attack/Speed Bond", "Attack/Defense Bond", "Attack/Resistance Bond", "Speed/Defense Bond", "Speed/Resistance Bond", "Brazen Attack/Speed", "Brazen Attack/Defense", "Brazen Attack/Resistance", "Brazen Defense/Resistance", "Close Defense", "Distant Defense", "Attack/Speed Push", "Attack/Resistance Solo"]
+#Def/Res Bond, Brazen Atk/Res, Brazen Spd/Def, Brazen Spd/Res, Pushes, Soloes
 meleeAs = ["Distant Counter"]
 rangedAs = ["Close Counter"]
 noStaffAs = ["Fury", "Life and Death", "Heavy Blade", "Death Blow", "Darting Blow", "Armored Blow", "Warding Blow", "Swift Sparrow", "Sturdy Blow", "Mirror Strike", "Steady Blow", "Swift Strike", "Bracing Blow", "Fierce Stance", "Darting Stance", "Kestrel Stance", "Sturdy Stance", "Mirror Stance", "Steady Posture", "Swift Stance", "Bracing Stance"]
@@ -71,12 +71,14 @@ armoredAs = ["Svalinn Shield"]
 noColorlessAs = ["Triangle Adept"]
 infantryArmoredNoStaffAs = ["Flashing Blade"]
 meleeInfantryArmoredAs = ["Steady Breath", "Warding Breath"]
+greenInfantryAs = ["Green Duel Infantry"]
+redFlierAs = ["Red Duel Flying"]
 exclusiveAs = ["Dragonskin", "Laws of Sacae", "Ostian Counter"]
 
 normalBs = ["Vantage", "Quick Riposte", "Desperation", "Brash Assault", "Daggerbreaker", "Wings of Mercy", "Escape Route", "Renewal", "Guard", "Obstruct", "Chill Attack", "Chill Speed", "Chill Defense", "Chill Resistance", "Dull Ranged"]
 meleeBs = ["Drag Back", "Hit and Run", "Knock Back", "Lunge", "Dull Close"]
 staffBs = ["Live to Serve", "Dazzling Staff", "Wrathful Staff"]
-noStaffBs = ["Seal Attack", "Seal Speed", "Seal Defense", "Seal Resistance", "Seal Attack/Speed", "Seal Attack/Defense", "Seal Defense/Resistance", "Poison Strike", "Watersweep", "Windsweep", "Speed Feint", "Defense Feint", "Attack/Defense Link", "Defense/Resistance Link"]
+noStaffBs = ["Seal Attack", "Seal Speed", "Seal Defense", "Seal Resistance", "Seal Attack/Speed", "Seal Attack/Defense", "Seal Defense/Resistance", "Poison Strike", "Watersweep", "Windsweep", "Speed Feint", "Defense Feint", "Attack/Defense Link", "Speed/Resistance Link", "Defense/Resistance Link"]
 #Seal Atk/Res, Seal Spd/Def, Seal Spd/Res, Atk/Res Feint, Links
 noRedBs = ["Lancebreaker", "Blue Tomebreaker"]
 noGreenBs = ["Swordbreaker", "Red Tomebreaker"]
@@ -92,8 +94,8 @@ singDanceBs = ["Blaze Dance", "Gale Dance", "Earth Dance", "Torrent Dance", "Fir
 #Atk/Def Dance
 exclusiveBs = ["Follow-Up Ring", "Recover Ring", "Beorc's Blessing", "Crusader's Ward", "Sacae's Blessing", "Warp Powder", "Chilling Seal", "Solar Brace", "S Drink", "Bushido", "Double Lion", "Binding Shield"]
 
-normalCs = ["Breath of Life", "Savage Blow", "Hone Attack", "Hone Speed", "Fortify Defense", "Fortify Resistance", "Spur Attack", "Spur Speed", "Spur Defense", "Spur Resistance", "Spur Attack/Speed", "Spur Attack/Defense", "Spur Attack/Resistance", "Spur Speed/Defense", "Spur Speed/Resistance", "Spur Defense/Resistance", "Drive Attack", "Drive Speed", "Drive Defense", "Drive Resistance", "Threaten Attack", "Threaten Speed", "Threaten Defense", "Threaten Resistance", "Attack Ploy", "Speed Ploy", "Defense Ploy", "Resistance Ploy", "Panic Ploy", "Attack Tactic", "Speed Tactic", "Defense Tactic", "Resistance Tactic", "Odd Attack Wave", "Even Speed Wave", "Odd Defense Wave", "Odd Resistance Wave", "Even Resistance Wave", "Distant Guard", "Close Guard"]
-#Even Attack Wave, Odd Speed Wave, Even Defense Wave Close Guard
+normalCs = ["Breath of Life", "Savage Blow", "Hone Attack", "Hone Speed", "Fortify Defense", "Fortify Resistance", "Spur Attack", "Spur Speed", "Spur Defense", "Spur Resistance", "Spur Attack/Speed", "Spur Attack/Defense", "Spur Attack/Resistance", "Spur Speed/Defense", "Spur Speed/Resistance", "Spur Defense/Resistance", "Drive Attack", "Drive Speed", "Drive Defense", "Drive Resistance", "Threaten Attack", "Threaten Speed", "Threaten Defense", "Threaten Resistance", "Attack Ploy", "Speed Ploy", "Defense Ploy", "Resistance Ploy", "Panic Ploy", "Attack Tactic", "Speed Tactic", "Defense Tactic", "Resistance Tactic", "Odd Attack Wave", "Odd Speed Wave", "Even Speed Wave", "Odd Defense Wave", "Even Defense Wave", "Odd Resistance Wave", "Even Resistance Wave", "Distant Guard", "Close Guard"]
+#Even Attack Wave
 noStaffCs = ["Attack Smoke", "Speed Smoke", "Defense Smoke", "Resistance Smoke"]
 infantryCs = ["Infantry Pulse", "Infantry Rush", "Infantry Flash"]
 armoredCs = ["Hone Armor", "Fortify Armor", "Goad Armor", "Ward Armor", "Armor March"]
@@ -114,10 +116,10 @@ swordCs = ["Sword Experience", "Sword Valor"]
 staffCs = ["Staff Valor"]
 #Staff Experience
 
-normalSeals = ["HP +5", "Attack +3", "Speed +3", "Defense +3", "Resistance +3", "Attack/Defense +2", "HP/Resistance", "Attack Ploy", "Speed Ploy", "Defense Ploy", "Resistance Ploy", "Panic Ploy",  "Brash Assault", "Breath of Life", "Close Defense", "Distant Defense", "Deflect Magic", "Deflect Missile", "Drive Attack", "Drive Defense", "Hone Attack", "Hone Speed", "Fortify Defense", "Fortify Resistance", "Fortress Defense", "Fortress Resistance", "Hardy Bearing", "Phantom Speed", "Quick Riposte", "Quickened Pulse", "Savage Blow", "Spur Attack", "Spur Speed", "Spur Defense", "Spur Resistance", "Threaten Attack", "Threaten Speed", "Obstruct", "Defense Tactic", "Resistance Tactic", "Initiate Seal Attack", "Initiate Seal Defense", "Initiate Seal HP", "Initiate Seal Resistance", "Initiate Seal Speed", "Squad Ace A", "Squad Ace B", "Squad Ace C", "Squad Ace D", "Squad Ace E", "Squad Ace F", "Squad Ace G", "Squad Ace H", "Squad Ace I", "Squad Ace J", "Squad Ace K", "Squad Ace L", "Squad Ace M", "Squad Ace N"]
+normalSeals = ["HP +5", "Attack +3", "Speed +3", "Defense +3", "Resistance +3", "Attack/Defense +2", "HP/Resistance", "Attack Ploy", "Speed Ploy", "Defense Ploy", "Resistance Ploy", "Panic Ploy",  "Brash Assault", "Breath of Life", "Close Defense", "Distant Defense", "Deflect Magic", "Deflect Missile", "Drive Attack", "Drive Speed", "Drive Defense", "Hone Attack", "Hone Speed", "Fortify Defense", "Fortify Resistance", "Fortress Defense", "Fortress Resistance", "Hardy Bearing", "Phantom Speed", "Quick Riposte", "Quickened Pulse", "Savage Blow", "Spur Attack", "Spur Speed", "Spur Defense", "Spur Resistance", "Threaten Attack", "Threaten Speed", "Threaten Defense", "Obstruct", "Defense Tactic", "Resistance Tactic", "Initiate Seal Attack", "Initiate Seal Defense", "Initiate Seal HP", "Initiate Seal Resistance", "Initiate Seal Speed", "Squad Ace A", "Squad Ace B", "Squad Ace C", "Squad Ace D", "Squad Ace E", "Squad Ace F", "Squad Ace G", "Squad Ace H", "Squad Ace I", "Squad Ace J", "Squad Ace K", "Squad Ace L", "Squad Ace M", "Squad Ace N"]
 noStaffSeals = ["Attack Smoke", "Speed Smoke", "Heavy Blade", "Poison Strike", "Seal Attack", "Seal Speed"]
 staffSeals = ["Live to Serve"]
-singDanceSeals = ["Earth Dance"]
+singDanceSeals = ["Blaze Dance", "Earth Dance"]
 meleeSeals = ["Deflect Melee"]
 flierSeals = ["Guidance", "Iote's Shield", "Flier Formation"]
 armoredSeals = ["Armored Boots"]
@@ -215,6 +217,10 @@ class Hero:
             self.As.extend(armoredAs)
         elif self.movementType == "Flier":
             self.As.extend(flierAs)
+        if self.color == "Green" and self.movementType == "Infantry":
+            self.As.extend(greenInfantryAs)
+        elif self.color == "Red" and self.movementType == "Flier":
+            self.As.extend(redFlierAs)
         self.A = randList(self.As)
 
         #B Skill
@@ -378,7 +384,7 @@ class Hero:
             self.statAdd[Atk] += 2
             self.statAdd[Spd] += 2
 
-        if self.A == "HP +5":
+        if self.A in {"HP +5", "Green Duel Infantry", "Red Duel Flying"}:
             self.statAdd[HP] += 5
         elif self.A == "Attack +3":
             self.statAdd[Atk] += 3
@@ -497,7 +503,7 @@ class Hero:
             self.cooldown = 5
         if self.weapon in {"Rauðrblade", "Gronnblade", "Blárblade", "Lightning Breath"}:
             self.cooldown += 1
-        elif self.weapon in {"Slaying Edge", "Slaying Axe", "Slaying Lance", "Slaying Bow", "Hauteclere", "Mystletainn", "Cursed Lance", "Urvan", "Audhulma", "Basilikos", "Kagami Mochi", "Berserk Armads", "Nameless Blade", "Barb Shuriken", "Dark Mystletainn", "Mjölnir", "Vassal's Blade", "Dauntless Lance", "Maltet"}:
+        elif self.weapon in {"Slaying Edge", "Slaying Axe", "Slaying Lance", "Slaying Bow", "Hauteclere", "Mystletainn", "Cursed Lance", "Urvan", "Audhulma", "Basilikos", "Kagami Mochi", "Berserk Armads", "Nameless Blade", "Barb Shuriken", "Dark Mystletainn", "Mjölnir", "Vassal's Blade", "Dauntless Lance", "Maltet", "Hoarfrost Knife", "Missiletain"}:
             self.cooldown -= 1
         self.special += " (Cooldown: %d)" % self.cooldown
 
