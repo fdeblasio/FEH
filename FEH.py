@@ -46,7 +46,7 @@ exclusiveThunders = {"Valaskjálf": 14, "Dire Thunder": 9, "Dark Aura": 14, "Wei
 exclusiveStaffs = {"Thökk": 14, "Hliðskjálf": 14}
 exclusiveDarks = {"Brynhildr": 14, "Gleipnir": 14, "Naglfar": 14, "Grimoire": 14, "Grima's Truth": 14, "Loptous": 14}
 exclusiveLights = {"Aura": 14, "Thani": 14, "Ivaldi": 14, "Wargod's Tome": 14}
-exclusiveBreaths = {"Great Flame": 16, "Expiration": 16, "Breath of Fog": 16, "Summer Breath": 16, "Breath of Blight": 16}
+exclusiveBreaths = {"Great Flame": 16, "Expiration": 16, "Breath of Fog": 16, "Summer Breath": 16, "Breath of Blight": 16, "Divine Mist": 16}
 
 weapons = {"Sword": swords, "Axe": axes, "Lance": lances, "Colorless Bow": bows, "Colorless Dagger": daggers, "Fire": fires, "Wind": winds, "Thunder": thunders, "Dark": darks, "Light": lights, "Staff": staffs, "Red Breath": breaths, "Green Breath": breaths, "Blue Breath": breaths, "Colorless Breath": breaths, "Red Bow": bows, "Green Bow": bows, "Blue Bow": bows, "Red Dagger": daggers, "Green Dagger": daggers, "Blue Dagger": daggers}
 
@@ -70,7 +70,7 @@ flierAs = ["Iote's Shield"]
 armoredAs = ["Svalinn Shield"]
 noColorlessAs = ["Triangle Adept"]
 infantryArmoredNoStaffAs = ["Flashing Blade"]
-meleeInfantryArmoredAs = ["Steady Breath", "Warding Breath"]
+meleeInfantryArmoredAs = ["Fierce Breath", "Steady Breath", "Warding Breath"]
 greenInfantryAs = ["Green Duel Infantry"]
 redFlierAs = ["Red Duel Flying"]
 exclusiveAs = ["Dragonskin", "Laws of Sacae", "Ostian Counter"]
@@ -101,7 +101,7 @@ infantryCs = ["Infantry Pulse", "Infantry Rush", "Infantry Flash"]
 armoredCs = ["Hone Armor", "Fortify Armor", "Goad Armor", "Ward Armor", "Armor March"]
 cavalryCs = ["Hone Cavalry", "Fortify Cavalry", "Goad Cavalry", "Ward Cavalry"]
 flierCs = ["Hone Fliers", "Fortify Fliers", "Goad Fliers", "Ward Fliers", "Guidance", "Flier Guidance"]
-exclusiveCs = ["Ostia's Pulse"]
+exclusiveCs = ["Ostia's Pulse", "With Everyone!"]
 dragonCs = ["Hone Dragons", "Fortify Dragons", "Goad Dragons", "Ward Dragons", "Dragon Valor"]
 axeCs = ["Axe Experience", "Axe Valor"]
 blueTomeCs = ["Blue Tome Experience", "Blue Tome Valor"]
@@ -342,7 +342,7 @@ class Hero:
             self.effective.add("Calvary")
         elif self.weapon in {"Armorsmasher", "Slaying Hammer", "Slaying Spear", "Dauntless Lance", "Sky Maiougi"}:
             self.effective.add("Armored")
-        elif self.weapon in {"Falchion", "Naga", "Divine Naga", "Sealed Falchion", "Breath of Fog", "Summer Breath", "Cloud Maiougi", "Exalted Falchion"}:
+        elif self.weapon in {"Falchion", "Naga", "Divine Naga", "Sealed Falchion", "Breath of Fog", "Summer Breath", "Cloud Maiougi", "Exalted Falchion", "Divine Mist"}:
             self.effective.add("Dragon")
         elif self.weapon == "Poison Dagger":
             self.effective.add("Infantry")
@@ -508,7 +508,7 @@ class Hero:
         self.special += " (Cooldown: %d)" % self.cooldown
 
     def counter(self):
-        if self.A in {"Distant Counter", "Close Counter"} or self.weapon in {"Lightning Breath", "Raijinto", "Siegfried", "Gradivus", "Ragnell", "Alondite", "Stout Tomahawk", "Leiptr", "Expiration"}:
+        if self.A in {"Distant Counter", "Close Counter"} or self.weapon in {"Lightning Breath", "Raijinto", "Siegfried", "Gradivus", "Ragnell", "Alondite", "Stout Tomahawk", "Leiptr", "Expiration", "Divine Mist"}:
             self.allCounter = True
         else:
             self.allCounter = False
