@@ -119,10 +119,11 @@ swordCs = ["Sword Experience", "Sword Valor"]
 staffCs = ["Staff Valor"]
 #Staff Experience
 
-normalSeals = ["HP +5", "Attack +3", "Speed +3", "Defense +3", "Resistance +3", "Attack/Defense +2", "Speed/Defense +2", "HP/Resistance", "Attack Ploy", "Speed Ploy", "Defense Ploy", "Resistance Ploy", "Panic Ploy",  "Brash Assault", "Breath of Life", "Close Defense", "Distant Defense", "Deflect Magic", "Deflect Missile", "Drive Attack", "Drive Speed", "Drive Defense", "Hone Attack", "Hone Speed", "Fortify Defense", "Fortify Resistance", "Fortress Defense", "Fortress Resistance", "Hardy Bearing", "Phantom Speed", "Quick Riposte", "Quickened Pulse", "Savage Blow", "Spur Attack", "Spur Speed", "Spur Defense", "Spur Resistance", "Threaten Attack", "Threaten Speed", "Threaten Defense", "Obstruct", "Defense Tactic", "Brazen Attack/Resistance", "Resistance Tactic", "Initiate Seal Attack", "Initiate Seal Defense", "Initiate Seal HP", "Initiate Seal Resistance", "Initiate Seal Speed", "Squad Ace A", "Squad Ace B", "Squad Ace C", "Squad Ace D", "Squad Ace E", "Squad Ace F", "Squad Ace G", "Squad Ace H", "Squad Ace I", "Squad Ace J", "Squad Ace K", "Squad Ace L", "Squad Ace M", "Squad Ace N", "Squad Ace O", "Squad Ace P"]
+#NOTE: reorder to be like in-game order
+normalSeals = ["HP +5", "Attack +3", "Speed +3", "Defense +3", "Resistance +3", "Attack/Defense +2", "Speed/Defense +2", "HP/Resistance", "Attack Ploy", "Speed Ploy", "Defense Ploy", "Resistance Ploy", "Panic Ploy",  "Brash Assault", "Breath of Life", "Close Defense", "Distant Defense", "Deflect Magic", "Deflect Missile", "Drive Attack", "Drive Speed", "Drive Defense", "Hone Attack", "Hone Speed", "Fortify Defense", "Fortify Resistance", "Fortress Defense", "Fortress Resistance", "Hardy Bearing", "Phantom Speed", "Quick Riposte", "Quickened Pulse", "Savage Blow", "Spur Attack", "Spur Speed", "Spur Defense", "Spur Resistance", "Threaten Attack", "Threaten Speed", "Threaten Defense", "Obstruct", "Defense Tactic", "Brazen Attack/Resistance", "Resistance Tactic", "Attack Defense Bond", "Water Boost" "Initiate Seal Attack", "Initiate Seal Defense", "Initiate Seal HP", "Initiate Seal Resistance", "Initiate Seal Speed", "Squad Ace A", "Squad Ace B", "Squad Ace C", "Squad Ace D", "Squad Ace E", "Squad Ace F", "Squad Ace G", "Squad Ace H", "Squad Ace I", "Squad Ace J", "Squad Ace K", "Squad Ace L", "Squad Ace M", "Squad Ace N", "Squad Ace O", "Squad Ace P"]
 noStaffSeals = ["Attack Smoke", "Speed Smoke", "Heavy Blade", "Poison Strike", "Seal Attack", "Seal Speed", "Darting Stance"]
 staffSeals = ["Live to Serve"]
-singDanceSeals = ["Blaze Dance", "Earth Dance"]
+singDanceSeals = ["Blaze Dance", "Gale Dance", "Earth Dance"]
 meleeSeals = ["Deflect Melee"]
 flierSeals = ["Guidance", "Iote's Shield", "Flier Formation"]
 armoredSeals = ["Armored Boots"]
@@ -433,12 +434,6 @@ class Hero:
         elif self.A == "Defense/Resistance +2":
             self.statAdd[Def] += 2
             self.statAdd[Res] += 2
-        elif self.A == "Fortress Defense":
-            self.statAdd[Def] += 5
-            self.statAdd[Atk] -= 3
-        elif self.A == "Fortress Resistance":
-            self.statAdd[Res] += 5
-            self.statAdd[Atk] -= 3
         elif self.A == "Fury":
             self.statAdd[Atk] += 3
             self.statAdd[Spd] += 3
@@ -449,6 +444,10 @@ class Hero:
             self.statAdd[Spd] += 5
             self.statAdd[Def] -= 5
             self.statAdd[Res] -= 5
+        elif self.A == "Fortress Defense/Resistance":
+            self.statAdd[Def] += 6
+            self.statAdd[Res] += 6
+            self.statAdd[Atk] -= 2
 
         if self.S in {"HP +5", "Initiate Seal HP", "Squad Ace A", "Squad Ace F", "Squad Ace K", "Squad Ace P"}:
             self.statAdd[HP] += 5
