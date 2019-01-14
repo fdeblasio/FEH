@@ -9,6 +9,7 @@ Def = 3
 Res = 4
 
 weaponTypes = ["Sword", "Axe", "Lance", "Colorless Bow", "Fire", "Wind", "Thunder", "Staff", "Colorless Dagger", "Dark", "Light", "Red Breath", "Green Breath", "Blue Breath", "Colorless Breath", "Red Bow", "Green Bow", "Blue Bow", "Red Dagger", "Green Dagger", "Blue Dagger"]
+#, "Red Beast", "Green Beast", "Blue Beast", "Colorless Beast"
 movementTypes = ["Infantry", "Cavalry", "Flier", "Armored"]
 
 swords = {"Silver Sword": 15, "Brave Sword": 8, "Slaying Edge": 14, "Wo Dao": 13, "Armorsmasher": 14, "Zanbato": 14, "Ruby Sword": 12, "Firesweep Sword": 15, "Safeguard": 14, "Barrier Blade": 14, "Kadomatsu": 14, "Geishun": 14}
@@ -25,6 +26,7 @@ staffs = {"Absorb": 7, "Fear": 12, "Slow": 12, "Gravity": 10, "Pain": 10, "Panic
 darks = {"Fenrir": 13}
 lights = {"Shine": 13}
 breaths = {"Flametongue": 15, "Light Breath": 13, "Dark Breath": 13, "Lightning Breath": 11, "Water Breath": 14, "Glittering Breath": 14}
+#beast weapons: Hatchling (Flier), Fledgling (Flier), Adult (Flier), Whelp (Infantry), Yearling (Infantry), Adult (Infantry)
 
 reds = {"Rauðrblade": 13, "Keen Rauðrwolf": 12, "Rauðrraven": 11, "Rauðrowl": 10, "Tomato Tome": 12, "Candelabra": 12}
 #Rauðrserpent
@@ -36,20 +38,23 @@ thunders.update(blues)
 lights.update(blues)
 
 exclusiveSwords = {"Fólkvangr": 16, "Falchion": 16, "Ragnell": 16, "Raijinto": 16, "Alondite": 16, "Amiti": 11, "Durandal": 16, "Blazing Durandal": 16, "Audhulma": 16, "Arya's Blade": 16, "Binding Blade": 16, "Tyrfing": 16, "Divine Tyrfing": 16, "Dark Greatsword": 16, "Eckesachs": 16, "Laevatein": 16, "Mystletainn": 16, "Regal Blade": 16, "Resolute Blade": 16, "Siegfried": 16, "Sieglinde": 16, "Sol Katti": 16, "Yato": 16, "Wing Sword": 16, "Beloved Zofia": 16, "Níu": 16, "Sealed Falchion": 16, "Nameless Blade": 16, "Light Brand": 16, "Meisterschwert": 11, "Dark Mystletainn": 16, "Vassal's Blade": 16, "Skuld": 16, "Royal Sword": 16, "Exalted Falchion": 16, "Solitary Blade": 16, "Missiletainn": 16, "Storm Sieglinde": 16, "Golden Dagger": 16, "Gjöll": 16, "Gladiator's Blade": 16, "Scarlet Sword": 16, "Whitewing Blade": 16, "Sökkvabekkr": 16, "Hikami": 16}
-exclusiveAxes = {"Armads": 16, "Basilikos": 16, "Hauteclere": 16, "Nóatún": 16, "Sinmara": 16, "Stout Tomahawk": 16, "Urvan": 16, "Urðr": 16, "Berserk Armads": 16, "Camilla's Axe": 16, "Býleistr": 16, "Thunder Armads": 16, "Draconic Poleax": 16, "Wolf Berg": 16, "Garm": 16, "Cherche's Axe": 11, "Axe of Virility": 16}
+exclusiveAxes = {"Armads": 16, "Basilikos": 16, "Hauteclere": 16, "Nóatún": 16, "Sinmara": 16, "Stout Tomahawk": 16, "Urvan": 16, "Urðr": 16, "Berserk Armads": 16, "Camilla's Axe": 16, "Býleistr": 16, "Thunder Armads": 16, "Draconic Poleax": 16, "Wolf Berg": 16, "Garm": 16, "Cherche's Axe": 11, "Axe of Virility": 16, "Hel Scythe": 16}
 exclusiveLances = {"Fensalir": 16, "Leiptr": 16, "Siegmund": 16, "Gradivus": 16, "Cursed Lance": 16, "Geirskögul": 16, "Vidofnir": 16, "Bright Naginata": 16, "Hinoka's Spear": 16, "Flame Siegmund": 16, "Rhomphaia": 16, "Dauntless Lance": 16, "Maltet": 16, "Gáe Bolg": 16, "Shanna's Lance": 16, "Florina's Lance": 16, "Whitewing Lance": 16, "Whitewing Spear": 16, "Festive Siegmund": 16}
 exclusiveBows = {"Fujin Yumi": 14, "Mulagir": 14, "Nidhogg": 14, "Parthia": 14, "Skadi": 14, "Warrior Princess": 14, "Swift Mulagir": 14, "Thögn": 14}
 exclusiveDaggers = {"Deathly Dagger": 11, "Peshkatz": 14, "Felicia's Plate": 14, "Hoarfrost Knife": 14, "Sylgr": 14, "Lyfjaberg": 14}
 exclusiveFires = {"Cymbeline": 14, "Valflame": 14, "Ragnarok": 14, "Forblaze": 14, "Múspell Fireposy": 14, "Fruit of Iðunn": 14, "Reese's Tome": 14, "Dawn Suzu": 14}
 exclusiveWinds = {"Élivágar": 14, "Excalibur": 14, "Naga": 14, "Divine Naga": 14, "Dark Excalibur": 14, "Blizzard": 14, "Wind's Brand": 14, "Munnin's Egg": 14, "Thunderhead": 14, "Nifl Frostflowers": 14, "Giga Excalibur": 14, "Forseti": 14, "Book of Shadows": 14, "Tactical Gale": 14, "Ífingr": 14}
-exclusiveThunders = {"Valaskjálf": 14, "Dire Thunder": 9, "Dark Aura": 14, "Weirding Tome": 14, "Huggin's Egg": 14, "Mjölnir": 14, "Odin's Grimoire": 14, "Missiletainn": 14, "Tactical Bolt": 14}
+exclusiveThunders = {"Valaskjálf": 14, "Dire Thunder": 9, "Dark Aura": 14, "Weirding Tome": 14, "Huggin's Egg": 14, "Mjölnir": 14, "Odin's Grimoire": 14, "Missiletainn": 14, "Tactical Bolt": 14, "Tome of Thoron": 14}
 exclusiveStaffs = {"Thökk": 14, "Hliðskjálf": 14}
 exclusiveDarks = {"Brynhildr": 14, "Gleipnir": 14, "Naglfar": 14, "Grimoire": 14, "Grima's Truth": 14, "Loptous": 14, "Aversa's Night": 14, "Book of Dreams": 14, "Imhullu": 14}
 exclusiveLights = {"Aura": 14, "Thani": 14, "Ivaldi": 14, "Wargod's Tome": 14, "Sagittae": 14, "Prayer Wheel": 14}
 exclusiveBreaths = {"Great Flame": 16, "Expiration": 16, "Breath of Fog": 16, "Summer Breath": 16, "Breath of Blight": 16, "Divine Mist": 16, "Spirit Breath": 16, "Draconic Rage": 16}
+#exclusive Beasts: Hawk King Claw, Heron Wing, Raven King Beak, Wolf Queen Fang
 
 weapons = {"Sword": swords, "Axe": axes, "Lance": lances, "Colorless Bow": bows, "Colorless Dagger": daggers, "Fire": fires, "Wind": winds, "Thunder": thunders, "Dark": darks, "Light": lights, "Staff": staffs, "Red Breath": breaths, "Green Breath": breaths, "Blue Breath": breaths, "Colorless Breath": breaths, "Red Bow": bows, "Green Bow": bows, "Blue Bow": bows, "Red Dagger": daggers, "Green Dagger": daggers, "Blue Dagger": daggers}
+#"Red Beast": , "Green Beast": , "Blue Beast": , "Colorless Beast":
 exclusiveWeapons = {"Sword": exclusiveSwords, "Axe": exclusiveAxes, "Lance": exclusiveLances, "Colorless Bow": exclusiveBows, "Colorless Dagger": exclusiveDaggers, "Fire": exclusiveFires, "Wind": exclusiveWinds, "Thunder": exclusiveThunders, "Dark": exclusiveDarks, "Light": exclusiveLights, "Staff": exclusiveStaffs, "Red Breath": exclusiveBreaths, "Green Breath": exclusiveBreaths, "Blue Breath": exclusiveBreaths, "Colorless Breath": exclusiveBreaths, "Red Bow": exclusiveBows, "Green Bow": exclusiveBows, "Blue Bow": exclusiveBows, "Red Dagger": exclusiveDaggers, "Green Dagger": exclusiveDaggers, "Blue Dagger": exclusiveDaggers}
+#"Red Beast": , "Green Beast": , "Blue Beast": , "Colorless Beast":
 
 assists = ["Swap", "Shove", "Smite", "Draw Back", "Reposition", "Pivot", "Ardent Sacrifice", "Harsh Command", "Reciprocal Aid", "Rally Up Attack", "Rally Resistance", "Rally Attack/Speed", "Rally Attack/Defense", "Rally Attack/Resistance", "Rally Speed/Defense", "Rally Speed/Resistance", "Rally Defense/Resistance"]
 #Rally Atk/Spd and Spd/Def are the + versions
@@ -72,6 +77,7 @@ flierAs = ["Iote's Shield"]
 armoredAs = ["Svalinn Shield"]
 noColorlessAs = ["Triangle Adept"]
 infantryArmoredNoStaffAs = ["Flashing Blade"]
+infantryFlierNoStaffAs = ["Sturdy Impact"]
 meleeInfantryArmoredAs = ["Fierce Breath", "Steady Breath", "Warding Breath"]
 infantryPhysicalAs = ["Sorcery Blade"]
 greenInfantryAs = ["Green Duel Infantry"]
@@ -89,7 +95,7 @@ noRedBs = ["Lancebreaker", "Blue Tomebreaker"]
 noGreenBs = ["Swordbreaker", "Red Tomebreaker"]
 noBlueBs = ["Axebreaker", "Green Tomebreaker"]
 noFlierBs = ["Bowbreaker"]
-infantryBs = ["Null Follow-Up"]
+infantryBs = ["Null Follow-Up", "Null C-Disrupt"]
 flierBs = ["Flier Formation", "Aerobatics"]
 armoredBs = ["Wary Fighter", "Bold Fighter", "Vengeful Fighter", "Special Fighter"]
 noArmoredBs = ["Pass"]
@@ -108,6 +114,9 @@ armoredCs = ["Hone Armor", "Fortify Armor", "Goad Armor", "Ward Armor", "Armor M
 cavalryCs = ["Hone Cavalry", "Fortify Cavalry", "Goad Cavalry", "Ward Cavalry"]
 flierCs = ["Hone Fliers", "Fortify Fliers", "Goad Fliers", "Ward Fliers", "Guidance", "Flier Guidance"]
 dragonCs = ["Hone Dragons", "Fortify Dragons", "Goad Dragons", "Ward Dragons", "Dragon Valor"]
+#Dragon Experience
+beastCs = ["Hone Beast", "Fortify Beasts"]
+#Goad Beasts, Ward Beasts, Beast Valor, Beast Experience
 axeCs = ["Axe Experience", "Axe Valor"]
 blueTomeCs = ["Blue Tome Experience", "Blue Tome Valor"]
 bowCs = ["Bow Experience", "Bow Valor"]
@@ -120,10 +129,10 @@ redTomeCs = ["Red Tome Experience", "Red Tome Valor"]
 swordCs = ["Sword Experience", "Sword Valor"]
 staffCs = ["Staff Valor"]
 #Staff Experience
-exclusiveCs = ["Ostia's Pulse", "With Everyone!", "Surtr's Menace", "Sparkling Boost"]
+exclusiveCs = ["Ostia's Pulse", "With Everyone!", "Surtr's Menace", "Sparkling Boost", "Glare"]
 
 #NOTE: reorder to be like in-game order
-normalSeals = ["HP +5", "Attack +3", "Speed +3", "Defense +3", "Resistance +3", "Attack/Speed +2", "Attack/Defense +2", "Speed/Defense +2", "HP/Resistance", "Attack Ploy", "Speed Ploy", "Defense Ploy", "Resistance Ploy", "Panic Ploy",  "Brash Assault", "Breath of Life", "Close Defense", "Distant Defense", "Deflect Magic", "Deflect Missile", "Drive Attack", "Drive Speed", "Drive Defense", "Drive Resistance", "Hone Attack", "Hone Speed", "Fortify Defense", "Fortify Resistance", "Fortress Defense", "Fortress Resistance", "Hardy Bearing", "Phantom Speed", "Quick Riposte", "Quickened Pulse", "Savage Blow", "Spur Attack", "Spur Speed", "Spur Defense", "Spur Resistance", "Spur Defense/Resistance", "Threaten Attack", "Threaten Speed", "Threaten Defense", "Threaten Resistance", "Obstruct", "Defense Tactic", "Brazen Attack/Resistance", "Resistance Tactic", "Attack/Defense Bond", "Attack/Speed Bond", "Water Boost" "Initiate Seal Attack", "Initiate Seal Defense", "Initiate Seal HP", "Initiate Seal Resistance", "Initiate Seal Speed", "Squad Ace A", "Squad Ace B", "Squad Ace C", "Squad Ace D", "Squad Ace E", "Squad Ace F", "Squad Ace G", "Squad Ace H", "Squad Ace I", "Squad Ace J", "Squad Ace K", "Squad Ace L", "Squad Ace M", "Squad Ace N", "Squad Ace O", "Squad Ace P", "Squad Ace Q"]
+normalSeals = ["HP +5", "Attack +3", "Speed +3", "Defense +3", "Resistance +3", "Attack/Speed +2", "Attack/Defense +2", "Speed/Defense +2", "HP/Resistance", "Attack Ploy", "Speed Ploy", "Defense Ploy", "Resistance Ploy", "Panic Ploy",  "Brash Assault", "Breath of Life", "Close Defense", "Distant Defense", "Deflect Magic", "Deflect Missile", "Drive Attack", "Drive Speed", "Drive Defense", "Drive Resistance", "Hone Attack", "Hone Speed", "Fortify Defense", "Fortify Resistance", "Fortress Defense", "Fortress Resistance", "Hardy Bearing", "Phantom Speed", "Quick Riposte", "Quickened Pulse", "Savage Blow", "Spur Attack", "Spur Speed", "Spur Defense", "Spur Resistance", "Spur Defense/Resistance", "Threaten Attack", "Threaten Speed", "Threaten Defense", "Threaten Resistance", "Obstruct", "Defense Tactic", "Brazen Attack/Resistance", "Resistance Tactic", "Attack/Defense Bond", "Attack/Speed Bond", "Water Boost" "Initiate Seal Attack", "Initiate Seal Defense", "Initiate Seal HP", "Initiate Seal Resistance", "Initiate Seal Speed", "Squad Ace A", "Squad Ace B", "Squad Ace C", "Squad Ace D", "Squad Ace E", "Squad Ace F", "Squad Ace G", "Squad Ace H", "Squad Ace I", "Squad Ace J", "Squad Ace K", "Squad Ace L", "Squad Ace M", "Squad Ace N", "Squad Ace O", "Squad Ace P", "Squad Ace Q", "Squad Ace R"]
 noStaffSeals = ["Attack Smoke", "Speed Smoke", "Heavy Blade", "Poison Strike", "Seal Attack", "Seal Speed", "Fierce Stance", "Darting Stance"]
 staffSeals = ["Live to Serve"]
 singDanceSeals = ["Blaze Dance", "Gale Dance", "Earth Dance"]
@@ -149,36 +158,33 @@ class Hero:
         else:
             self.customName = True
         self.experience = ""
-        if self.weaponType in {"Sword", "Fire", "Dark", "Red Breath", "Red Bow", "Red Dagger"}:
+        if self.weaponType in {"Sword", "Fire", "Dark", "Red Breath", "Red Bow", "Red Dagger", "Red Beast"}:
             self.color = "Red"
-        elif self.weaponType in {"Axe", "Wind", "Green Breath", "Green Bow", "Green Dagger"}:
+        elif self.weaponType in {"Axe", "Wind", "Green Breath", "Green Bow", "Green Dagger", "Green Beast"}:
             self.color = "Green"
-        elif self.weaponType in {"Lance", "Thunder", "Light", "Blue Breath", "Blue Bow", "Blue Dagger"}:
+        elif self.weaponType in {"Lance", "Thunder", "Light", "Blue Breath", "Blue Bow", "Blue Dagger", "Blue Beast"}:
             self.color = "Blue"
-        elif self.weaponType in {"Colorless Bow", "Colorless Dagger", "Staff", "Colorless Breath"}:
+        elif self.weaponType in {"Colorless Bow", "Colorless Dagger", "Staff", "Colorless Breath", "Colorless Beast"}:
             self.color = "Colorless"
 
+        self.dragon = False
+        self.bow = False
+        self.dagger = False
+        self.beast = False
         if self.weaponType in {"Red Breath", "Green Breath", "Blue Breath", "Colorless Breath"}:
             self.dragon = True
-            self.bow = False
-            self.dagger = False
         elif self.weaponType in {"Colorless Bow", "Red Bow", "Green Bow", "Blue Bow"}:
-            self.dragon = False
             self.bow = True
-            self.dagger = False
         elif self.weaponType in {"Colorless Dagger", "Red Dagger", "Green Dagger", "Blue Dagger"}:
-            self.dragon = False
-            self.bow = False
             self.dagger = True
-        else:
-            self.dragon = False
-            self.bow = False
-            self.dagger = False
-        if self.weaponType in {"Sword", "Axe", "Lance", "Colorless Bow", "Colorless Dagger", "Red Bow", "Green Bow", "Blue Bow", "Red Dagger", "Green Dagger", "Blue Dagger"}:
+        elif self.weaponType in {"Red Beast", "Green Beast", "Blue Beast", "Colorless Beast"}:
+            self.beast = True
+
+        if self.weaponType in {"Sword", "Axe", "Lance", "Colorless Bow", "Colorless Dagger", "Red Bow", "Green Bow", "Blue Bow", "Red Dagger", "Green Dagger", "Blue Dagger", "Red Beast", "Green Beast", "Blue Beast", "Colorless Beast"}:
             self.physical = True
         elif self.weaponType in {"Fire", "Wind", "Thunder", "Dark", "Light", "Staff", "Red Breath", "Green Breath", "Blue Breath", "Colorless Breath"}:
             self.physical = False
-        if self.weaponType in {"Sword", "Axe", "Lance", "Red Breath", "Green Breath", "Blue Breath", "Colorless Breath"}:
+        if self.weaponType in {"Sword", "Axe", "Lance", "Red Breath", "Green Breath", "Blue Breath", "Colorless Breath", "Red Beast", "Green Beast", "Blue Beast", "Colorless Beast"}:
             self.melee = True
         elif self.weaponType in {"Colorless Bow", "Colorless Dagger", "Fire", "Wind", "Thunder", "Dark", "Light", "Staff", "Red Bow", "Green Bow", "Blue Bow", "Red Dagger", "Green Dagger", "Blue Dagger"}:
             self.melee = False
@@ -212,6 +218,10 @@ class Hero:
                 self.As.extend(noColorlessAs)
             if self.movementType == "Infantry" or self.movementType == "Armored":
                 self.As.extend(infantryArmoredNoStaffAs)
+            if self.movementType == "Infantry" or self.movementType == "Flier":
+                self.As.extend(infantryFlierNoStaffAs)
+                self.As.remove("Armored Blow")
+                self.As.remove("Sturdy Blow")
         if self.melee:
             self.As.extend(meleeAs)
             if self.movementType == "Infantry" or self.movementType == "Armored":
@@ -289,6 +299,8 @@ class Hero:
             self.Cs.extend(bowCs)
         elif self.dagger:
             self.Cs.extend(daggerCs)
+        elif self.beast:
+            self.Cs.extend(beastCs)
         else:
             self.Cs.extend(self.weaponCs[weaponType])
         self.Cs.extend(self.movementCs[movementType])
@@ -388,9 +400,9 @@ class Hero:
             self.statAdd[Spd] -= 5
         elif self.weapon == "Amiti":
             self.statAdd[Spd] -= 2
-        elif self.weapon in {"Blazing Durandal", "Great Flame", "Laevatein", "Resolute Blade", "Flame Siegmund", "Nifl Frostflowers", "Dawn Suzu", "Garm", "Storm Sieglinde", "Book of Dreams", "Gjöll"}:
+        elif self.weapon in {"Blazing Durandal", "Great Flame", "Laevatein", "Resolute Blade", "Flame Siegmund", "Nifl Frostflowers", "Dawn Suzu", "Garm", "Storm Sieglinde", "Book of Dreams", "Gjöll", "Hawk King Claw"}:
             self.statAdd[Atk] += 3
-        elif self.weapon in {"Arya's Blade", "Mulagir", "Weirding Tome", "Skadi", "Níu", "Warrior Princess", "Múspell Fireposy", "Giga Excalibur", "Fruit of Iðunn", "Thögn", "Royal Sword", "Exalted Falchion", "Forseti", "Book of Shadows", "Sylgr", "Hikami", "Prayer Wheel"}:
+        elif self.weapon in {"Arya's Blade", "Mulagir", "Weirding Tome", "Skadi", "Níu", "Warrior Princess", "Múspell Fireposy", "Giga Excalibur", "Fruit of Iðunn", "Thögn", "Royal Sword", "Exalted Falchion", "Forseti", "Book of Shadows", "Sylgr", "Hikami", "Prayer Wheel", "Heron Wing", "Raven King Beak"}:
             self.statAdd[Spd] += 3
         elif self.weapon in {"Geirskögul", "Ivaldi", "Sinmara", "Beloved Zofia", "Thunder Armads", "Summer Breath", "Wolf Berg", "Spirit Breath", "Sagittae"}:
             self.statAdd[Def] += 3
@@ -465,7 +477,7 @@ class Hero:
             self.statAdd[Spd] += 3
         elif self.S in {"Defense +3", "Initiate Seal Defense", "Squad Ace B", "Squad Ace G", "Squad Ace L", "Squad Ace Q"}:
             self.statAdd[Def] += 3
-        elif self.S in {"Resistance +3", "Initiate Seal Resistance", "Squad Ace C", "Squad Ace H", "Squad Ace M"}:
+        elif self.S in {"Resistance +3", "Initiate Seal Resistance", "Squad Ace C", "Squad Ace H", "Squad Ace M", "Squad Ace R"}:
             self.statAdd[Res] += 3
         elif self.S == "Fortress Defense":
             self.statAdd[Def] += 5
@@ -525,7 +537,7 @@ class Hero:
             self.cooldown = 5
         if self.weapon in {"Rauðrblade", "Gronnblade", "Blárblade", "Lightning Breath"}:
             self.cooldown += 1
-        elif self.weapon in {"Slaying Edge", "Slaying Axe", "Slaying Lance", "Slaying Bow", "Hauteclere", "Mystletainn", "Cursed Lance", "Urvan", "Audhulma", "Basilikos", "Kagami Mochi", "Berserk Armads", "Nameless Blade", "Barb Shuriken", "Dark Mystletainn", "Mjölnir", "Vassal's Blade", "Dauntless Lance", "Maltet", "Hoarfrost Knife", "Missiletainn", "Solitary Blade", "Shanna's Lance", "Golden Dagger", "Draconic Rage", "Scarlet Sword", "Whitewing Lance", "Festive Siegmund"}:
+        elif self.weapon in {"Slaying Edge", "Slaying Axe", "Slaying Lance", "Slaying Bow", "Hauteclere", "Mystletainn", "Cursed Lance", "Urvan", "Audhulma", "Basilikos", "Kagami Mochi", "Berserk Armads", "Nameless Blade", "Barb Shuriken", "Dark Mystletainn", "Mjölnir", "Vassal's Blade", "Dauntless Lance", "Maltet", "Hoarfrost Knife", "Missiletainn", "Solitary Blade", "Shanna's Lance", "Golden Dagger", "Draconic Rage", "Scarlet Sword", "Whitewing Lance", "Festive Siegmund", "Hel Scythe", "Wolf Queen Fang"}:
             self.cooldown -= 1
         if self.B == "Lunar Brace":
             self.cooldown += 1
