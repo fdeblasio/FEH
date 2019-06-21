@@ -180,16 +180,30 @@ def randList(list):
     return list[randint(0, len(list) - 1)]
 
 class Hero:
-    def __init__(self, weaponType, movementType, name):
-        self.weaponType = weaponType
-        self.movementType = movementType
+    def __init__(self, name, weaponType, movementType, weapon, assist, special, A, B, C, S):
         self.name = name
         if self.name == "":
             self.customName = False
         else:
             self.customName = True
+        self.weaponType = weaponType
+        self.movementType = movementType
+
+        self.tempWeapon = weapon
+        self.tempAssist = assist
+        self.tempSpecial = special
+        self.tempA = A
+        self.tempB = B
+        self.tempC = C
+        self.tempS = S
+
+        if self.tempAssist in {"Sing", "Dance", "Gray Waves"}:
+            self.assist = self.tempAssist
+            self.refresher = True
+        else:
+            self.refresher = False
+
         self.experience = ""
-        self.refresher = False
         if self.weaponType in {"Sword", "Fire", "Dark", "Red Breath", "Red Bow", "Red Dagger", "Red Beast"}:
             self.color = "Red"
         elif self.weaponType in {"Axe", "Wind", "Green Breath", "Green Bow", "Green Dagger", "Green Beast"}:
@@ -223,12 +237,16 @@ class Hero:
 
         #Weapon
         self.weapon = randList(weapons[self.weaponType].keys())
+        if self.tempWeapon in weapons[self.weaponType]:
+            self.weapon = self.tempWeapon
 
         #Assist
         if self.weaponType == "Staff":
             self.assists = heals[:]
         else:
             self.assists = assists[:]
+        if self.tempAssist in self.assists:
+            self.assist = self.tempAssist
 
         #Special
         if self.weaponType == "Staff":
@@ -239,6 +257,8 @@ class Hero:
                 self.specials.extend(meleeSpecials)
                 if self.physical:
                     self.specials.extend(physicalMeleeSpecials)
+        if self.tempSpecial in self.specials:
+            self.special = self.tempSpecial
 
         #A Skill
         self.As = normalAs[:]
@@ -283,6 +303,8 @@ class Hero:
         elif self.color == "Blue" and self.movementType == "Flier":
             self.As.extend(blueFlierAs)
             self.As.remove("HP +5")
+        if self.tempA in self.As:
+            self.A = self.tempA
 
         #B Skill
         self.Bs = normalBs[:]
@@ -324,6 +346,8 @@ class Hero:
             self.Bs.extend(noBlueBs)
         if self.refresher:
             self.Bs.extend(singDanceBs)
+        if self.tempB in self.Bs:
+            self.B = self.tempB
 
         #C Skill
         self.Cs = normalCs[:]
@@ -342,6 +366,8 @@ class Hero:
         else:
             self.Cs.extend(self.weaponCs[weaponType])
         self.Cs.extend(self.movementCs[movementType])
+        if self.tempC in self.Cs:
+            self.C = self.tempC
 
 
         #Sacred Seal
@@ -359,7 +385,9 @@ class Hero:
         elif self.movementType == "Armored":
             self.seals.extend(armoredSeals)
         if self.refresher:
-            self.Ss.extend(singDanceSeals)
+            self.seals.extend(singDanceSeals)
+        if self.tempS in self.seals:
+            self.S = self.tempS
 
         #neutral IVs for now
         #47 - 1 for each stat
@@ -561,13 +589,12 @@ class Hero:
             self.cooldown = 4
         elif self.special in {"Aether", "Galeforce", "Miracle"}:
             self.cooldown = 5
-        if self.weapon in {"Rauðrblade", "Gronnblade", "Blárblade", "Lightning Breath"}:
-            self.cooldown += 1
-        elif self.weapon in {"Slaying Edge", "Slaying Axe", "Slaying Lance", "Slaying Bow", "Hauteclere", "Mystletainn", "Cursed Lance", "Urvan", "Audhulma", "Basilikos", "Kagami Mochi", "Berserk Armads", "Nameless Blade", "Barb Shuriken", "Dark Mystletainn", "Mjölnir", "Vassal's Blade", "Dauntless Lance", "Maltet", "Hoarfrost Knife", "Missiletainn", "Solitary Blade", "Shanna's Lance", "Golden Dagger", "Draconic Rage", "Scarlet Sword", "Whitewing Lance", "Festive Siegmund", "Hel Scythe", "Wolf Queen Fang", "Grado Poleax", "Niles's Bow", "Daybreak Lance", "Shadow Sword", "Loyal Greatlance"}:
+        if self.weapon in {"Slaying Edge", "Slaying Axe", "Slaying Lance", "Slaying Bow", "Hauteclere", "Mystletainn", "Cursed Lance", "Urvan", "Audhulma", "Basilikos", "Kagami Mochi", "Berserk Armads", "Nameless Blade", "Barb Shuriken", "Dark Mystletainn", "Mjölnir", "Vassal's Blade", "Dauntless Lance", "Maltet", "Hoarfrost Knife", "Missiletainn", "Solitary Blade", "Shanna's Lance", "Golden Dagger", "Draconic Rage", "Scarlet Sword", "Whitewing Lance", "Festive Siegmund", "Hel Scythe", "Wolf Queen Fang", "Grado Poleax", "Niles's Bow", "Daybreak Lance", "Shadow Sword", "Loyal Greatlance"}:
             self.cooldown -= 1
+        elif self.weapon in {"Rauðrblade", "Gronnblade", "Blárblade", "Lightning Breath"}:
+            self.cooldown += 1
         if self.B == "Lunar Brace":
             self.cooldown += 1
-        self.special += " (Cooldown: %d)" % self.cooldown
 
     def Name(self):
         if not self.customName:
@@ -627,7 +654,10 @@ class Hero:
         print "Damage Type:", self.distance, self.damage
         print
         for i in range(len(self.skills)):
-            print self.skillString[i] + ":", self.skills[i]
+            if self.skills[i] == self.special:
+                print self.skillString[i] + ":", self.skills[i] + " (Cooldown: %d)" % self.cooldown
+            else:
+                print self.skillString[i] + ":", self.skills[i]
         print
         for i in range(len(self.stats)):
             print self.statString[i], self.stats[i], "\tBase:", self.baseStats[i], "\tGrowth:", self.statGrowths[i], "\tTotal:", self.stats[i] + self.statAdd[i], "(" + str(self.statAdd[i]) +  ")"
@@ -639,7 +669,7 @@ class Hero:
             eff = eff[:-2]
             print "Effective Against:", eff
 
-def randHero(weap = "", move = "", name = ""):
+def randHero(name = "", weap = "", move = "", wep = "", asst = "", spec = "", a = "", b = "", c = "", s = ""):
     weaponType = randList(weaponTypes)
     movementType = randList(movementTypes)
 
@@ -648,13 +678,20 @@ def randHero(weap = "", move = "", name = ""):
     if move in movementTypes:
         movementType = move
 
-    rand = Hero(weaponType, movementType, name)
-    rand.assist = randList(rand.assists)
-    rand.special = randList(rand.specials)
-    rand.A = randList(rand.As)
-    rand.B = randList(rand.Bs)
-    rand.C = randList(rand.Cs)
-    rand.S = randList(rand.seals)
+    rand = Hero(name, weaponType, movementType, wep, asst, spec, a, b, c, s)
+    if asst == "":
+        rand.assist = randList(rand.assists)
+    if spec == "":
+        rand.special = randList(rand.specials)
+    if a == "":
+        rand.A = randList(rand.As)
+    if b == "":
+        rand.B = randList(rand.Bs)
+    if c == "":
+        rand.C = randList(rand.Cs)
+    if s == "":
+        rand.S = randList(rand.seals)
+    rand.update()
 
     return rand
 
