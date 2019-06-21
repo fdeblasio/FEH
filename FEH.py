@@ -182,7 +182,7 @@ def randList(list):
 class Hero:
     def __init__(self, name, weaponType, movementType, weapon, assist, special, A, B, C, S):
         self.name = name
-        if self.name == "":
+        if self.name in {"", "-"}:
             self.customName = False
         else:
             self.customName = True
@@ -236,17 +236,21 @@ class Hero:
             self.melee = False
 
         #Weapon
-        self.weapon = randList(weapons[self.weaponType].keys())
         if self.tempWeapon in weapons[self.weaponType]:
             self.weapon = self.tempWeapon
+        else:
+            self.weapon = "-"
 
         #Assist
         if self.weaponType == "Staff":
             self.assists = heals[:]
         else:
             self.assists = assists[:]
-        if self.tempAssist in self.assists:
-            self.assist = self.tempAssist
+        if self.refresher:
+            if self.tempAssist in self.assists:
+                self.assist = self.tempAssist
+            else:
+                self.assist = "-"
 
         #Special
         if self.weaponType == "Staff":
@@ -259,6 +263,8 @@ class Hero:
                     self.specials.extend(physicalMeleeSpecials)
         if self.tempSpecial in self.specials:
             self.special = self.tempSpecial
+        else:
+            self.special = "-"
 
         #A Skill
         self.As = normalAs[:]
@@ -305,6 +311,8 @@ class Hero:
             self.As.remove("HP +5")
         if self.tempA in self.As:
             self.A = self.tempA
+        else:
+            self.A = "-"
 
         #B Skill
         self.Bs = normalBs[:]
@@ -348,6 +356,8 @@ class Hero:
             self.Bs.extend(singDanceBs)
         if self.tempB in self.Bs:
             self.B = self.tempB
+        else:
+            self.B = "-"
 
         #C Skill
         self.Cs = normalCs[:]
@@ -368,7 +378,8 @@ class Hero:
         self.Cs.extend(self.movementCs[movementType])
         if self.tempC in self.Cs:
             self.C = self.tempC
-
+        else:
+            self.C = "-"
 
         #Sacred Seal
         self.seals = normalSeals[:]
@@ -388,6 +399,8 @@ class Hero:
             self.seals.extend(singDanceSeals)
         if self.tempS in self.seals:
             self.S = self.tempS
+        else:
+            self.S = "-"
 
         #neutral IVs for now
         #47 - 1 for each stat
@@ -679,17 +692,19 @@ def randHero(name = "", weap = "", move = "", wep = "", asst = "", spec = "", a 
         movementType = move
 
     rand = Hero(name, weaponType, movementType, wep, asst, spec, a, b, c, s)
-    if asst == "":
+    if wep in {"", "-"}:
+        rand.weapon = randList(weapons[rand.weaponType].keys())
+    if asst in {"", "-"}:
         rand.assist = randList(rand.assists)
-    if spec == "":
+    if spec in {"", "-"}:
         rand.special = randList(rand.specials)
-    if a == "":
+    if a in {"", "-"}:
         rand.A = randList(rand.As)
-    if b == "":
+    if b in {"", "-"}:
         rand.B = randList(rand.Bs)
-    if c == "":
+    if c in {"", "-"}:
         rand.C = randList(rand.Cs)
-    if s == "":
+    if s in {"", "-"}:
         rand.S = randList(rand.seals)
     rand.update()
 
