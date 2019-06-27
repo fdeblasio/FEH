@@ -13,7 +13,7 @@ def randDict(dict):
     rand = randList(dict.keys())
     return dict[rand]
 
-colors = {"Red": Fore.RED, "Green": Fore.GREEN, "Blue": Fore.BLUE, "Colorless": Fore.RESET}
+colors = {"Red": Back.RED, "Green": Back.GREEN, "Blue": Back.BLUE, "Colorless": Back.WHITE}
 
 summonPool = {}
 heroes = open("src/heroes.csv", 'r')
@@ -69,26 +69,58 @@ def summon():
     except:
         heroImage.config(text="Image Not Found", image='')
 
-    weapImg = Image.open("src/images/weapons/" + result.weaponType + ".png")
-    weapImg = weapImg.resize((25, 25), Image.ANTIALIAS)
-    heroWeap = ImageTk.PhotoImage(weapImg)
+    weapTypeImg = Image.open("src/images/weapons/" + result.weaponType + ".png")
+    weapTypeImg = weapTypeImg.resize((25, 25), Image.ANTIALIAS)
+    heroWeapType = ImageTk.PhotoImage(weapTypeImg)
 
     moveImg = Image.open("src/images/movement/" + result.movementType + ".png")
     moveImg = moveImg.resize((25, 25), Image.ANTIALIAS)
     heroMove = ImageTk.PhotoImage(moveImg)
 
-    weaponImage.config(image=heroWeap)
-    weaponImage.image = heroWeap
+    weaponTypeImage.config(image=heroWeapType)
+    weaponTypeImage.image = heroWeapType
     moveImage.config(image=heroMove)
     moveImage.image = heroMove
-    print result.name + " "*(21-len(result.name)) + colors[result.color] + result.weaponType + Style.RESET_ALL + "\t" + result.movementType
+    print result.name + " "*(21-len(result.name)) + colors[result.color] + Style.BRIGHT + result.weaponType + Style.RESET_ALL + "\t" + result.movementType
+
+    weaponImg = Image.open("src/images/skills/Weapon.png")
+    weaponImg = weaponImg.resize((25, 25), Image.ANTIALIAS)
+    weapImg = ImageTk.PhotoImage(weaponImg)
+
+    assistImg = Image.open("src/images/skills/Assist.png")
+    assistImg = assistImg.resize((25, 25), Image.ANTIALIAS)
+    asstImg = ImageTk.PhotoImage(assistImg)
+
+    specialImg = Image.open("src/images/skills/Special.png")
+    specialImg = specialImg.resize((25, 25), Image.ANTIALIAS)
+    specImg = ImageTk.PhotoImage(specialImg)
+
+    weaponImage.config(image=weapImg)
+    weaponImage.image = weapImg
+    weaponName.config(text=result.weapon)
+    assistImage.config(image=asstImg)
+    assistImage.image = asstImg
+    assistName.config(text=result.assist)
+    specialImage.config(image=specImg)
+    specialImage.image = specImg
+    specialName.config(text=result.special)
+    print result.weapon, result.assist, result.special
 
 root = Tk()
 root.title("Summoning Screen")
-root.geometry("400x400")
+root.geometry("500x500")
 
 heroImage = Label(root)
 heroImage.pack()
+
+heroSkills = Frame(root)
+heroSkills.pack(side=BOTTOM)
+weaponFrame = Frame(heroSkills)
+weaponFrame.pack()
+assistFrame = Frame(heroSkills)
+assistFrame.pack()
+specialFrame = Frame(heroSkills)
+specialFrame.pack()
 
 weapMove = Frame(root)
 weapMove.pack(side=BOTTOM)
@@ -102,10 +134,22 @@ summonButton.pack()
 summoned = Label(resultFrame)
 summoned.pack()
 
-weaponImage = Label(weapMove)
-weaponImage.pack(side=LEFT)
-
+weaponTypeImage = Label(weapMove)
+weaponTypeImage.pack(side=LEFT)
 moveImage = Label(weapMove)
 moveImage.pack(side=RIGHT)
+
+weaponImage = Label(weaponFrame)
+weaponImage.pack(side=LEFT)
+weaponName = Label(weaponFrame)
+weaponName.pack(side=RIGHT)
+assistImage = Label(assistFrame)
+assistImage.pack(side=LEFT)
+assistName = Label(assistFrame)
+assistName.pack(side=RIGHT)
+specialImage = Label(specialFrame)
+specialImage.pack(side=LEFT)
+specialName = Label(specialFrame)
+specialName.pack(side=RIGHT)
 
 root.mainloop()

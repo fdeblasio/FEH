@@ -234,7 +234,7 @@ class Hero:
             self.assists = heals[:]
         else:
             self.assists = assists[:]
-        if self.refresher:
+        if not self.refresher:
             if self.tempAssist in self.assists:
                 self.assist = self.tempAssist
             else:
