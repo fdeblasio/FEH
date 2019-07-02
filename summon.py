@@ -81,30 +81,49 @@ def summon():
     weaponTypeImage.image = heroWeapType
     moveImage.config(image=heroMove)
     moveImage.image = heroMove
-    print result.name + " "*(21-len(result.name)) + colors[result.color] + Style.BRIGHT + result.weaponType + Style.RESET_ALL + "\t" + result.movementType
+    print result.name
+    print colors[result.color] + Style.BRIGHT + result.weaponType + Style.RESET_ALL + "\t" + result.movementType
 
-    weaponImg = Image.open("src/images/skills/Weapon.png")
-    weaponImg = weaponImg.resize((25, 25), Image.ANTIALIAS)
-    weapImg = ImageTk.PhotoImage(weaponImg)
+    try:
+        imageA = Image.open("src/images/skills/" + result.A + ".png")
+        imageA = imageA.resize((25, 25), Image.ANTIALIAS)
+        ImageA = ImageTk.PhotoImage(imageA)
 
-    assistImg = Image.open("src/images/skills/Assist.png")
-    assistImg = assistImg.resize((25, 25), Image.ANTIALIAS)
-    asstImg = ImageTk.PhotoImage(assistImg)
+        AImage.config(image=ImageA)
+        AImage.image = ImageA
+    except:
+        AImage.config(image=aImg)
 
-    specialImg = Image.open("src/images/skills/Special.png")
-    specialImg = specialImg.resize((25, 25), Image.ANTIALIAS)
-    specImg = ImageTk.PhotoImage(specialImg)
+    try:
+        imageB = Image.open("src/images/skills/" + result.B + ".png")
+        imageB = imageB.resize((25, 25), Image.ANTIALIAS)
+        ImageB = ImageTk.PhotoImage(imageB)
 
-    weaponImage.config(image=weapImg)
-    weaponImage.image = weapImg
-    weaponName.config(text=result.weapon)
-    assistImage.config(image=asstImg)
-    assistImage.image = asstImg
-    assistName.config(text=result.assist)
-    specialImage.config(image=specImg)
-    specialImage.image = specImg
-    specialName.config(text=result.special)
-    print result.weapon, result.assist, result.special
+        BImage.config(image=ImageB)
+        BImage.image = ImageB
+    except:
+        BImage.config(image=bImg)
+
+    try:
+        imageC = Image.open("src/images/skills/" + result.C + ".png")
+        imageC = imageC.resize((25, 25), Image.ANTIALIAS)
+        ImageC = ImageTk.PhotoImage(imageC)
+
+        CImage.config(image=ImageC)
+        CImage.image = ImageC
+    except:
+        CImage.config(image=cImg)
+
+    weaponName.config(text=result.weapon + " "*(20-len(result.weapon)))
+    AName.config(text=result.A + " "*(20-len(result.A)))
+    print "Weapon:  " + result.weapon + " "*(20-len(result.weapon)) + "A: " + result.A
+    assistName.config(text=result.assist + " "*(20-len(result.assist)))
+    BName.config(text=result.B + " "*(20-len(result.B)))
+    print "Assist:  " + result.assist + " "*(20-len(result.assist)) + "B: " + result.B
+    specialName.config(text=result.special + " "*(20-len(result.special)))
+    CName.config(text=result.C + " "*(20-len(result.C)))
+    print "Special: " + result.special + " "*(20-len(result.special)) + "C: " + result.C
+    print
 
 root = Tk()
 root.title("Summoning Screen")
@@ -115,12 +134,6 @@ heroImage.pack()
 
 heroSkills = Frame(root)
 heroSkills.pack(side=BOTTOM)
-weaponFrame = Frame(heroSkills)
-weaponFrame.pack()
-assistFrame = Frame(heroSkills)
-assistFrame.pack()
-specialFrame = Frame(heroSkills)
-specialFrame.pack()
 
 weapMove = Frame(root)
 weapMove.pack(side=BOTTOM)
@@ -128,28 +141,69 @@ weapMove.pack(side=BOTTOM)
 resultFrame = Frame(root)
 resultFrame.pack(side=BOTTOM)
 
-summonButton = Button(resultFrame, text="Summon", command=summon)
-summonButton.pack()
+summonButton = Button(resultFrame, text="Summon", command=summon, font=("nintendoP_Skip-D_003",8))
+summonButton.grid(columnspan=2, row=0)
 
-summoned = Label(resultFrame)
-summoned.pack()
+summoned = Label(resultFrame, text="Ready for summoning", font=("nintendoP_Skip-D_003",12))
+summoned.grid(columnspan=2, row=1)
 
-weaponTypeImage = Label(weapMove)
-weaponTypeImage.pack(side=LEFT)
-moveImage = Label(weapMove)
-moveImage.pack(side=RIGHT)
+weaponTypeImage = Label(resultFrame)
+weaponTypeImage.grid(row=2, column=0, sticky=E)
+moveImage = Label(resultFrame)
+moveImage.grid(row=2, column=1, sticky=W)
 
-weaponImage = Label(weaponFrame)
-weaponImage.pack(side=LEFT)
-weaponName = Label(weaponFrame)
-weaponName.pack(side=RIGHT)
-assistImage = Label(assistFrame)
-assistImage.pack(side=LEFT)
-assistName = Label(assistFrame)
-assistName.pack(side=RIGHT)
-specialImage = Label(specialFrame)
-specialImage.pack(side=LEFT)
-specialName = Label(specialFrame)
-specialName.pack(side=RIGHT)
+weaponImg = Image.open("src/images/skills/Weapon.png")
+weaponImg = weaponImg.resize((25, 25), Image.ANTIALIAS)
+weapImg = ImageTk.PhotoImage(weaponImg)
+weaponImage = Label(heroSkills, image=weapImg)
+weaponImage.grid(row=0, column=0)
+weaponImage.image = weapImg
+weaponName = Label(heroSkills, text="-"+" "*19, font=("Fira Mono", 11))
+weaponName.grid(row=0, column=1)
+
+assistImg = Image.open("src/images/skills/Assist.png")
+assistImg = assistImg.resize((25, 25), Image.ANTIALIAS)
+asstImg = ImageTk.PhotoImage(assistImg)
+assistImage = Label(heroSkills, image=asstImg)
+assistImage.grid(row=1, column=0)
+assistImage.image = asstImg
+assistName = Label(heroSkills, text="-"+" "*19, font=("Fira Mono", 11))
+assistName.grid(row=1, column=1)
+
+specialImg = Image.open("src/images/skills/Special.png")
+specialImg = specialImg.resize((25, 25), Image.ANTIALIAS)
+specImg = ImageTk.PhotoImage(specialImg)
+specialImage = Label(heroSkills, image=specImg)
+specialImage.grid(row=2, column=0)
+specialImage.image = specImg
+specialName = Label(heroSkills, text="-"+" "*19, font=("Fira Mono", 11))
+specialName.grid(row=2, column=1)
+
+AImg = Image.open("src/images/skills/A.png")
+AImg = AImg.resize((25, 25), Image.ANTIALIAS)
+aImg = ImageTk.PhotoImage(AImg)
+AImage = Label(heroSkills, image=aImg)
+AImage.grid(row=0, column=2)
+AImage.image = aImg
+AName = Label(heroSkills, text="-"+" "*19, font=("Fira Mono", 11))
+AName.grid(row=0, column=3)
+
+BImg = Image.open("src/images/skills/B.png")
+BImg = BImg.resize((25, 25), Image.ANTIALIAS)
+bImg = ImageTk.PhotoImage(BImg)
+BImage = Label(heroSkills, image=bImg)
+BImage.grid(row=1, column=2)
+BImage.image = bImg
+BName = Label(heroSkills, text="-"+" "*19, font=("Fira Mono", 11))
+BName.grid(row=1, column=3)
+
+CImg = Image.open("src/images/skills/C.png")
+CImg = CImg.resize((25, 25), Image.ANTIALIAS)
+cImg = ImageTk.PhotoImage(CImg)
+CImage = Label(heroSkills, image=cImg)
+CImage.grid(row=2, column=2)
+CImage.image = cImg
+CName = Label(heroSkills, text="-"+" "*19, font=("Fira Mono", 11))
+CName.grid(row=2, column=3)
 
 root.mainloop()

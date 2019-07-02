@@ -1,5 +1,6 @@
 #coding: utf-8
 from random import randint
+from colorama import Fore, Back, Style, init
 
 #for accessing stats in the list
 HP = 0
@@ -179,6 +180,9 @@ growthValues = {1: 10, 2: 13, 3: 15, 4: 17, 5: 19, 6: 22, 7: 24, 8: 26, 9: 28, 1
 def randList(list):
     return list[randint(0, len(list) - 1)]
 
+init(autoreset=True)
+colors = {"Red": Back.RED, "Green": Back.GREEN, "Blue": Back.BLUE, "Colorless": Back.WHITE}
+
 class Hero:
     def __init__(self, name, weaponType, movementType, weapon, assist, special, A, B, C, S):
         self.name = name
@@ -236,7 +240,7 @@ class Hero:
             self.melee = False
 
         #Weapon
-        if self.tempWeapon in weapons[self.weaponType]:
+        if self.tempWeapon in weapons[self.weaponType] or self.tempWeapon in seasonalWeapons[self.weaponType] or self.tempWeapon in exclusiveWeapons[self.weaponType]:
             self.weapon = self.tempWeapon
         else:
             self.weapon = "-"
@@ -662,7 +666,7 @@ class Hero:
         self.statString = ["HP: ", "Atk:", "Spd:", "Def:", "Res:"]
         print self.name
         print
-        print "Color:", self.color
+        print "Color: " + colors[self.color] + Style.BRIGHT + self.color + Style.RESET_ALL
         print "Movement:", self.movement
         print "Damage Type:", self.distance, self.damage
         print
