@@ -2,7 +2,7 @@ from random import randint, random
 from colorama import Fore, Back, Style, init
 from Tkinter import *
 from PIL import Image, ImageTk
-from hero import Hero
+from FEH import Hero
 
 init(autoreset=True)
 
