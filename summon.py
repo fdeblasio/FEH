@@ -84,44 +84,25 @@ def summon():
     print result.name
     print colors[result.color] + Style.BRIGHT + result.weaponType + Style.RESET_ALL + "\t" + result.movementType
 
-    try:
-        imageA = Image.open("src/images/skills/" + result.A + ".png")
-        imageA = imageA.resize((25, 25), Image.ANTIALIAS)
-        ImageA = ImageTk.PhotoImage(imageA)
+    passives = ["A", "B", "C"]
+    resultSkills = {"Weapon": result.weapon, "Assist": result.assist, "Special": result.special, "A": result.A, "B": result.B, "C": result.C}
+    passiveImgs = {}
+    tkPassImgs = {}
+    for passive in passives:
+        try:
+            passiveImgs[passive] = Image.open("src/images/skills/" + resultSkills[passive] + ".png")
+            passiveImgs[passive] = passiveImgs[passive].resize((25, 25), Image.ANTIALIAS)
+            tkPassImgs[passive] = ImageTk.PhotoImage(passiveImgs[passive])
+            image[passive].config(image=tkPassImgs[passive])
+            image[passive].image = tkPassImgs[passive]
+        except:
+            image[passive].config(image=tkImage[passive])
 
-        AImage.config(image=ImageA)
-        AImage.image = ImageA
-    except:
-        AImage.config(image=aImg)
+    for skill in skills:
+        name[skill].config(text=resultSkills[skill] + " "*(20-len(resultSkills[skill])))
 
-    try:
-        imageB = Image.open("src/images/skills/" + result.B + ".png")
-        imageB = imageB.resize((25, 25), Image.ANTIALIAS)
-        ImageB = ImageTk.PhotoImage(imageB)
-
-        BImage.config(image=ImageB)
-        BImage.image = ImageB
-    except:
-        BImage.config(image=bImg)
-
-    try:
-        imageC = Image.open("src/images/skills/" + result.C + ".png")
-        imageC = imageC.resize((25, 25), Image.ANTIALIAS)
-        ImageC = ImageTk.PhotoImage(imageC)
-
-        CImage.config(image=ImageC)
-        CImage.image = ImageC
-    except:
-        CImage.config(image=cImg)
-
-    weaponName.config(text=result.weapon + " "*(20-len(result.weapon)))
-    AName.config(text=result.A + " "*(20-len(result.A)))
     print "Weapon:  " + result.weapon + " "*(20-len(result.weapon)) + "A: " + result.A
-    assistName.config(text=result.assist + " "*(20-len(result.assist)))
-    BName.config(text=result.B + " "*(20-len(result.B)))
     print "Assist:  " + result.assist + " "*(20-len(result.assist)) + "B: " + result.B
-    specialName.config(text=result.special + " "*(20-len(result.special)))
-    CName.config(text=result.C + " "*(20-len(result.C)))
     print "Special: " + result.special + " "*(20-len(result.special)) + "C: " + result.C
     print
 
@@ -152,58 +133,19 @@ weaponTypeImage.grid(row=2, column=0, sticky=E)
 moveImage = Label(resultFrame)
 moveImage.grid(row=2, column=1, sticky=W)
 
-weaponImg = Image.open("src/images/skills/Weapon.png")
-weaponImg = weaponImg.resize((25, 25), Image.ANTIALIAS)
-weapImg = ImageTk.PhotoImage(weaponImg)
-weaponImage = Label(heroSkills, image=weapImg)
-weaponImage.grid(row=0, column=0)
-weaponImage.image = weapImg
-weaponName = Label(heroSkills, text="-"+" "*19, font=("Fira Mono", 11))
-weaponName.grid(row=0, column=1)
-
-assistImg = Image.open("src/images/skills/Assist.png")
-assistImg = assistImg.resize((25, 25), Image.ANTIALIAS)
-asstImg = ImageTk.PhotoImage(assistImg)
-assistImage = Label(heroSkills, image=asstImg)
-assistImage.grid(row=1, column=0)
-assistImage.image = asstImg
-assistName = Label(heroSkills, text="-"+" "*19, font=("Fira Mono", 11))
-assistName.grid(row=1, column=1)
-
-specialImg = Image.open("src/images/skills/Special.png")
-specialImg = specialImg.resize((25, 25), Image.ANTIALIAS)
-specImg = ImageTk.PhotoImage(specialImg)
-specialImage = Label(heroSkills, image=specImg)
-specialImage.grid(row=2, column=0)
-specialImage.image = specImg
-specialName = Label(heroSkills, text="-"+" "*19, font=("Fira Mono", 11))
-specialName.grid(row=2, column=1)
-
-AImg = Image.open("src/images/skills/A.png")
-AImg = AImg.resize((25, 25), Image.ANTIALIAS)
-aImg = ImageTk.PhotoImage(AImg)
-AImage = Label(heroSkills, image=aImg)
-AImage.grid(row=0, column=2)
-AImage.image = aImg
-AName = Label(heroSkills, text="-"+" "*19, font=("Fira Mono", 11))
-AName.grid(row=0, column=3)
-
-BImg = Image.open("src/images/skills/B.png")
-BImg = BImg.resize((25, 25), Image.ANTIALIAS)
-bImg = ImageTk.PhotoImage(BImg)
-BImage = Label(heroSkills, image=bImg)
-BImage.grid(row=1, column=2)
-BImage.image = bImg
-BName = Label(heroSkills, text="-"+" "*19, font=("Fira Mono", 11))
-BName.grid(row=1, column=3)
-
-CImg = Image.open("src/images/skills/C.png")
-CImg = CImg.resize((25, 25), Image.ANTIALIAS)
-cImg = ImageTk.PhotoImage(CImg)
-CImage = Label(heroSkills, image=cImg)
-CImage.grid(row=2, column=2)
-CImage.image = cImg
-CName = Label(heroSkills, text="-"+" "*19, font=("Fira Mono", 11))
-CName.grid(row=2, column=3)
+skills = ["Weapon", "Assist", "Special", "A", "B", "C"]
+origPng = {}
+tkImage = {}
+image = {}
+name = {}
+for skill in skills:
+    origPng[skill] = Image.open("src/images/skills/" + skill + ".png")
+    origPng[skill] = origPng[skill].resize((25, 25), Image.ANTIALIAS)
+    tkImage[skill] = ImageTk.PhotoImage(origPng[skill])
+    image[skill] = Label(heroSkills, image=tkImage[skill])
+    image[skill].image = tkImage[skill]
+    name[skill] = Label(heroSkills, text="-"+" "*19, font=("Fira Mono", 11))
+    image[skill].grid(row=skills.index(skill)%3, column=2*(skills.index(skill)/3))
+    name[skill].grid(row=skills.index(skill)%3, column=2*(skills.index(skill)/3)+1)
 
 root.mainloop()
