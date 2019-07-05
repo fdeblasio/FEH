@@ -53,7 +53,7 @@ focusHeroes.close()
 
 def summon():
     if len(focusPool) > 0:
-        result = randDict({True: focusPool, False: summonPool}[random() < 0.05])
+        result = randDict({True: focusPool, False: summonPool}[random() < 0.5])
     else:
         result = randDict(summonPool)
     resultText = "You summoned " + result.name + "!"
@@ -99,16 +99,17 @@ def summon():
             image[passive].config(image=tkImage[passive])
 
     for skill in skills:
-        name[skill].config(text=resultSkills[skill] + " "*(20-len(resultSkills[skill])))
+        name[skill].config(text=resultSkills[skill] + " "*(37-len(resultSkills[skill])))
 
-    print "Weapon:  " + result.weapon + " "*(20-len(result.weapon)) + "A: " + result.A
-    print "Assist:  " + result.assist + " "*(20-len(result.assist)) + "B: " + result.B
-    print "Special: " + result.special + " "*(20-len(result.special)) + "C: " + result.C
+    spacing = 30
+    print "Weapon:  " + result.weapon + " "*(spacing-len(result.weapon)) + "A: " + result.A
+    print "Assist:  " + result.assist + " "*(spacing-len(result.assist)) + "B: " + result.B
+    print "Special: " + result.special + " "*(spacing-len(result.special)) + "C: " + result.C
     print
 
 root = Tk()
 root.title("Summoning Screen")
-root.geometry("500x500")
+root.geometry("750x500")
 
 heroImage = Label(root)
 heroImage.pack()
@@ -144,7 +145,7 @@ for skill in skills:
     tkImage[skill] = ImageTk.PhotoImage(origPng[skill])
     image[skill] = Label(heroSkills, image=tkImage[skill])
     image[skill].image = tkImage[skill]
-    name[skill] = Label(heroSkills, text="-"+" "*19, font=("Fira Mono", 11))
+    name[skill] = Label(heroSkills, text="-"+" "*36, font=("Fira Mono", 11))
     image[skill].grid(row=skills.index(skill)%3, column=2*(skills.index(skill)/3))
     name[skill].grid(row=skills.index(skill)%3, column=2*(skills.index(skill)/3)+1)
 

@@ -79,7 +79,7 @@ seasonalWeapons = {"Sword": seasonalSwords, "Axe": seasonalAxes, "Lance": season
 exclusiveWeapons = {"Sword": exclusiveSwords, "Axe": exclusiveAxes, "Lance": exclusiveLances, "Colorless Bow": exclusiveBows, "Colorless Dagger": exclusiveDaggers, "Fire": exclusiveFires, "Wind": exclusiveWinds, "Thunder": exclusiveThunders, "Dark": exclusiveDarks, "Light": exclusiveLights, "Staff": exclusiveStaffs, "Red Breath": exclusiveBreaths, "Green Breath": exclusiveBreaths, "Blue Breath": exclusiveBreaths, "Colorless Breath": exclusiveBreaths, "Red Bow": exclusiveBows, "Green Bow": exclusiveBows, "Blue Bow": exclusiveBows, "Red Dagger": exclusiveDaggers, "Green Dagger": exclusiveDaggers, "Blue Dagger": exclusiveDaggers}
 #"Red Beast": , "Green Beast": , "Blue Beast": , "Colorless Beast":
 
-assists = ["Swap", "Shove", "Smite", "Draw Back", "Reposition", "Pivot", "Reciprocal Aid", "Rally Attack/Speed", "Rally Attack/Defense", "Rally Attack/Resistance", "Rally Speed/Defense", "Rally Speed/Resistance", "Rally Defense/Resistance", "Rally Up Attack", "Rally Up Resistance", "Ardent Sacrifice", "Harsh Command"]
+assists = ["Swap", "Shove", "Smite", "Draw Back", "Reposition", "Pivot", "Reciprocal Aid", "Rally Attack-Speed", "Rally Attack-Defense", "Rally Attack-Resistance", "Rally Speed-Defense", "Rally Speed-Resistance", "Rally Defense-Resistance", "Rally Up Attack", "Rally Up Resistance", "Ardent Sacrifice", "Harsh Command"]
 #Harsh Command, Rally Atk/Spd, Atk/Def, Spd/Def, and Res/Def are the + versions
 #Rally Up Speed, Defense
 heals = ["Physic", "Recover", "Martyr", "Rehabilitate", "Restore"]
@@ -92,8 +92,8 @@ healSpecials = ["Miracle", "Imbue", "Heavenly Light", "Windfire Balm", "Earthfir
 exclusiveSpecials = ["Black Luna", "Ice Mirror", "Radiant Aether", "Regnal Astra", "Fire Emblem", "Lunar Flash"]
 
 #Fury/Death Blow/Darting Blow/Steady Stance/Warding Stance/Distant Defense/Flashing Blade are 4
-normalAs = ["HP +5", "Attack +3", "Speed +3", "Defense +3", "Resistance +3", "HP/Attack", "HP/Speed", "HP/Defense", "HP/Resistance", "Attack/Speed +2", "Attack/Defense +2", "Attack/Resistance +2", "Speed/Defense +2", "Speed/Resistance +2", "Defense/Resistance +2", "Fortress Defense/Resistance", "Defiant Attack", "Defiant Speed", "Defiant Defense", "Defiant Resistance", "Brazen Attack/Speed", "Brazen Attack/Defense", "Brazen Attack/Resistance", "Brazen Defense/Resistance", "Close Defense", "Distant Defense", "Fire Boost", "Wind Boost", "Earth Boost", "Water Boost", "Attack/Speed Bond", "Attack/Defense Bond", "Attack/Resistance Bond", "Speed/Defense Bond", "Speed/Resistance Bond", "Defense/Resistance Bond", "Attack/Speed Push", "Attack/Defense Push", "Attack/Resistance Push", "Attack/Speed Solo", "Attack/Defense Solo", "Attack/Resistance Solo", "Speed/Defense Solo", "Defense/Resistance Solo"]
-#Brazen Spd/Def, Brazen Spd/Res, Speed/Def Push, Speed/Res Push, Def/Res Push, Spd/Res Solo
+normalAs = ["HP +5", "Attack +3", "Speed +3", "Defense +3", "Resistance +3", "HP-Attack", "HP-Speed", "HP-Defense", "HP-Resistance", "Attack-Speed +2", "Attack-Defense +2", "Attack-Resistance +2", "Speed-Defense +2", "Speed-Resistance +2", "Defense-Resistance +2", "Fortress Defense-Resistance", "Defiant Attack", "Defiant Speed", "Defiant Defense", "Defiant Resistance", "Brazen Attack-Speed", "Brazen Attack-Defense", "Brazen Attack-Resistance", "Brazen Defense-Resistance", "Close Defense", "Distant Defense", "Fire Boost", "Wind Boost", "Earth Boost", "Water Boost", "Attack-Speed Bond", "Attack-Defense Bond", "Attack-Resistance Bond", "Speed-Defense Bond", "Speed-Resistance Bond", "Defense-Resistance Bond", "Attack-Speed Push", "Attack-Defense Push", "Attack-Resistance Push", "Attack-Speed Solo", "Attack-Defense Solo", "Attack-Resistance Solo", "Speed-Defense Solo", "Defense-Resistance Solo"]
+#Brazen Spd/Def, Brazen Spd/Res, Speed-Def Push, Speed-Res Push, Def/Res Push, Spd/Res Solo
 noStaffAs = ["Fury", "Life and Death", "Death Blow", "Darting Blow", "Armored Blow", "Warding Blow", "Swift Sparrow", "Sturdy Blow", "Mirror Strike", "Steady Blow", "Swift Strike", "Bracing Blow", "Fierce Stance", "Darting Stance", "Steady Stance", "Warding Stance", "Kestrel Stance", "Sturdy Stance", "Mirror Stance", "Steady Posture", "Swift Stance", "Bracing Stance", "Heavy Blade"]
 meleeAs = ["Distant Counter"]
 rangedAs = ["Close Counter"]
@@ -111,14 +111,14 @@ greenInfantryAs = ["Green Duel Infantry"]
 greenFlierAs = ["Green Duel Flying"]
 blueFlierAs = ["Blue Duel Flying"]
 colorlessInfantryAs = ["Colorless Duel Infantry"]
-aetherRaidAs = ["AR-O Attack/Speed", "AR-O Attack/Defense", "AR-D Attack/Resistance", "AR-D Speed/Defense", "AR-D Defense/Resistance"]
+aetherRaidAs = ["AR-O Attack-Speed", "AR-O Attack-Defense", "AR-D Attack-Resistance", "AR-D Speed-Defense", "AR-D Defense-Resistance"]
 exclusiveAs = ["Dragonskin", "Laws of Sacae", "Ostian Counter"]
 
 normalBs = ["Obstruct", "Wings of Mercy", "Escape Route", "Vantage", "Desperation", "Brash Assault", "Quick Riposte", "Renewal", "Chill Attack", "Chill Speed", "Chill Defense", "Chill Resistance", "Sabotage Attack", "Sabotage Resistance", "Daggerbreaker", "Guard", "Dull Ranged"]
 #Sabotage Speed, Defense
 meleeBs = ["Knock Back", "Lunge", "Drag Back", "Hit and Run", "Dull Close"]
 staffBs = ["Live to Serve", "Wrathful Staff", "Dazzling Staff"]
-noStaffBs = ["Poison Strike", "Seal Attack", "Seal Speed", "Seal Defense", "Seal Resistance", "Seal Attack/Speed", "Seal Attack/Defense", "Seal Speed/Defense", "Seal Defense/Resistance", "Windsweep", "Watersweep", "Attack/Speed Link", "Attack/Defense Link", "Attack/Resistance Link", "Speed/Defense Link", "Speed/Resistance Link", "Defense/Resistance Link", "Attack Feint", "Speed Feint", "Defense Feint", "Resistance Feint", "Mystic Boost"]
+noStaffBs = ["Poison Strike", "Seal Attack", "Seal Speed", "Seal Defense", "Seal Resistance", "Seal Attack-Speed", "Seal Attack-Defense", "Seal Speed-Defense", "Seal Defense-Resistance", "Windsweep", "Watersweep", "Attack-Speed Link", "Attack-Defense Link", "Attack-Resistance Link", "Speed-Defense Link", "Speed-Resistance Link", "Defense-Resistance Link", "Attack Feint", "Speed Feint", "Defense Feint", "Resistance Feint", "Mystic Boost"]
 #Seal Atk/Res, Seal Spd/Res
 noRedBs = ["Lancebreaker", "Blue Tomebreaker"]
 noGreenBs = ["Swordbreaker", "Red Tomebreaker"]
@@ -138,8 +138,8 @@ daggerAetherRaidBs = ["Disarm Trap"]
 uselessBs = ["Live for Honor", "Live for Bounty"]
 exclusiveBs = ["Follow-Up Ring", "Recover Ring", "Beorc's Blessing", "Crusader's Ward", "Sacae's Blessing", "Warp Powder", "Chilling Seal", "Solar Brace", "S Drink", "Bushido", "Double Lion", "Binding Shield", "Lunar Brace", "Freezing Seal"]
 
-#Hone Attack/Hone Speed are 4
-normalCs = ["Breath of Life", "Savage Blow", "Spur Attack", "Spur Speed", "Spur Defense", "Spur Resistance", "Spur Attack/Speed", "Spur Attack/Defense", "Spur Attack/Resistance", "Spur Speed/Defense", "Spur Speed/Resistance", "Spur Defense/Resistance", "Drive Attack", "Drive Speed", "Drive Defense", "Drive Resistance", "Close Guard", "Distant Guard", "Hone Attack", "Hone Speed", "Fortify Defense", "Fortify Resistance", "Joint Hone Speed", "Attack Tactic", "Speed Tactic", "Defense Tactic", "Resistance Tactic", "Threaten Attack", "Threaten Speed", "Threaten Defense", "Threaten Resistance", "Attack Ploy", "Speed Ploy", "Defense Ploy", "Resistance Ploy", "Panic Ploy", "Odd Attack Wave", "Odd Speed Wave", "Odd Defense Wave", "Odd Resistance Wave", "Even Attack Wave", "Even Speed Wave", "Even Defense Wave", "Even Resistance Wave", "Attack Opening", "Speed Opening", "Defense Opening", "Resistance Opening"]
+#Hone Attack-Hone Speed are 4
+normalCs = ["Breath of Life", "Savage Blow", "Spur Attack", "Spur Speed", "Spur Defense", "Spur Resistance", "Spur Attack-Speed", "Spur Attack-Defense", "Spur Attack-Resistance", "Spur Speed-Defense", "Spur Speed-Resistance", "Spur Defense-Resistance", "Drive Attack", "Drive Speed", "Drive Defense", "Drive Resistance", "Close Guard", "Distant Guard", "Hone Attack", "Hone Speed", "Fortify Defense", "Fortify Resistance", "Joint Hone Speed", "Attack Tactic", "Speed Tactic", "Defense Tactic", "Resistance Tactic", "Threaten Attack", "Threaten Speed", "Threaten Defense", "Threaten Resistance", "Attack Ploy", "Speed Ploy", "Defense Ploy", "Resistance Ploy", "Panic Ploy", "Odd Attack Wave", "Odd Speed Wave", "Odd Defense Wave", "Odd Resistance Wave", "Even Attack Wave", "Even Speed Wave", "Even Defense Wave", "Even Resistance Wave", "Attack Opening", "Speed Opening", "Defense Opening", "Resistance Opening"]
 noStaffCs = ["Attack Smoke", "Speed Smoke", "Defense Smoke", "Resistance Smoke", "Pulse Smoke"]
 infantryCs = ["Infantry Pulse", "Infantry Rush", "Infantry Flash", "Infantry Breath"]
 armoredCs = ["Goad Armor", "Ward Armor", "Hone Armor", "Fortify Armor", "Armor March"]
@@ -164,7 +164,7 @@ staffCs = ["Staff Valor"]
 exclusiveCs = ["Ostia's Pulse", "With Everyone!", "Surtr's Menace", "Sparkling Boost", "Glare", "Upheaval", "Human Virtue", "Chaos Named", "Solitary Dream", "Divine Fang"]
 
 #NOTE: reorder to be like in-game order
-normalSeals = ["HP +5", "Attack +3", "Speed +3", "Defense +3", "Resistance +3", "HP/Speed", "HP/Resistance", "Attack/Speed +2", "Attack/Defense +2", "Speed/Defense +2", "Speed/Resistance +2", "Fortress Defense", "Fortress Resistance", "Warding Stance", "Brazen Attack/Speed", "Brazen Attack/Defense", "Brazen Attack/Resistance", "Close Defense", "Distant Defense", "Fire Boost", "Wind Boost", "Water Boost", "Attack/Speed Bond", "Attack/Defense Bond", "Speed/Resistance Bond", "Obstruct", "Brash Assault", "Quick Riposte", "Renewal", "Chill Attack", "Breath of Life", "Savage Blow", "Spur Attack", "Spur Speed", "Spur Defense", "Spur Resistance", "Spur Defense/Resistance", "Drive Attack", "Drive Speed", "Drive Defense", "Drive Resistance", "Hone Attack", "Hone Speed", "Fortify Defense", "Fortify Resistance", "Defense Tactic", "Resistance Tactic", "Threaten Attack", "Threaten Speed", "Threaten Defense", "Threaten Resistance", "Attack Ploy", "Speed Ploy", "Defense Ploy", "Resistance Ploy", "Panic Ploy", "Even Defense Wave", "Even Resistance Wave", "Quickened Pulse", "Phantom Speed", "Hardy Bearing", "Deflect Missile", "Deflect Magic", "Initiate Seal HP", "Initiate Seal Attack", "Initiate Seal Speed", "Initiate Seal Defense", "Initiate Seal Resistance", "Squad Ace A", "Squad Ace B", "Squad Ace C", "Squad Ace D", "Squad Ace E", "Squad Ace F", "Squad Ace G", "Squad Ace H", "Squad Ace I", "Squad Ace J", "Squad Ace K", "Squad Ace L", "Squad Ace M", "Squad Ace N", "Squad Ace O", "Squad Ace P", "Squad Ace Q", "Squad Ace R", "Squad Ace S", "Squad Ace T", "Squad Ace U", "Squad Ace V", "Squad Ace W"]
+normalSeals = ["HP +5", "Attack +3", "Speed +3", "Defense +3", "Resistance +3", "HP-Speed", "HP-Resistance", "Attack-Speed +2", "Attack-Defense +2", "Speed-Defense +2", "Speed-Resistance +2", "Fortress Defense", "Fortress Resistance", "Warding Stance", "Brazen Attack-Speed", "Brazen Attack-Defense", "Brazen Attack-Resistance", "Close Defense", "Distant Defense", "Fire Boost", "Wind Boost", "Water Boost", "Attack-Speed Bond", "Attack-Defense Bond", "Speed-Resistance Bond", "Obstruct", "Brash Assault", "Quick Riposte", "Renewal", "Chill Attack", "Breath of Life", "Savage Blow", "Spur Attack", "Spur Speed", "Spur Defense", "Spur Resistance", "Spur Defense-Resistance", "Drive Attack", "Drive Speed", "Drive Defense", "Drive Resistance", "Hone Attack", "Hone Speed", "Fortify Defense", "Fortify Resistance", "Defense Tactic", "Resistance Tactic", "Threaten Attack", "Threaten Speed", "Threaten Defense", "Threaten Resistance", "Attack Ploy", "Speed Ploy", "Defense Ploy", "Resistance Ploy", "Panic Ploy", "Even Defense Wave", "Even Resistance Wave", "Quickened Pulse", "Phantom Speed", "Hardy Bearing", "Deflect Missile", "Deflect Magic", "Initiate Seal HP", "Initiate Seal Attack", "Initiate Seal Speed", "Initiate Seal Defense", "Initiate Seal Resistance", "Squad Ace A", "Squad Ace B", "Squad Ace C", "Squad Ace D", "Squad Ace E", "Squad Ace F", "Squad Ace G", "Squad Ace H", "Squad Ace I", "Squad Ace J", "Squad Ace K", "Squad Ace L", "Squad Ace M", "Squad Ace N", "Squad Ace O", "Squad Ace P", "Squad Ace Q", "Squad Ace R", "Squad Ace S", "Squad Ace T", "Squad Ace U", "Squad Ace V", "Squad Ace W"]
 noStaffSeals = ["Darting Blow", "Fierce Stance", "Darting Stance", "Heavy Blade", "Poison Strike", "Seal Attack", "Seal Speed", "Attack Smoke", "Speed Smoke"]
 staffSeals = ["Live to Serve"]
 singDanceSeals = ["Blaze Dance", "Gale Dance", "Earth Dance", "Torrent Dance"]
@@ -518,34 +518,34 @@ class Hero:
             self.statAdd[Def] += 3
         elif self.A == "Resistance +3":
             self.statAdd[Res] += 3
-        elif self.A == "HP/Attack":
+        elif self.A == "HP-Attack":
             self.statAdd[HP] += 4
             self.statAdd[Atk] += 2
-        elif self.A == "HP/Speed":
+        elif self.A == "HP-Speed":
             self.statAdd[HP] += 4
             self.statAdd[Spd] += 2
-        elif self.A == "HP/Defense":
+        elif self.A == "HP-Defense":
             self.statAdd[HP] += 4
             self.statAdd[Def] += 2
-        elif self.A == "HP/Resistance":
+        elif self.A == "HP-Resistance":
             self.statAdd[HP] += 4
             self.statAdd[Res] += 2
-        elif self.A == "Attack/Speed +2":
+        elif self.A == "Attack-Speed +2":
             self.statAdd[Atk] += 2
             self.statAdd[Spd] += 2
-        elif self.A == "Attack/Defense +2":
+        elif self.A == "Attack-Defense +2":
             self.statAdd[Atk] += 2
             self.statAdd[Def] += 2
-        elif self.A == "Attack/Resistance +2":
+        elif self.A == "Attack-Resistance +2":
             self.statAdd[Atk] += 2
             self.statAdd[Res] += 2
-        elif self.A == "Speed/Defense +2":
+        elif self.A == "Speed-Defense +2":
             self.statAdd[Spd] += 2
             self.statAdd[Def] += 2
-        elif self.A == "Speed/Resistance +2":
+        elif self.A == "Speed-Resistance +2":
             self.statAdd[Spd] += 2
             self.statAdd[Res] += 2
-        elif self.A == "Defense/Resistance +2":
+        elif self.A == "Defense-Resistance +2":
             self.statAdd[Def] += 2
             self.statAdd[Res] += 2
         elif self.A == "Fury":
@@ -558,7 +558,7 @@ class Hero:
             self.statAdd[Spd] += 5
             self.statAdd[Def] -= 5
             self.statAdd[Res] -= 5
-        elif self.A == "Fortress Defense/Resistance":
+        elif self.A == "Fortress Defense-Resistance":
             self.statAdd[Def] += 6
             self.statAdd[Res] += 6
             self.statAdd[Atk] -= 2
@@ -579,19 +579,19 @@ class Hero:
         elif self.S == "Fortress Resistance":
             self.statAdd[Res] += 5
             self.statAdd[Atk] -= 3
-        elif self.S == "Attack/Defense +2":
+        elif self.S == "Attack-Defense +2":
             self.statAdd[Atk] += 2
             self.statAdd[Def] += 2
-        elif self.S == "Speed/Defense +2":
+        elif self.S == "Speed-Defense +2":
             self.statAdd[Spd] += 2
             self.statAdd[Def] += 2
-        elif self.S == "Speed/Resistance +2":
+        elif self.S == "Speed-Resistance +2":
             self.statAdd[Spd] += 2
             self.statAdd[Res] += 2
-        elif self.S == "HP/Speed":
+        elif self.S == "HP-Speed":
             self.statAdd[HP] += 4
             self.statAdd[Spd] += 2
-        elif self.S == "HP/Resistance":
+        elif self.S == "HP-Resistance":
             self.statAdd[HP] += 4
             self.statAdd[Res] += 2
 
