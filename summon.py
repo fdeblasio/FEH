@@ -20,17 +20,18 @@ heroes = open("src/heroes.csv", 'r')
 lines = heroes.read().split("\n")[:-1]
 for line in lines:
     hero = line.split(",")
-    name = hero[0]
-    weaponType = hero[1]
-    move = hero[2]
-    weapon = hero[3]
-    assist = hero[4]
-    special = hero[5]
-    a = hero[6]
-    b = hero[7]
-    c = hero[8]
-    s = hero[9]
-    summonPool[name] = Hero(name, weaponType, move, weapon, assist, special, a, b, c, s)
+    if len(hero) > 1:
+        name = hero[0]
+        weaponType = hero[1]
+        move = hero[2]
+        weapon = hero[3]
+        assist = hero[4]
+        special = hero[5]
+        a = hero[6]
+        b = hero[7]
+        c = hero[8]
+        s = hero[9]
+        summonPool[name] = Hero(name, weaponType, move, weapon, assist, special, a, b, c, s)
 heroes.close()
 
 focusPool = {}
@@ -38,17 +39,18 @@ focusHeroes = open("src/focus.csv", 'r')
 lines = focusHeroes.read().split("\n")[:-1]
 for line in lines:
     hero = line.split(",")
-    name = hero[0]
-    weaponType = hero[1]
-    move = hero[2]
-    weapon = hero[3]
-    assist = hero[4]
-    special = hero[5]
-    a = hero[6]
-    b = hero[7]
-    c = hero[8]
-    s = hero[9]
-    focusPool[name] = Hero(name, weaponType, move, weapon, assist, special, a, b, c, s)
+    if len(hero) > 1:
+        name = hero[0]
+        weaponType = hero[1]
+        move = hero[2]
+        weapon = hero[3]
+        assist = hero[4]
+        special = hero[5]
+        a = hero[6]
+        b = hero[7]
+        c = hero[8]
+        s = hero[9]
+        focusPool[name] = Hero(name, weaponType, move, weapon, assist, special, a, b, c, s)
 focusHeroes.close()
 
 def summon():
@@ -61,12 +63,23 @@ def summon():
 
     try:
         heroImg = Image.open("src/images/heroes/" + result.name + ".png")
+        imageFound = True
+    except:
+        print
+        try:
+            genericHero = Hero("", result.weaponType, result.movementType, "", "", "", "", "", "", "")
+            genericHero.Name()
+            heroImg = Image.open("src/images/heroes/" + genericHero.name + ".png")
+            imageFound = True
+        except:
+            imageFound = False
+
+    if imageFound:
         heroImg = heroImg.resize((250, 250), Image.ANTIALIAS)
         heroPic = ImageTk.PhotoImage(heroImg)
-
         heroImage.config(image=heroPic, text='')
         heroImage.image = heroPic
-    except:
+    else:
         heroImage.config(text="Image Not Found", image='')
 
     weapTypeImg = Image.open("src/images/weapons/" + result.weaponType + ".png")

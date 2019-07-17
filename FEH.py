@@ -658,7 +658,7 @@ class Hero:
                 elif not self.physical:
                     self.name += self.weaponType + " Mage"
                     if self.movementType == "Cavalry":
-                        self.name = self.name.replace("Horseback ", "") + " Cavalier"
+                        self.name = self.name.replace("Horseback ", "") + " Knight"
                 elif self.bow:
                     self.name += self.color + " Archer"
                     if self.movementType == "Cavalry":
